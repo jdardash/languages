@@ -1,0 +1,3373 @@
+{
+ "language": "spanish",
+ "attribution": "Conjugations from the Fred Jehle Spanish verb database (CC BY-NC-SA 3.0).",
+ "persons": {
+  "1s": "yo",
+  "2s": "tú",
+  "3s": "él / ella / usted",
+  "1p": "nosotros",
+  "3p": "ellos / ustedes"
+ },
+ "items": [
+  {
+   "verb": "ser",
+   "english": "to be",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "soy",
+    "2s": "eres",
+    "3s": "es",
+    "1p": "somos",
+    "3p": "son"
+   }
+  },
+  {
+   "verb": "ser",
+   "english": "to be",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "fui",
+    "2s": "fuiste",
+    "3s": "fue",
+    "1p": "fuimos",
+    "3p": "fueron"
+   }
+  },
+  {
+   "verb": "ser",
+   "english": "to be",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "era",
+    "2s": "eras",
+    "3s": "era",
+    "1p": "éramos",
+    "3p": "eran"
+   }
+  },
+  {
+   "verb": "ser",
+   "english": "to be",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "sea",
+    "2s": "seas",
+    "3s": "sea",
+    "1p": "seamos",
+    "3p": "sean"
+   }
+  },
+  {
+   "verb": "estar",
+   "english": "to be",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "estoy",
+    "2s": "estás",
+    "3s": "está",
+    "1p": "estamos",
+    "3p": "están"
+   }
+  },
+  {
+   "verb": "estar",
+   "english": "to be",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "estuve",
+    "2s": "estuviste",
+    "3s": "estuvo",
+    "1p": "estuvimos",
+    "3p": "estuvieron"
+   }
+  },
+  {
+   "verb": "estar",
+   "english": "to be",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "estaba",
+    "2s": "estabas",
+    "3s": "estaba",
+    "1p": "estábamos",
+    "3p": "estaban"
+   }
+  },
+  {
+   "verb": "estar",
+   "english": "to be",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "esté",
+    "2s": "estés",
+    "3s": "esté",
+    "1p": "estemos",
+    "3p": "estén"
+   }
+  },
+  {
+   "verb": "tener",
+   "english": "to have",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "tengo",
+    "2s": "tienes",
+    "3s": "tiene",
+    "1p": "tenemos",
+    "3p": "tienen"
+   }
+  },
+  {
+   "verb": "tener",
+   "english": "to have",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "tuve",
+    "2s": "tuviste",
+    "3s": "tuvo",
+    "1p": "tuvimos",
+    "3p": "tuvieron"
+   }
+  },
+  {
+   "verb": "tener",
+   "english": "to have",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "tenía",
+    "2s": "tenías",
+    "3s": "tenía",
+    "1p": "teníamos",
+    "3p": "tenían"
+   }
+  },
+  {
+   "verb": "tener",
+   "english": "to have",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "tenga",
+    "2s": "tengas",
+    "3s": "tenga",
+    "1p": "tengamos",
+    "3p": "tengan"
+   }
+  },
+  {
+   "verb": "hacer",
+   "english": "to do, make",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "hago",
+    "2s": "haces",
+    "3s": "hace",
+    "1p": "hacemos",
+    "3p": "hacen"
+   }
+  },
+  {
+   "verb": "hacer",
+   "english": "to do, make",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "hice",
+    "2s": "hiciste",
+    "3s": "hizo",
+    "1p": "hicimos",
+    "3p": "hicieron"
+   }
+  },
+  {
+   "verb": "hacer",
+   "english": "to do, make",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "hacía",
+    "2s": "hacías",
+    "3s": "hacía",
+    "1p": "hacíamos",
+    "3p": "hacían"
+   }
+  },
+  {
+   "verb": "hacer",
+   "english": "to do, make",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "haga",
+    "2s": "hagas",
+    "3s": "haga",
+    "1p": "hagamos",
+    "3p": "hagan"
+   }
+  },
+  {
+   "verb": "poder",
+   "english": "to be able, can",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "puedo",
+    "2s": "puedes",
+    "3s": "puede",
+    "1p": "podemos",
+    "3p": "pueden"
+   }
+  },
+  {
+   "verb": "poder",
+   "english": "to be able, can",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "pude",
+    "2s": "pudiste",
+    "3s": "pudo",
+    "1p": "pudimos",
+    "3p": "pudieron"
+   }
+  },
+  {
+   "verb": "poder",
+   "english": "to be able, can",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "podía",
+    "2s": "podías",
+    "3s": "podía",
+    "1p": "podíamos",
+    "3p": "podían"
+   }
+  },
+  {
+   "verb": "poder",
+   "english": "to be able, can",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "pueda",
+    "2s": "puedas",
+    "3s": "pueda",
+    "1p": "podamos",
+    "3p": "puedan"
+   }
+  },
+  {
+   "verb": "decir",
+   "english": "to say, tell",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "digo",
+    "2s": "dices",
+    "3s": "dice",
+    "1p": "decimos",
+    "3p": "dicen"
+   }
+  },
+  {
+   "verb": "decir",
+   "english": "to say, tell",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "dije",
+    "2s": "dijiste",
+    "3s": "dijo",
+    "1p": "dijimos",
+    "3p": "dijeron"
+   }
+  },
+  {
+   "verb": "decir",
+   "english": "to say, tell",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "decía",
+    "2s": "decías",
+    "3s": "decía",
+    "1p": "decíamos",
+    "3p": "decían"
+   }
+  },
+  {
+   "verb": "decir",
+   "english": "to say, tell",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "diga",
+    "2s": "digas",
+    "3s": "diga",
+    "1p": "digamos",
+    "3p": "digan"
+   }
+  },
+  {
+   "verb": "ir",
+   "english": "to go",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "voy",
+    "2s": "vas",
+    "3s": "va",
+    "1p": "vamos",
+    "3p": "van"
+   }
+  },
+  {
+   "verb": "ir",
+   "english": "to go",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "fui",
+    "2s": "fuiste",
+    "3s": "fue",
+    "1p": "fuimos",
+    "3p": "fueron"
+   }
+  },
+  {
+   "verb": "ir",
+   "english": "to go",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "iba",
+    "2s": "ibas",
+    "3s": "iba",
+    "1p": "íbamos",
+    "3p": "iban"
+   }
+  },
+  {
+   "verb": "ir",
+   "english": "to go",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "vaya",
+    "2s": "vayas",
+    "3s": "vaya",
+    "1p": "vayamos",
+    "3p": "vayan"
+   }
+  },
+  {
+   "verb": "ver",
+   "english": "to see",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "veo",
+    "2s": "ves",
+    "3s": "ve",
+    "1p": "vemos",
+    "3p": "ven"
+   }
+  },
+  {
+   "verb": "ver",
+   "english": "to see",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "vi",
+    "2s": "viste",
+    "3s": "vio",
+    "1p": "vimos",
+    "3p": "vieron"
+   }
+  },
+  {
+   "verb": "ver",
+   "english": "to see",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "veía",
+    "2s": "veías",
+    "3s": "veía",
+    "1p": "veíamos",
+    "3p": "veían"
+   }
+  },
+  {
+   "verb": "ver",
+   "english": "to see",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "vea",
+    "2s": "veas",
+    "3s": "vea",
+    "1p": "veamos",
+    "3p": "vean"
+   }
+  },
+  {
+   "verb": "dar",
+   "english": "to give",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "doy",
+    "2s": "das",
+    "3s": "da",
+    "1p": "damos",
+    "3p": "dan"
+   }
+  },
+  {
+   "verb": "dar",
+   "english": "to give",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "di",
+    "2s": "diste",
+    "3s": "dio",
+    "1p": "dimos",
+    "3p": "dieron"
+   }
+  },
+  {
+   "verb": "dar",
+   "english": "to give",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "daba",
+    "2s": "dabas",
+    "3s": "daba",
+    "1p": "dábamos",
+    "3p": "daban"
+   }
+  },
+  {
+   "verb": "dar",
+   "english": "to give",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "dé",
+    "2s": "des",
+    "3s": "dé",
+    "1p": "demos",
+    "3p": "den"
+   }
+  },
+  {
+   "verb": "saber",
+   "english": "to know",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "sé",
+    "2s": "sabes",
+    "3s": "sabe",
+    "1p": "sabemos",
+    "3p": "saben"
+   }
+  },
+  {
+   "verb": "saber",
+   "english": "to know",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "supe",
+    "2s": "supiste",
+    "3s": "supo",
+    "1p": "supimos",
+    "3p": "supieron"
+   }
+  },
+  {
+   "verb": "saber",
+   "english": "to know",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "sabía",
+    "2s": "sabías",
+    "3s": "sabía",
+    "1p": "sabíamos",
+    "3p": "sabían"
+   }
+  },
+  {
+   "verb": "saber",
+   "english": "to know",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "sepa",
+    "2s": "sepas",
+    "3s": "sepa",
+    "1p": "sepamos",
+    "3p": "sepan"
+   }
+  },
+  {
+   "verb": "querer",
+   "english": "to want, love",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "quiero",
+    "2s": "quieres",
+    "3s": "quiere",
+    "1p": "queremos",
+    "3p": "quieren"
+   }
+  },
+  {
+   "verb": "querer",
+   "english": "to want, love",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "quise",
+    "2s": "quisiste",
+    "3s": "quiso",
+    "1p": "quisimos",
+    "3p": "quisieron"
+   }
+  },
+  {
+   "verb": "querer",
+   "english": "to want, love",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "quería",
+    "2s": "querías",
+    "3s": "quería",
+    "1p": "queríamos",
+    "3p": "querían"
+   }
+  },
+  {
+   "verb": "querer",
+   "english": "to want, love",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "quiera",
+    "2s": "quieras",
+    "3s": "quiera",
+    "1p": "queramos",
+    "3p": "quieran"
+   }
+  },
+  {
+   "verb": "llegar",
+   "english": "to arrive, come, reach",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "llego",
+    "2s": "llegas",
+    "3s": "llega",
+    "1p": "llegamos",
+    "3p": "llegan"
+   }
+  },
+  {
+   "verb": "llegar",
+   "english": "to arrive, come, reach",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "llegué",
+    "2s": "llegaste",
+    "3s": "llegó",
+    "1p": "llegamos",
+    "3p": "llegaron"
+   }
+  },
+  {
+   "verb": "llegar",
+   "english": "to arrive, come, reach",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "llegaba",
+    "2s": "llegabas",
+    "3s": "llegaba",
+    "1p": "llegábamos",
+    "3p": "llegaban"
+   }
+  },
+  {
+   "verb": "llegar",
+   "english": "to arrive, come, reach",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "llegue",
+    "2s": "llegues",
+    "3s": "llegue",
+    "1p": "lleguemos",
+    "3p": "lleguen"
+   }
+  },
+  {
+   "verb": "pasar",
+   "english": "to pass, pass by, go",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "paso",
+    "2s": "pasas",
+    "3s": "pasa",
+    "1p": "pasamos",
+    "3p": "pasan"
+   }
+  },
+  {
+   "verb": "pasar",
+   "english": "to pass, pass by, go",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "pasé",
+    "2s": "pasaste",
+    "3s": "pasó",
+    "1p": "pasamos",
+    "3p": "pasaron"
+   }
+  },
+  {
+   "verb": "pasar",
+   "english": "to pass, pass by, go",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "pasaba",
+    "2s": "pasabas",
+    "3s": "pasaba",
+    "1p": "pasábamos",
+    "3p": "pasaban"
+   }
+  },
+  {
+   "verb": "pasar",
+   "english": "to pass, pass by, go",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "pase",
+    "2s": "pases",
+    "3s": "pase",
+    "1p": "pasemos",
+    "3p": "pasen"
+   }
+  },
+  {
+   "verb": "deber",
+   "english": "to owe",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "debo",
+    "2s": "debes",
+    "3s": "debe",
+    "1p": "debemos",
+    "3p": "deben"
+   }
+  },
+  {
+   "verb": "deber",
+   "english": "to owe",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "debí",
+    "2s": "debiste",
+    "3s": "debió",
+    "1p": "debimos",
+    "3p": "debieron"
+   }
+  },
+  {
+   "verb": "deber",
+   "english": "to owe",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "debía",
+    "2s": "debías",
+    "3s": "debía",
+    "1p": "debíamos",
+    "3p": "debían"
+   }
+  },
+  {
+   "verb": "deber",
+   "english": "to owe",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "deba",
+    "2s": "debas",
+    "3s": "deba",
+    "1p": "debamos",
+    "3p": "deban"
+   }
+  },
+  {
+   "verb": "poner",
+   "english": "to put, place, set",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "pongo",
+    "2s": "pones",
+    "3s": "pone",
+    "1p": "ponemos",
+    "3p": "ponen"
+   }
+  },
+  {
+   "verb": "poner",
+   "english": "to put, place, set",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "puse",
+    "2s": "pusiste",
+    "3s": "puso",
+    "1p": "pusimos",
+    "3p": "pusieron"
+   }
+  },
+  {
+   "verb": "poner",
+   "english": "to put, place, set",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "ponía",
+    "2s": "ponías",
+    "3s": "ponía",
+    "1p": "poníamos",
+    "3p": "ponían"
+   }
+  },
+  {
+   "verb": "poner",
+   "english": "to put, place, set",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "ponga",
+    "2s": "pongas",
+    "3s": "ponga",
+    "1p": "pongamos",
+    "3p": "pongan"
+   }
+  },
+  {
+   "verb": "parecer",
+   "english": "to seem, appear",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "parezco",
+    "2s": "pareces",
+    "3s": "parece",
+    "1p": "parecemos",
+    "3p": "parecen"
+   }
+  },
+  {
+   "verb": "parecer",
+   "english": "to seem, appear",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "parecí",
+    "2s": "pareciste",
+    "3s": "pareció",
+    "1p": "parecimos",
+    "3p": "parecieron"
+   }
+  },
+  {
+   "verb": "parecer",
+   "english": "to seem, appear",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "parecía",
+    "2s": "parecías",
+    "3s": "parecía",
+    "1p": "parecíamos",
+    "3p": "parecían"
+   }
+  },
+  {
+   "verb": "parecer",
+   "english": "to seem, appear",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "parezca",
+    "2s": "parezcas",
+    "3s": "parezca",
+    "1p": "parezcamos",
+    "3p": "parezcan"
+   }
+  },
+  {
+   "verb": "quedar",
+   "english": "to stay, remain, be left",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "quedo",
+    "2s": "quedas",
+    "3s": "queda",
+    "1p": "quedamos",
+    "3p": "quedan"
+   }
+  },
+  {
+   "verb": "quedar",
+   "english": "to stay, remain, be left",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "quedé",
+    "2s": "quedaste",
+    "3s": "quedó",
+    "1p": "quedamos",
+    "3p": "quedaron"
+   }
+  },
+  {
+   "verb": "quedar",
+   "english": "to stay, remain, be left",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "quedaba",
+    "2s": "quedabas",
+    "3s": "quedaba",
+    "1p": "quedábamos",
+    "3p": "quedaban"
+   }
+  },
+  {
+   "verb": "quedar",
+   "english": "to stay, remain, be left",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "quede",
+    "2s": "quedes",
+    "3s": "quede",
+    "1p": "quedemos",
+    "3p": "queden"
+   }
+  },
+  {
+   "verb": "creer",
+   "english": "to believe",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "creo",
+    "2s": "crees",
+    "3s": "cree",
+    "1p": "creemos",
+    "3p": "creen"
+   }
+  },
+  {
+   "verb": "creer",
+   "english": "to believe",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "creí",
+    "2s": "creíste",
+    "3s": "creyó",
+    "1p": "creímos",
+    "3p": "creyeron"
+   }
+  },
+  {
+   "verb": "creer",
+   "english": "to believe",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "creía",
+    "2s": "creías",
+    "3s": "creía",
+    "1p": "creíamos",
+    "3p": "creían"
+   }
+  },
+  {
+   "verb": "creer",
+   "english": "to believe",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "crea",
+    "2s": "creas",
+    "3s": "crea",
+    "1p": "creamos",
+    "3p": "crean"
+   }
+  },
+  {
+   "verb": "hablar",
+   "english": "to speak",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "hablo",
+    "2s": "hablas",
+    "3s": "habla",
+    "1p": "hablamos",
+    "3p": "hablan"
+   }
+  },
+  {
+   "verb": "hablar",
+   "english": "to speak",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "hablé",
+    "2s": "hablaste",
+    "3s": "habló",
+    "1p": "hablamos",
+    "3p": "hablaron"
+   }
+  },
+  {
+   "verb": "hablar",
+   "english": "to speak",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "hablaba",
+    "2s": "hablabas",
+    "3s": "hablaba",
+    "1p": "hablábamos",
+    "3p": "hablaban"
+   }
+  },
+  {
+   "verb": "hablar",
+   "english": "to speak",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "hable",
+    "2s": "hables",
+    "3s": "hable",
+    "1p": "hablemos",
+    "3p": "hablen"
+   }
+  },
+  {
+   "verb": "llevar",
+   "english": "to carry, bring",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "llevo",
+    "2s": "llevas",
+    "3s": "lleva",
+    "1p": "llevamos",
+    "3p": "llevan"
+   }
+  },
+  {
+   "verb": "llevar",
+   "english": "to carry, bring",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "llevé",
+    "2s": "llevaste",
+    "3s": "llevó",
+    "1p": "llevamos",
+    "3p": "llevaron"
+   }
+  },
+  {
+   "verb": "llevar",
+   "english": "to carry, bring",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "llevaba",
+    "2s": "llevabas",
+    "3s": "llevaba",
+    "1p": "llevábamos",
+    "3p": "llevaban"
+   }
+  },
+  {
+   "verb": "llevar",
+   "english": "to carry, bring",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "lleve",
+    "2s": "lleves",
+    "3s": "lleve",
+    "1p": "llevemos",
+    "3p": "lleven"
+   }
+  },
+  {
+   "verb": "dejar",
+   "english": "to leave, abandon",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "dejo",
+    "2s": "dejas",
+    "3s": "deja",
+    "1p": "dejamos",
+    "3p": "dejan"
+   }
+  },
+  {
+   "verb": "dejar",
+   "english": "to leave, abandon",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "dejé",
+    "2s": "dejaste",
+    "3s": "dejó",
+    "1p": "dejamos",
+    "3p": "dejaron"
+   }
+  },
+  {
+   "verb": "dejar",
+   "english": "to leave, abandon",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "dejaba",
+    "2s": "dejabas",
+    "3s": "dejaba",
+    "1p": "dejábamos",
+    "3p": "dejaban"
+   }
+  },
+  {
+   "verb": "dejar",
+   "english": "to leave, abandon",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "deje",
+    "2s": "dejes",
+    "3s": "deje",
+    "1p": "dejemos",
+    "3p": "dejen"
+   }
+  },
+  {
+   "verb": "seguir",
+   "english": "to follow, continue",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "sigo",
+    "2s": "sigues",
+    "3s": "sigue",
+    "1p": "seguimos",
+    "3p": "siguen"
+   }
+  },
+  {
+   "verb": "seguir",
+   "english": "to follow, continue",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "seguí",
+    "2s": "seguiste",
+    "3s": "siguió",
+    "1p": "seguimos",
+    "3p": "siguieron"
+   }
+  },
+  {
+   "verb": "seguir",
+   "english": "to follow, continue",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "seguía",
+    "2s": "seguías",
+    "3s": "seguía",
+    "1p": "seguíamos",
+    "3p": "seguían"
+   }
+  },
+  {
+   "verb": "seguir",
+   "english": "to follow, continue",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "siga",
+    "2s": "sigas",
+    "3s": "siga",
+    "1p": "sigamos",
+    "3p": "sigan"
+   }
+  },
+  {
+   "verb": "encontrar",
+   "english": "to find, encounter",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "encuentro",
+    "2s": "encuentras",
+    "3s": "encuentra",
+    "1p": "encontramos",
+    "3p": "encuentran"
+   }
+  },
+  {
+   "verb": "encontrar",
+   "english": "to find, encounter",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "encontré",
+    "2s": "encontraste",
+    "3s": "encontró",
+    "1p": "encontramos",
+    "3p": "encontraron"
+   }
+  },
+  {
+   "verb": "encontrar",
+   "english": "to find, encounter",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "encontraba",
+    "2s": "encontrabas",
+    "3s": "encontraba",
+    "1p": "encontrábamos",
+    "3p": "encontraban"
+   }
+  },
+  {
+   "verb": "encontrar",
+   "english": "to find, encounter",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "encuentre",
+    "2s": "encuentres",
+    "3s": "encuentre",
+    "1p": "encontremos",
+    "3p": "encuentren"
+   }
+  },
+  {
+   "verb": "llamar",
+   "english": "to call, to name",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "llamo",
+    "2s": "llamas",
+    "3s": "llama",
+    "1p": "llamamos",
+    "3p": "llaman"
+   }
+  },
+  {
+   "verb": "llamar",
+   "english": "to call, to name",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "llamé",
+    "2s": "llamaste",
+    "3s": "llamó",
+    "1p": "llamamos",
+    "3p": "llamaron"
+   }
+  },
+  {
+   "verb": "llamar",
+   "english": "to call, to name",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "llamaba",
+    "2s": "llamabas",
+    "3s": "llamaba",
+    "1p": "llamábamos",
+    "3p": "llamaban"
+   }
+  },
+  {
+   "verb": "llamar",
+   "english": "to call, to name",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "llame",
+    "2s": "llames",
+    "3s": "llame",
+    "1p": "llamemos",
+    "3p": "llamen"
+   }
+  },
+  {
+   "verb": "venir",
+   "english": "to come",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "vengo",
+    "2s": "vienes",
+    "3s": "viene",
+    "1p": "venimos",
+    "3p": "vienen"
+   }
+  },
+  {
+   "verb": "venir",
+   "english": "to come",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "vine",
+    "2s": "viniste",
+    "3s": "vino",
+    "1p": "vinimos",
+    "3p": "vinieron"
+   }
+  },
+  {
+   "verb": "venir",
+   "english": "to come",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "venía",
+    "2s": "venías",
+    "3s": "venía",
+    "1p": "veníamos",
+    "3p": "venían"
+   }
+  },
+  {
+   "verb": "venir",
+   "english": "to come",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "venga",
+    "2s": "vengas",
+    "3s": "venga",
+    "1p": "vengamos",
+    "3p": "vengan"
+   }
+  },
+  {
+   "verb": "pensar",
+   "english": "to think",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "pienso",
+    "2s": "piensas",
+    "3s": "piensa",
+    "1p": "pensamos",
+    "3p": "piensan"
+   }
+  },
+  {
+   "verb": "pensar",
+   "english": "to think",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "pensé",
+    "2s": "pensaste",
+    "3s": "pensó",
+    "1p": "pensamos",
+    "3p": "pensaron"
+   }
+  },
+  {
+   "verb": "pensar",
+   "english": "to think",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "pensaba",
+    "2s": "pensabas",
+    "3s": "pensaba",
+    "1p": "pensábamos",
+    "3p": "pensaban"
+   }
+  },
+  {
+   "verb": "pensar",
+   "english": "to think",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "piense",
+    "2s": "pienses",
+    "3s": "piense",
+    "1p": "pensemos",
+    "3p": "piensen"
+   }
+  },
+  {
+   "verb": "salir",
+   "english": "to leave, go out",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "salgo",
+    "2s": "sales",
+    "3s": "sale",
+    "1p": "salimos",
+    "3p": "salen"
+   }
+  },
+  {
+   "verb": "salir",
+   "english": "to leave, go out",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "salí",
+    "2s": "saliste",
+    "3s": "salió",
+    "1p": "salimos",
+    "3p": "salieron"
+   }
+  },
+  {
+   "verb": "salir",
+   "english": "to leave, go out",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "salía",
+    "2s": "salías",
+    "3s": "salía",
+    "1p": "salíamos",
+    "3p": "salían"
+   }
+  },
+  {
+   "verb": "salir",
+   "english": "to leave, go out",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "salga",
+    "2s": "salgas",
+    "3s": "salga",
+    "1p": "salgamos",
+    "3p": "salgan"
+   }
+  },
+  {
+   "verb": "volver",
+   "english": "to return, go back",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "vuelvo",
+    "2s": "vuelves",
+    "3s": "vuelve",
+    "1p": "volvemos",
+    "3p": "vuelven"
+   }
+  },
+  {
+   "verb": "volver",
+   "english": "to return, go back",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "volví",
+    "2s": "volviste",
+    "3s": "volvió",
+    "1p": "volvimos",
+    "3p": "volvieron"
+   }
+  },
+  {
+   "verb": "volver",
+   "english": "to return, go back",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "volvía",
+    "2s": "volvías",
+    "3s": "volvía",
+    "1p": "volvíamos",
+    "3p": "volvían"
+   }
+  },
+  {
+   "verb": "volver",
+   "english": "to return, go back",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "vuelva",
+    "2s": "vuelvas",
+    "3s": "vuelva",
+    "1p": "volvamos",
+    "3p": "vuelvan"
+   }
+  },
+  {
+   "verb": "tomar",
+   "english": "to take, drink",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "tomo",
+    "2s": "tomas",
+    "3s": "toma",
+    "1p": "tomamos",
+    "3p": "toman"
+   }
+  },
+  {
+   "verb": "tomar",
+   "english": "to take, drink",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "tomé",
+    "2s": "tomaste",
+    "3s": "tomó",
+    "1p": "tomamos",
+    "3p": "tomaron"
+   }
+  },
+  {
+   "verb": "tomar",
+   "english": "to take, drink",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "tomaba",
+    "2s": "tomabas",
+    "3s": "tomaba",
+    "1p": "tomábamos",
+    "3p": "tomaban"
+   }
+  },
+  {
+   "verb": "tomar",
+   "english": "to take, drink",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "tome",
+    "2s": "tomes",
+    "3s": "tome",
+    "1p": "tomemos",
+    "3p": "tomen"
+   }
+  },
+  {
+   "verb": "conocer",
+   "english": "to know",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "conozco",
+    "2s": "conoces",
+    "3s": "conoce",
+    "1p": "conocemos",
+    "3p": "conocen"
+   }
+  },
+  {
+   "verb": "conocer",
+   "english": "to know",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "conocí",
+    "2s": "conociste",
+    "3s": "conoció",
+    "1p": "conocimos",
+    "3p": "conocieron"
+   }
+  },
+  {
+   "verb": "conocer",
+   "english": "to know",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "conocía",
+    "2s": "conocías",
+    "3s": "conocía",
+    "1p": "conocíamos",
+    "3p": "conocían"
+   }
+  },
+  {
+   "verb": "conocer",
+   "english": "to know",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "conozca",
+    "2s": "conozcas",
+    "3s": "conozca",
+    "1p": "conozcamos",
+    "3p": "conozcan"
+   }
+  },
+  {
+   "verb": "vivir",
+   "english": "to live",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "vivo",
+    "2s": "vives",
+    "3s": "vive",
+    "1p": "vivimos",
+    "3p": "viven"
+   }
+  },
+  {
+   "verb": "vivir",
+   "english": "to live",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "viví",
+    "2s": "viviste",
+    "3s": "vivió",
+    "1p": "vivimos",
+    "3p": "vivieron"
+   }
+  },
+  {
+   "verb": "vivir",
+   "english": "to live",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "vivía",
+    "2s": "vivías",
+    "3s": "vivía",
+    "1p": "vivíamos",
+    "3p": "vivían"
+   }
+  },
+  {
+   "verb": "vivir",
+   "english": "to live",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "viva",
+    "2s": "vivas",
+    "3s": "viva",
+    "1p": "vivamos",
+    "3p": "vivan"
+   }
+  },
+  {
+   "verb": "sentir",
+   "english": "to feel, regret",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "siento",
+    "2s": "sientes",
+    "3s": "siente",
+    "1p": "sentimos",
+    "3p": "sienten"
+   }
+  },
+  {
+   "verb": "sentir",
+   "english": "to feel, regret",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "sentí",
+    "2s": "sentiste",
+    "3s": "sintió",
+    "1p": "sentimos",
+    "3p": "sintieron"
+   }
+  },
+  {
+   "verb": "sentir",
+   "english": "to feel, regret",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "sentía",
+    "2s": "sentías",
+    "3s": "sentía",
+    "1p": "sentíamos",
+    "3p": "sentían"
+   }
+  },
+  {
+   "verb": "sentir",
+   "english": "to feel, regret",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "sienta",
+    "2s": "sientas",
+    "3s": "sienta",
+    "1p": "sintamos",
+    "3p": "sientan"
+   }
+  },
+  {
+   "verb": "mirar",
+   "english": "to watch, look at",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "miro",
+    "2s": "miras",
+    "3s": "mira",
+    "1p": "miramos",
+    "3p": "miran"
+   }
+  },
+  {
+   "verb": "mirar",
+   "english": "to watch, look at",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "miré",
+    "2s": "miraste",
+    "3s": "miró",
+    "1p": "miramos",
+    "3p": "miraron"
+   }
+  },
+  {
+   "verb": "mirar",
+   "english": "to watch, look at",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "miraba",
+    "2s": "mirabas",
+    "3s": "miraba",
+    "1p": "mirábamos",
+    "3p": "miraban"
+   }
+  },
+  {
+   "verb": "mirar",
+   "english": "to watch, look at",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "mire",
+    "2s": "mires",
+    "3s": "mire",
+    "1p": "miremos",
+    "3p": "miren"
+   }
+  },
+  {
+   "verb": "contar",
+   "english": "to count, relate, tell",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "cuento",
+    "2s": "cuentas",
+    "3s": "cuenta",
+    "1p": "contamos",
+    "3p": "cuentan"
+   }
+  },
+  {
+   "verb": "contar",
+   "english": "to count, relate, tell",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "conté",
+    "2s": "contaste",
+    "3s": "contó",
+    "1p": "contamos",
+    "3p": "contaron"
+   }
+  },
+  {
+   "verb": "contar",
+   "english": "to count, relate, tell",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "contaba",
+    "2s": "contabas",
+    "3s": "contaba",
+    "1p": "contábamos",
+    "3p": "contaban"
+   }
+  },
+  {
+   "verb": "contar",
+   "english": "to count, relate, tell",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "cuente",
+    "2s": "cuentes",
+    "3s": "cuente",
+    "1p": "contemos",
+    "3p": "cuenten"
+   }
+  },
+  {
+   "verb": "empezar",
+   "english": "to begin, start",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "empiezo",
+    "2s": "empiezas",
+    "3s": "empieza",
+    "1p": "empezamos",
+    "3p": "empiezan"
+   }
+  },
+  {
+   "verb": "empezar",
+   "english": "to begin, start",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "empecé",
+    "2s": "empezaste",
+    "3s": "empezó",
+    "1p": "empezamos",
+    "3p": "empezaron"
+   }
+  },
+  {
+   "verb": "empezar",
+   "english": "to begin, start",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "empezaba",
+    "2s": "empezabas",
+    "3s": "empezaba",
+    "1p": "empezábamos",
+    "3p": "empezaban"
+   }
+  },
+  {
+   "verb": "empezar",
+   "english": "to begin, start",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "empiece",
+    "2s": "empieces",
+    "3s": "empiece",
+    "1p": "empecemos",
+    "3p": "empiecen"
+   }
+  },
+  {
+   "verb": "esperar",
+   "english": "to hope",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "espero",
+    "2s": "esperas",
+    "3s": "espera",
+    "1p": "esperamos",
+    "3p": "esperan"
+   }
+  },
+  {
+   "verb": "esperar",
+   "english": "to hope",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "esperé",
+    "2s": "esperaste",
+    "3s": "esperó",
+    "1p": "esperamos",
+    "3p": "esperaron"
+   }
+  },
+  {
+   "verb": "esperar",
+   "english": "to hope",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "esperaba",
+    "2s": "esperabas",
+    "3s": "esperaba",
+    "1p": "esperábamos",
+    "3p": "esperaban"
+   }
+  },
+  {
+   "verb": "esperar",
+   "english": "to hope",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "espere",
+    "2s": "esperes",
+    "3s": "espere",
+    "1p": "esperemos",
+    "3p": "esperen"
+   }
+  },
+  {
+   "verb": "buscar",
+   "english": "to search for, look for",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "busco",
+    "2s": "buscas",
+    "3s": "busca",
+    "1p": "buscamos",
+    "3p": "buscan"
+   }
+  },
+  {
+   "verb": "buscar",
+   "english": "to search for, look for",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "busqué",
+    "2s": "buscaste",
+    "3s": "buscó",
+    "1p": "buscamos",
+    "3p": "buscaron"
+   }
+  },
+  {
+   "verb": "buscar",
+   "english": "to search for, look for",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "buscaba",
+    "2s": "buscabas",
+    "3s": "buscaba",
+    "1p": "buscábamos",
+    "3p": "buscaban"
+   }
+  },
+  {
+   "verb": "buscar",
+   "english": "to search for, look for",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "busque",
+    "2s": "busques",
+    "3s": "busque",
+    "1p": "busquemos",
+    "3p": "busquen"
+   }
+  },
+  {
+   "verb": "entrar",
+   "english": "to enter, go in, come in",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "entro",
+    "2s": "entras",
+    "3s": "entra",
+    "1p": "entramos",
+    "3p": "entran"
+   }
+  },
+  {
+   "verb": "entrar",
+   "english": "to enter, go in, come in",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "entré",
+    "2s": "entraste",
+    "3s": "entró",
+    "1p": "entramos",
+    "3p": "entraron"
+   }
+  },
+  {
+   "verb": "entrar",
+   "english": "to enter, go in, come in",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "entraba",
+    "2s": "entrabas",
+    "3s": "entraba",
+    "1p": "entrábamos",
+    "3p": "entraban"
+   }
+  },
+  {
+   "verb": "entrar",
+   "english": "to enter, go in, come in",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "entre",
+    "2s": "entres",
+    "3s": "entre",
+    "1p": "entremos",
+    "3p": "entren"
+   }
+  },
+  {
+   "verb": "trabajar",
+   "english": "to work",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "trabajo",
+    "2s": "trabajas",
+    "3s": "trabaja",
+    "1p": "trabajamos",
+    "3p": "trabajan"
+   }
+  },
+  {
+   "verb": "trabajar",
+   "english": "to work",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "trabajé",
+    "2s": "trabajaste",
+    "3s": "trabajó",
+    "1p": "trabajamos",
+    "3p": "trabajaron"
+   }
+  },
+  {
+   "verb": "trabajar",
+   "english": "to work",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "trabajaba",
+    "2s": "trabajabas",
+    "3s": "trabajaba",
+    "1p": "trabajábamos",
+    "3p": "trabajaban"
+   }
+  },
+  {
+   "verb": "trabajar",
+   "english": "to work",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "trabaje",
+    "2s": "trabajes",
+    "3s": "trabaje",
+    "1p": "trabajemos",
+    "3p": "trabajen"
+   }
+  },
+  {
+   "verb": "escribir",
+   "english": "to write",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "escribo",
+    "2s": "escribes",
+    "3s": "escribe",
+    "1p": "escribimos",
+    "3p": "escriben"
+   }
+  },
+  {
+   "verb": "escribir",
+   "english": "to write",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "escribí",
+    "2s": "escribiste",
+    "3s": "escribió",
+    "1p": "escribimos",
+    "3p": "escribieron"
+   }
+  },
+  {
+   "verb": "escribir",
+   "english": "to write",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "escribía",
+    "2s": "escribías",
+    "3s": "escribía",
+    "1p": "escribíamos",
+    "3p": "escribían"
+   }
+  },
+  {
+   "verb": "escribir",
+   "english": "to write",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "escriba",
+    "2s": "escribas",
+    "3s": "escriba",
+    "1p": "escribamos",
+    "3p": "escriban"
+   }
+  },
+  {
+   "verb": "perder",
+   "english": "to lose",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "pierdo",
+    "2s": "pierdes",
+    "3s": "pierde",
+    "1p": "perdemos",
+    "3p": "pierden"
+   }
+  },
+  {
+   "verb": "perder",
+   "english": "to lose",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "perdí",
+    "2s": "perdiste",
+    "3s": "perdió",
+    "1p": "perdimos",
+    "3p": "perdieron"
+   }
+  },
+  {
+   "verb": "perder",
+   "english": "to lose",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "perdía",
+    "2s": "perdías",
+    "3s": "perdía",
+    "1p": "perdíamos",
+    "3p": "perdían"
+   }
+  },
+  {
+   "verb": "perder",
+   "english": "to lose",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "pierda",
+    "2s": "pierdas",
+    "3s": "pierda",
+    "1p": "perdamos",
+    "3p": "pierdan"
+   }
+  },
+  {
+   "verb": "entender",
+   "english": "to understand",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "entiendo",
+    "2s": "entiendes",
+    "3s": "entiende",
+    "1p": "entendemos",
+    "3p": "entienden"
+   }
+  },
+  {
+   "verb": "entender",
+   "english": "to understand",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "entendí",
+    "2s": "entendiste",
+    "3s": "entendió",
+    "1p": "entendimos",
+    "3p": "entendieron"
+   }
+  },
+  {
+   "verb": "entender",
+   "english": "to understand",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "entendía",
+    "2s": "entendías",
+    "3s": "entendía",
+    "1p": "entendíamos",
+    "3p": "entendían"
+   }
+  },
+  {
+   "verb": "entender",
+   "english": "to understand",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "entienda",
+    "2s": "entiendas",
+    "3s": "entienda",
+    "1p": "entendamos",
+    "3p": "entiendan"
+   }
+  },
+  {
+   "verb": "pedir",
+   "english": "to request, ask for",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "pido",
+    "2s": "pides",
+    "3s": "pide",
+    "1p": "pedimos",
+    "3p": "piden"
+   }
+  },
+  {
+   "verb": "pedir",
+   "english": "to request, ask for",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "pedí",
+    "2s": "pediste",
+    "3s": "pidió",
+    "1p": "pedimos",
+    "3p": "pidieron"
+   }
+  },
+  {
+   "verb": "pedir",
+   "english": "to request, ask for",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "pedía",
+    "2s": "pedías",
+    "3s": "pedía",
+    "1p": "pedíamos",
+    "3p": "pedían"
+   }
+  },
+  {
+   "verb": "pedir",
+   "english": "to request, ask for",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "pida",
+    "2s": "pidas",
+    "3s": "pida",
+    "1p": "pidamos",
+    "3p": "pidan"
+   }
+  },
+  {
+   "verb": "recibir",
+   "english": "to receive",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "recibo",
+    "2s": "recibes",
+    "3s": "recibe",
+    "1p": "recibimos",
+    "3p": "reciben"
+   }
+  },
+  {
+   "verb": "recibir",
+   "english": "to receive",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "recibí",
+    "2s": "recibiste",
+    "3s": "recibió",
+    "1p": "recibimos",
+    "3p": "recibieron"
+   }
+  },
+  {
+   "verb": "recibir",
+   "english": "to receive",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "recibía",
+    "2s": "recibías",
+    "3s": "recibía",
+    "1p": "recibíamos",
+    "3p": "recibían"
+   }
+  },
+  {
+   "verb": "recibir",
+   "english": "to receive",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "reciba",
+    "2s": "recibas",
+    "3s": "reciba",
+    "1p": "recibamos",
+    "3p": "reciban"
+   }
+  },
+  {
+   "verb": "recordar",
+   "english": "to remember, remind",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "recuerdo",
+    "2s": "recuerdas",
+    "3s": "recuerda",
+    "1p": "recordamos",
+    "3p": "recuerdan"
+   }
+  },
+  {
+   "verb": "recordar",
+   "english": "to remember, remind",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "recordé",
+    "2s": "recordaste",
+    "3s": "recordó",
+    "1p": "recordamos",
+    "3p": "recordaron"
+   }
+  },
+  {
+   "verb": "recordar",
+   "english": "to remember, remind",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "recordaba",
+    "2s": "recordabas",
+    "3s": "recordaba",
+    "1p": "recordábamos",
+    "3p": "recordaban"
+   }
+  },
+  {
+   "verb": "recordar",
+   "english": "to remember, remind",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "recuerde",
+    "2s": "recuerdes",
+    "3s": "recuerde",
+    "1p": "recordemos",
+    "3p": "recuerden"
+   }
+  },
+  {
+   "verb": "terminar",
+   "english": "to finish, end",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "termino",
+    "2s": "terminas",
+    "3s": "termina",
+    "1p": "terminamos",
+    "3p": "terminan"
+   }
+  },
+  {
+   "verb": "terminar",
+   "english": "to finish, end",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "terminé",
+    "2s": "terminaste",
+    "3s": "terminó",
+    "1p": "terminamos",
+    "3p": "terminaron"
+   }
+  },
+  {
+   "verb": "terminar",
+   "english": "to finish, end",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "terminaba",
+    "2s": "terminabas",
+    "3s": "terminaba",
+    "1p": "terminábamos",
+    "3p": "terminaban"
+   }
+  },
+  {
+   "verb": "terminar",
+   "english": "to finish, end",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "termine",
+    "2s": "termines",
+    "3s": "termine",
+    "1p": "terminemos",
+    "3p": "terminen"
+   }
+  },
+  {
+   "verb": "aprender",
+   "english": "to learn",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "aprendo",
+    "2s": "aprendes",
+    "3s": "aprende",
+    "1p": "aprendemos",
+    "3p": "aprenden"
+   }
+  },
+  {
+   "verb": "aprender",
+   "english": "to learn",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "aprendí",
+    "2s": "aprendiste",
+    "3s": "aprendió",
+    "1p": "aprendimos",
+    "3p": "aprendieron"
+   }
+  },
+  {
+   "verb": "aprender",
+   "english": "to learn",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "aprendía",
+    "2s": "aprendías",
+    "3s": "aprendía",
+    "1p": "aprendíamos",
+    "3p": "aprendían"
+   }
+  },
+  {
+   "verb": "aprender",
+   "english": "to learn",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "aprenda",
+    "2s": "aprendas",
+    "3s": "aprenda",
+    "1p": "aprendamos",
+    "3p": "aprendan"
+   }
+  },
+  {
+   "verb": "comer",
+   "english": "to eat",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "como",
+    "2s": "comes",
+    "3s": "come",
+    "1p": "comemos",
+    "3p": "comen"
+   }
+  },
+  {
+   "verb": "comer",
+   "english": "to eat",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "comí",
+    "2s": "comiste",
+    "3s": "comió",
+    "1p": "comimos",
+    "3p": "comieron"
+   }
+  },
+  {
+   "verb": "comer",
+   "english": "to eat",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "comía",
+    "2s": "comías",
+    "3s": "comía",
+    "1p": "comíamos",
+    "3p": "comían"
+   }
+  },
+  {
+   "verb": "comer",
+   "english": "to eat",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "coma",
+    "2s": "comas",
+    "3s": "coma",
+    "1p": "comamos",
+    "3p": "coman"
+   }
+  },
+  {
+   "verb": "beber",
+   "english": "to drink",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "bebo",
+    "2s": "bebes",
+    "3s": "bebe",
+    "1p": "bebemos",
+    "3p": "beben"
+   }
+  },
+  {
+   "verb": "beber",
+   "english": "to drink",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "bebí",
+    "2s": "bebiste",
+    "3s": "bebió",
+    "1p": "bebimos",
+    "3p": "bebieron"
+   }
+  },
+  {
+   "verb": "beber",
+   "english": "to drink",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "bebía",
+    "2s": "bebías",
+    "3s": "bebía",
+    "1p": "bebíamos",
+    "3p": "bebían"
+   }
+  },
+  {
+   "verb": "beber",
+   "english": "to drink",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "beba",
+    "2s": "bebas",
+    "3s": "beba",
+    "1p": "bebamos",
+    "3p": "beban"
+   }
+  },
+  {
+   "verb": "jugar",
+   "english": "to play",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "juego",
+    "2s": "juegas",
+    "3s": "juega",
+    "1p": "jugamos",
+    "3p": "juegan"
+   }
+  },
+  {
+   "verb": "jugar",
+   "english": "to play",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "jugué",
+    "2s": "jugaste",
+    "3s": "jugó",
+    "1p": "jugamos",
+    "3p": "jugaron"
+   }
+  },
+  {
+   "verb": "jugar",
+   "english": "to play",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "jugaba",
+    "2s": "jugabas",
+    "3s": "jugaba",
+    "1p": "jugábamos",
+    "3p": "jugaban"
+   }
+  },
+  {
+   "verb": "jugar",
+   "english": "to play",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "juegue",
+    "2s": "juegues",
+    "3s": "juegue",
+    "1p": "juguemos",
+    "3p": "jueguen"
+   }
+  },
+  {
+   "verb": "leer",
+   "english": "to read",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "leo",
+    "2s": "lees",
+    "3s": "lee",
+    "1p": "leemos",
+    "3p": "leen"
+   }
+  },
+  {
+   "verb": "leer",
+   "english": "to read",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "leí",
+    "2s": "leíste",
+    "3s": "leyó",
+    "1p": "leímos",
+    "3p": "leyeron"
+   }
+  },
+  {
+   "verb": "leer",
+   "english": "to read",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "leía",
+    "2s": "leías",
+    "3s": "leía",
+    "1p": "leíamos",
+    "3p": "leían"
+   }
+  },
+  {
+   "verb": "leer",
+   "english": "to read",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "lea",
+    "2s": "leas",
+    "3s": "lea",
+    "1p": "leamos",
+    "3p": "lean"
+   }
+  },
+  {
+   "verb": "abrir",
+   "english": "to open",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "abro",
+    "2s": "abres",
+    "3s": "abre",
+    "1p": "abrimos",
+    "3p": "abren"
+   }
+  },
+  {
+   "verb": "abrir",
+   "english": "to open",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "abrí",
+    "2s": "abriste",
+    "3s": "abrió",
+    "1p": "abrimos",
+    "3p": "abrieron"
+   }
+  },
+  {
+   "verb": "abrir",
+   "english": "to open",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "abría",
+    "2s": "abrías",
+    "3s": "abría",
+    "1p": "abríamos",
+    "3p": "abrían"
+   }
+  },
+  {
+   "verb": "abrir",
+   "english": "to open",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "abra",
+    "2s": "abras",
+    "3s": "abra",
+    "1p": "abramos",
+    "3p": "abran"
+   }
+  },
+  {
+   "verb": "dormir",
+   "english": "to sleep",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "duermo",
+    "2s": "duermes",
+    "3s": "duerme",
+    "1p": "dormimos",
+    "3p": "duermen"
+   }
+  },
+  {
+   "verb": "dormir",
+   "english": "to sleep",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "dormí",
+    "2s": "dormiste",
+    "3s": "durmió",
+    "1p": "dormimos",
+    "3p": "durmieron"
+   }
+  },
+  {
+   "verb": "dormir",
+   "english": "to sleep",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "dormía",
+    "2s": "dormías",
+    "3s": "dormía",
+    "1p": "dormíamos",
+    "3p": "dormían"
+   }
+  },
+  {
+   "verb": "dormir",
+   "english": "to sleep",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "duerma",
+    "2s": "duermas",
+    "3s": "duerma",
+    "1p": "durmamos",
+    "3p": "duerman"
+   }
+  },
+  {
+   "verb": "comprar",
+   "english": "to buy, purchase",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "compro",
+    "2s": "compras",
+    "3s": "compra",
+    "1p": "compramos",
+    "3p": "compran"
+   }
+  },
+  {
+   "verb": "comprar",
+   "english": "to buy, purchase",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "compré",
+    "2s": "compraste",
+    "3s": "compró",
+    "1p": "compramos",
+    "3p": "compraron"
+   }
+  },
+  {
+   "verb": "comprar",
+   "english": "to buy, purchase",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "compraba",
+    "2s": "comprabas",
+    "3s": "compraba",
+    "1p": "comprábamos",
+    "3p": "compraban"
+   }
+  },
+  {
+   "verb": "comprar",
+   "english": "to buy, purchase",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "compre",
+    "2s": "compres",
+    "3s": "compre",
+    "1p": "compremos",
+    "3p": "compren"
+   }
+  },
+  {
+   "verb": "necesitar",
+   "english": "to need, require",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "necesito",
+    "2s": "necesitas",
+    "3s": "necesita",
+    "1p": "necesitamos",
+    "3p": "necesitan"
+   }
+  },
+  {
+   "verb": "necesitar",
+   "english": "to need, require",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "necesité",
+    "2s": "necesitaste",
+    "3s": "necesitó",
+    "1p": "necesitamos",
+    "3p": "necesitaron"
+   }
+  },
+  {
+   "verb": "necesitar",
+   "english": "to need, require",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "necesitaba",
+    "2s": "necesitabas",
+    "3s": "necesitaba",
+    "1p": "necesitábamos",
+    "3p": "necesitaban"
+   }
+  },
+  {
+   "verb": "necesitar",
+   "english": "to need, require",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "necesite",
+    "2s": "necesites",
+    "3s": "necesite",
+    "1p": "necesitemos",
+    "3p": "necesiten"
+   }
+  },
+  {
+   "verb": "usar",
+   "english": "to use",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "uso",
+    "2s": "usas",
+    "3s": "usa",
+    "1p": "usamos",
+    "3p": "usan"
+   }
+  },
+  {
+   "verb": "usar",
+   "english": "to use",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "usé",
+    "2s": "usaste",
+    "3s": "usó",
+    "1p": "usamos",
+    "3p": "usaron"
+   }
+  },
+  {
+   "verb": "usar",
+   "english": "to use",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "usaba",
+    "2s": "usabas",
+    "3s": "usaba",
+    "1p": "usábamos",
+    "3p": "usaban"
+   }
+  },
+  {
+   "verb": "usar",
+   "english": "to use",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "use",
+    "2s": "uses",
+    "3s": "use",
+    "1p": "usemos",
+    "3p": "usen"
+   }
+  },
+  {
+   "verb": "pagar",
+   "english": "to pay, pay for",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "pago",
+    "2s": "pagas",
+    "3s": "paga",
+    "1p": "pagamos",
+    "3p": "pagan"
+   }
+  },
+  {
+   "verb": "pagar",
+   "english": "to pay, pay for",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "pagué",
+    "2s": "pagaste",
+    "3s": "pagó",
+    "1p": "pagamos",
+    "3p": "pagaron"
+   }
+  },
+  {
+   "verb": "pagar",
+   "english": "to pay, pay for",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "pagaba",
+    "2s": "pagabas",
+    "3s": "pagaba",
+    "1p": "pagábamos",
+    "3p": "pagaban"
+   }
+  },
+  {
+   "verb": "pagar",
+   "english": "to pay, pay for",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "pague",
+    "2s": "pagues",
+    "3s": "pague",
+    "1p": "paguemos",
+    "3p": "paguen"
+   }
+  },
+  {
+   "verb": "ayudar",
+   "english": "to help",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "ayudo",
+    "2s": "ayudas",
+    "3s": "ayuda",
+    "1p": "ayudamos",
+    "3p": "ayudan"
+   }
+  },
+  {
+   "verb": "ayudar",
+   "english": "to help",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "ayudé",
+    "2s": "ayudaste",
+    "3s": "ayudó",
+    "1p": "ayudamos",
+    "3p": "ayudaron"
+   }
+  },
+  {
+   "verb": "ayudar",
+   "english": "to help",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "ayudaba",
+    "2s": "ayudabas",
+    "3s": "ayudaba",
+    "1p": "ayudábamos",
+    "3p": "ayudaban"
+   }
+  },
+  {
+   "verb": "ayudar",
+   "english": "to help",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "ayude",
+    "2s": "ayudes",
+    "3s": "ayude",
+    "1p": "ayudemos",
+    "3p": "ayuden"
+   }
+  },
+  {
+   "verb": "gustar",
+   "english": "to please, be pleasing",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "gusto",
+    "2s": "gustas",
+    "3s": "gusta",
+    "1p": "gustamos",
+    "3p": "gustan"
+   }
+  },
+  {
+   "verb": "gustar",
+   "english": "to please, be pleasing",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "gusté",
+    "2s": "gustaste",
+    "3s": "gustó",
+    "1p": "gustamos",
+    "3p": "gustaron"
+   }
+  },
+  {
+   "verb": "gustar",
+   "english": "to please, be pleasing",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "gustaba",
+    "2s": "gustabas",
+    "3s": "gustaba",
+    "1p": "gustábamos",
+    "3p": "gustaban"
+   }
+  },
+  {
+   "verb": "gustar",
+   "english": "to please, be pleasing",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "guste",
+    "2s": "gustes",
+    "3s": "guste",
+    "1p": "gustemos",
+    "3p": "gusten"
+   }
+  },
+  {
+   "verb": "oír",
+   "english": "to hear",
+   "mood": "Indicativo",
+   "tense": "Presente",
+   "tenseEn": "present",
+   "forms": {
+    "1s": "oigo",
+    "2s": "oyes",
+    "3s": "oye",
+    "1p": "oímos",
+    "3p": "oyen"
+   }
+  },
+  {
+   "verb": "oír",
+   "english": "to hear",
+   "mood": "Indicativo",
+   "tense": "Pretérito",
+   "tenseEn": "preterite",
+   "forms": {
+    "1s": "oí",
+    "2s": "oíste",
+    "3s": "oyó",
+    "1p": "oímos",
+    "3p": "oyeron"
+   }
+  },
+  {
+   "verb": "oír",
+   "english": "to hear",
+   "mood": "Indicativo",
+   "tense": "Imperfecto",
+   "tenseEn": "imperfect",
+   "forms": {
+    "1s": "oía",
+    "2s": "oías",
+    "3s": "oía",
+    "1p": "oíamos",
+    "3p": "oían"
+   }
+  },
+  {
+   "verb": "oír",
+   "english": "to hear",
+   "mood": "Subjuntivo",
+   "tense": "Presente",
+   "tenseEn": "present subjunctive",
+   "forms": {
+    "1s": "oiga",
+    "2s": "oigas",
+    "3s": "oiga",
+    "1p": "oigamos",
+    "3p": "oigan"
+   }
+  }
+ ]
+}

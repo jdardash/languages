@@ -1,0 +1,3077 @@
+{
+ "language": "spanish",
+ "items": [
+  {
+   "id": "z-w-1",
+   "rank": 1,
+   "text": "Soy ____ California.",
+   "answer": "de",
+   "en": "I am from California.",
+   "gloss": "of, from"
+  },
+  {
+   "id": "z-w-2",
+   "rank": 2,
+   "text": "____ casa es grande.",
+   "answer": "La",
+   "en": "The house is big.",
+   "gloss": "the (feminine)"
+  },
+  {
+   "id": "z-w-3",
+   "rank": 3,
+   "text": "____ libro está aquí.",
+   "answer": "El",
+   "en": "The book is here.",
+   "gloss": "the (masculine)"
+  },
+  {
+   "id": "z-w-4",
+   "rank": 4,
+   "text": "Creo ____ sí.",
+   "answer": "que",
+   "en": "I think so.",
+   "gloss": "that, which"
+  },
+  {
+   "id": "z-w-5",
+   "rank": 5,
+   "text": "Tú ____ yo.",
+   "answer": "y",
+   "en": "You and I.",
+   "gloss": "and"
+  },
+  {
+   "id": "z-w-6",
+   "rank": 6,
+   "text": "Voy ____ la tienda.",
+   "answer": "a",
+   "en": "I am going to the store.",
+   "gloss": "to, at"
+  },
+  {
+   "id": "z-w-7",
+   "rank": 7,
+   "text": "Estoy ____ casa.",
+   "answer": "en",
+   "en": "I am at home.",
+   "gloss": "in, on, at"
+  },
+  {
+   "id": "z-w-8",
+   "rank": 8,
+   "text": "Tengo ____ perro.",
+   "answer": "un",
+   "en": "I have a dog.",
+   "gloss": "a, an (masculine)"
+  },
+  {
+   "id": "z-w-9",
+   "rank": 9,
+   "text": "Quiero ____ manzana.",
+   "answer": "una",
+   "en": "I want an apple.",
+   "gloss": "a, an (feminine)"
+  },
+  {
+   "id": "z-w-10",
+   "rank": 10,
+   "text": "Quiero ____ profesor.",
+   "answer": "ser",
+   "en": "I want to be a teacher.",
+   "gloss": "to be (identity, traits)"
+  },
+  {
+   "id": "z-w-11",
+   "rank": 11,
+   "text": "____ entiendo.",
+   "answer": "No",
+   "en": "I do not understand.",
+   "gloss": "no, not"
+  },
+  {
+   "id": "z-w-12",
+   "rank": 12,
+   "text": "____ llama Ana.",
+   "answer": "Se",
+   "en": "Her name is Ana.",
+   "gloss": "oneself, itself (reflexive)"
+  },
+  {
+   "id": "z-w-14",
+   "rank": 14,
+   "text": "Gracias ____ todo.",
+   "answer": "por",
+   "en": "Thanks for everything.",
+   "gloss": "for, by, through"
+  },
+  {
+   "id": "z-w-15",
+   "rank": 15,
+   "text": "Voy ____ mi hermana.",
+   "answer": "con",
+   "en": "I am going with my sister.",
+   "gloss": "with"
+  },
+  {
+   "id": "z-w-16",
+   "rank": 16,
+   "text": "____ carro es nuevo.",
+   "answer": "Su",
+   "en": "Their car is new.",
+   "gloss": "his, her, your (formal), their"
+  },
+  {
+   "id": "z-w-17",
+   "rank": 17,
+   "text": "Es ____ ti.",
+   "answer": "para",
+   "en": "It is for you.",
+   "gloss": "for, in order to"
+  },
+  {
+   "id": "z-w-18",
+   "rank": 18,
+   "text": "Es ____ su padre.",
+   "answer": "como",
+   "en": "He is like his father.",
+   "gloss": "like, as, how"
+  },
+  {
+   "id": "z-w-21",
+   "rank": 21,
+   "text": "No ____ sé.",
+   "answer": "lo",
+   "en": "I do not know it.",
+   "gloss": "it, him; the (neuter)"
+  },
+  {
+   "id": "z-w-22",
+   "rank": 22,
+   "text": "____ dije la verdad.",
+   "answer": "Le",
+   "en": "I told him the truth.",
+   "gloss": "to him, to her, to you"
+  },
+  {
+   "id": "z-w-23",
+   "rank": 23,
+   "text": "____ está bien.",
+   "answer": "Todo",
+   "en": "Everything is fine.",
+   "gloss": "all, everything"
+  },
+  {
+   "id": "z-w-24",
+   "rank": 24,
+   "text": "Quiero ir, ____ no puedo.",
+   "answer": "pero",
+   "en": "I want to go, but I cannot.",
+   "gloss": "but"
+  },
+  {
+   "id": "z-w-25",
+   "rank": 25,
+   "text": "Quiero ____ café.",
+   "answer": "más",
+   "en": "I want more coffee.",
+   "gloss": "more"
+  },
+  {
+   "id": "z-w-26",
+   "rank": 26,
+   "text": "Voy a ____ la cena.",
+   "answer": "hacer",
+   "en": "I am going to make dinner.",
+   "gloss": "to do, to make"
+  },
+  {
+   "id": "z-w-27",
+   "rank": 27,
+   "text": "¿Té ____ café?",
+   "answer": "o",
+   "en": "Tea or coffee?",
+   "gloss": "or"
+  },
+  {
+   "id": "z-w-29",
+   "rank": 29,
+   "text": "¿Qué quieres ____?",
+   "answer": "decir",
+   "en": "What do you mean?",
+   "gloss": "to say, to tell"
+  },
+  {
+   "id": "z-w-30",
+   "rank": 30,
+   "text": "____ libro es mío.",
+   "answer": "Este",
+   "en": "This book is mine.",
+   "gloss": "this"
+  },
+  {
+   "id": "z-w-32",
+   "rank": 32,
+   "text": "Dame ____ ejemplo.",
+   "answer": "otro",
+   "en": "Give me another example.",
+   "gloss": "other, another"
+  },
+  {
+   "id": "z-w-33",
+   "rank": 33,
+   "text": "____ señor es mi vecino.",
+   "answer": "Ese",
+   "en": "That man is my neighbor.",
+   "gloss": "that"
+  },
+  {
+   "id": "z-w-34",
+   "rank": 34,
+   "text": "____ llueve, me quedo.",
+   "answer": "Si",
+   "en": "If it rains, I am staying.",
+   "gloss": "if"
+  },
+  {
+   "id": "z-w-35",
+   "rank": 35,
+   "text": "____ gusta el café.",
+   "answer": "Me",
+   "en": "I like coffee.",
+   "gloss": "me, to me, myself"
+  },
+  {
+   "id": "z-w-36",
+   "rank": 36,
+   "text": "____ terminé.",
+   "answer": "Ya",
+   "en": "I already finished.",
+   "gloss": "already, now"
+  },
+  {
+   "id": "z-w-37",
+   "rank": 37,
+   "text": "Quiero ____ la película.",
+   "answer": "ver",
+   "en": "I want to see the movie.",
+   "gloss": "to see"
+  },
+  {
+   "id": "z-w-38",
+   "rank": 38,
+   "text": "Estudio ____ quiero aprender.",
+   "answer": "porque",
+   "en": "I study because I want to learn.",
+   "gloss": "because"
+  },
+  {
+   "id": "z-w-40",
+   "rank": 40,
+   "text": "____ llegues, avísame.",
+   "answer": "Cuando",
+   "en": "When you arrive, let me know.",
+   "gloss": "when"
+  },
+  {
+   "id": "z-w-41",
+   "rank": 41,
+   "text": "____ trabaja aquí.",
+   "answer": "Él",
+   "en": "He works here.",
+   "gloss": "he, him"
+  },
+  {
+   "id": "z-w-42",
+   "rank": 42,
+   "text": "Es ____ tarde.",
+   "answer": "muy",
+   "en": "It is very late.",
+   "gloss": "very"
+  },
+  {
+   "id": "z-w-43",
+   "rank": 43,
+   "text": "Café ____ azúcar, por favor.",
+   "answer": "sin",
+   "en": "Coffee without sugar, please.",
+   "gloss": "without"
+  },
+  {
+   "id": "z-w-44",
+   "rank": 44,
+   "text": "Otra ____, por favor.",
+   "answer": "vez",
+   "en": "One more time, please.",
+   "gloss": "time, occasion"
+  },
+  {
+   "id": "z-w-45",
+   "rank": 45,
+   "text": "Tengo ____ trabajo.",
+   "answer": "mucho",
+   "en": "I have a lot of work.",
+   "gloss": "a lot, much, many"
+  },
+  {
+   "id": "z-w-47",
+   "rank": 47,
+   "text": "¿____ hora es?",
+   "answer": "Qué",
+   "en": "What time is it?",
+   "gloss": "what"
+  },
+  {
+   "id": "z-w-48",
+   "rank": 48,
+   "text": "Es un libro ____ historia.",
+   "answer": "sobre",
+   "en": "It is a book about history.",
+   "gloss": "about, on, over"
+  },
+  {
+   "id": "z-w-49",
+   "rank": 49,
+   "text": "____ casa es tu casa.",
+   "answer": "Mi",
+   "en": "My house is your house.",
+   "gloss": "my"
+  },
+  {
+   "id": "z-w-50",
+   "rank": 50,
+   "text": "____ también.",
+   "answer": "Yo",
+   "en": "Me too.",
+   "gloss": "I"
+  },
+  {
+   "id": "z-w-51",
+   "rank": 51,
+   "text": "Ella ____ viene.",
+   "answer": "también",
+   "en": "She is coming too.",
+   "gloss": "also, too"
+  },
+  {
+   "id": "z-w-52",
+   "rank": 52,
+   "text": "Vivimos en el ____ edificio.",
+   "answer": "mismo",
+   "en": "We live in the same building.",
+   "gloss": "same, self"
+  },
+  {
+   "id": "z-w-53",
+   "rank": 53,
+   "text": "____ mañana.",
+   "answer": "Hasta",
+   "en": "See you tomorrow.",
+   "gloss": "until, up to"
+  },
+  {
+   "id": "z-w-55",
+   "rank": 55,
+   "text": "____ cafés, por favor.",
+   "answer": "Dos",
+   "en": "Two coffees, please.",
+   "gloss": "two"
+  },
+  {
+   "id": "z-w-57",
+   "rank": 57,
+   "text": "____ tú y yo.",
+   "answer": "Entre",
+   "en": "Between you and me.",
+   "gloss": "between, among"
+  },
+  {
+   "id": "z-w-58",
+   "rank": 58,
+   "text": "Se hace ____.",
+   "answer": "así",
+   "en": "It is done like this.",
+   "gloss": "like this, so"
+  },
+  {
+   "id": "z-w-59",
+   "rank": 59,
+   "text": "____, el desayuno.",
+   "answer": "Primero",
+   "en": "First, breakfast.",
+   "gloss": "first"
+  },
+  {
+   "id": "z-w-60",
+   "rank": 60,
+   "text": "Vivo aquí ____ enero.",
+   "answer": "desde",
+   "en": "I have lived here since January.",
+   "gloss": "since, from"
+  },
+  {
+   "id": "z-w-61",
+   "rank": 61,
+   "text": "Es una ciudad ____.",
+   "answer": "grande",
+   "en": "It is a big city.",
+   "gloss": "big, large, great"
+  },
+  {
+   "id": "z-w-62",
+   "rank": 62,
+   "text": "____ no importa.",
+   "answer": "Eso",
+   "en": "That does not matter.",
+   "gloss": "that (neuter)"
+  },
+  {
+   "id": "z-w-63",
+   "rank": 63,
+   "text": "____ tú ni yo lo sabemos.",
+   "answer": "Ni",
+   "en": "Neither you nor I know.",
+   "gloss": "neither, nor"
+  },
+  {
+   "id": "z-w-64",
+   "rank": 64,
+   "text": "____ vemos mañana.",
+   "answer": "Nos",
+   "en": "See you tomorrow.",
+   "gloss": "us, to us, ourselves"
+  },
+  {
+   "id": "z-w-67",
+   "rank": 67,
+   "text": "No tengo ____.",
+   "answer": "tiempo",
+   "en": "I do not have time.",
+   "gloss": "time; weather"
+  },
+  {
+   "id": "z-w-68",
+   "rank": 68,
+   "text": "____ es mi amiga.",
+   "answer": "Ella",
+   "en": "She is my friend.",
+   "gloss": "she, her"
+  },
+  {
+   "id": "z-w-69",
+   "rank": 69,
+   "text": "____, claro.",
+   "answer": "Sí",
+   "en": "Yes, of course.",
+   "gloss": "yes"
+  },
+  {
+   "id": "z-w-71",
+   "rank": 71,
+   "text": "Solo quiero ____.",
+   "answer": "uno",
+   "en": "I only want one.",
+   "gloss": "one"
+  },
+  {
+   "id": "z-w-72",
+   "rank": 72,
+   "text": "Estoy ____, gracias.",
+   "answer": "bien",
+   "en": "I am fine, thanks.",
+   "gloss": "well, fine"
+  },
+  {
+   "id": "z-w-73",
+   "rank": 73,
+   "text": "Hablo un ____ de español.",
+   "answer": "poco",
+   "en": "I speak a little Spanish.",
+   "gloss": "little, few"
+  },
+  {
+   "id": "z-w-75",
+   "rank": 75,
+   "text": "____, ¿qué hacemos?",
+   "answer": "Entonces",
+   "en": "So, what do we do?",
+   "gloss": "then, so"
+  },
+  {
+   "id": "z-w-77",
+   "rank": 77,
+   "text": "Una ____ más.",
+   "answer": "cosa",
+   "en": "One more thing.",
+   "gloss": "thing"
+  },
+  {
+   "id": "z-w-78",
+   "rank": 78,
+   "text": "No comas ____.",
+   "answer": "tanto",
+   "en": "Do not eat so much.",
+   "gloss": "so much, so many"
+  },
+  {
+   "id": "z-w-79",
+   "rank": 79,
+   "text": "Ese ____ es mi tío.",
+   "answer": "hombre",
+   "en": "That man is my uncle.",
+   "gloss": "man"
+  },
+  {
+   "id": "z-w-81",
+   "rank": 81,
+   "text": "No es ____ difícil.",
+   "answer": "tan",
+   "en": "It is not so hard.",
+   "gloss": "so, such"
+  },
+  {
+   "id": "z-w-82",
+   "rank": 82,
+   "text": "La casa ____ crecí.",
+   "answer": "donde",
+   "en": "The house where I grew up.",
+   "gloss": "where"
+  },
+  {
+   "id": "z-w-83",
+   "rank": 83,
+   "text": "____ no puedo.",
+   "answer": "Ahora",
+   "en": "I cannot right now.",
+   "gloss": "now"
+  },
+  {
+   "id": "z-w-84",
+   "rank": 84,
+   "text": "Es ____ del plan.",
+   "answer": "parte",
+   "en": "It is part of the plan.",
+   "gloss": "part"
+  },
+  {
+   "id": "z-w-85",
+   "rank": 85,
+   "text": "Te llamo ____.",
+   "answer": "después",
+   "en": "I will call you later.",
+   "gloss": "after, later"
+  },
+  {
+   "id": "z-w-86",
+   "rank": 86,
+   "text": "Así es la ____.",
+   "answer": "vida",
+   "en": "Such is life.",
+   "gloss": "life"
+  },
+  {
+   "id": "z-w-88",
+   "rank": 88,
+   "text": "____ llegas tarde.",
+   "answer": "Siempre",
+   "en": "You always arrive late.",
+   "gloss": "always"
+  },
+  {
+   "id": "z-w-93",
+   "rank": 93,
+   "text": "No pasa ____.",
+   "answer": "nada",
+   "en": "It is no big deal.",
+   "gloss": "nothing"
+  },
+  {
+   "id": "z-w-94",
+   "rank": 94,
+   "text": "____ día estudio media hora.",
+   "answer": "Cada",
+   "en": "Every day I study half an hour.",
+   "gloss": "each, every"
+  },
+  {
+   "id": "z-w-96",
+   "rank": 96,
+   "text": "____ mal.",
+   "answer": "Menos",
+   "en": "Thank goodness.",
+   "gloss": "less, fewer"
+  },
+  {
+   "id": "z-w-97",
+   "rank": 97,
+   "text": "Tengo un teléfono ____.",
+   "answer": "nuevo",
+   "en": "I have a new phone.",
+   "gloss": "new"
+  },
+  {
+   "id": "z-w-99",
+   "rank": 99,
+   "text": "¿Quieres ____ de tomar?",
+   "answer": "algo",
+   "en": "Do you want something to drink?",
+   "gloss": "something"
+  },
+  {
+   "id": "z-w-100",
+   "rank": 100,
+   "text": "____ estoy mirando.",
+   "answer": "Solo",
+   "en": "I am just looking.",
+   "gloss": "only, just; alone"
+  },
+  {
+   "id": "z-w-102",
+   "rank": 102,
+   "text": "Voy a ____.",
+   "answer": "casa",
+   "en": "I am going home.",
+   "gloss": "house, home"
+  },
+  {
+   "id": "z-w-103",
+   "rank": 103,
+   "text": "Todo el ____ lo sabe.",
+   "answer": "mundo",
+   "en": "Everybody knows it.",
+   "gloss": "world"
+  },
+  {
+   "id": "z-w-104",
+   "rank": 104,
+   "text": "Esa ____ es doctora.",
+   "answer": "mujer",
+   "en": "That woman is a doctor.",
+   "gloss": "woman, wife"
+  },
+  {
+   "id": "z-w-106",
+   "rank": 106,
+   "text": "____ está el problema.",
+   "answer": "Ahí",
+   "en": "There is the problem.",
+   "gloss": "there"
+  },
+  {
+   "id": "z-w-108",
+   "rank": 108,
+   "text": "Hay mucha ____ aquí.",
+   "answer": "gente",
+   "en": "There are a lot of people here.",
+   "gloss": "people"
+  },
+  {
+   "id": "z-w-109",
+   "rank": 109,
+   "text": "¿De qué ____ eres?",
+   "answer": "país",
+   "en": "What country are you from?",
+   "gloss": "country"
+  },
+  {
+   "id": "z-w-110",
+   "rank": 110,
+   "text": "Levanta la ____.",
+   "answer": "mano",
+   "en": "Raise your hand.",
+   "gloss": "hand"
+  },
+  {
+   "id": "z-w-111",
+   "rank": 111,
+   "text": "Hay otra ____ de hacerlo.",
+   "answer": "forma",
+   "en": "There is another way to do it.",
+   "gloss": "form, way, shape"
+  },
+  {
+   "id": "z-w-112",
+   "rank": 112,
+   "text": "Me gusta mi ____.",
+   "answer": "trabajo",
+   "en": "I like my job.",
+   "gloss": "work, job"
+  },
+  {
+   "id": "z-w-113",
+   "rank": 113,
+   "text": "Un ____, por favor.",
+   "answer": "momento",
+   "en": "One moment, please.",
+   "gloss": "moment"
+  },
+  {
+   "id": "z-w-114",
+   "rank": 114,
+   "text": "Escucho música ____ cocino.",
+   "answer": "mientras",
+   "en": "I listen to music while I cook.",
+   "gloss": "while"
+  },
+  {
+   "id": "z-w-115",
+   "rank": 115,
+   "text": "Este es el ____ café de la ciudad.",
+   "answer": "mejor",
+   "en": "This is the best coffee in the city.",
+   "gloss": "better, best"
+  },
+  {
+   "id": "z-w-116",
+   "rank": 116,
+   "text": "Es un ____ tranquilo.",
+   "answer": "lugar",
+   "en": "It is a quiet place.",
+   "gloss": "place"
+  },
+  {
+   "id": "z-w-117",
+   "rank": 117,
+   "text": "El ____ juega en el parque.",
+   "answer": "niño",
+   "en": "The boy plays in the park.",
+   "gloss": "child, boy"
+  },
+  {
+   "id": "z-w-118",
+   "rank": 118,
+   "text": "Un vaso de ____, por favor.",
+   "answer": "agua",
+   "en": "A glass of water, please.",
+   "gloss": "water"
+  },
+  {
+   "id": "z-w-120",
+   "rank": 120,
+   "text": "¿A qué ____ empieza?",
+   "answer": "hora",
+   "en": "What time does it start?",
+   "gloss": "hour, time"
+  },
+  {
+   "id": "z-w-121",
+   "rank": 121,
+   "text": "Quiero ____ a tu familia.",
+   "answer": "conocer",
+   "en": "I want to meet your family.",
+   "gloss": "to know (people, places), to meet"
+  },
+  {
+   "id": "z-w-123",
+   "rank": 123,
+   "text": "Son las ____ de la tarde.",
+   "answer": "tres",
+   "en": "It is three in the afternoon.",
+   "gloss": "three"
+  },
+  {
+   "id": "z-w-124",
+   "rank": 124,
+   "text": "Voy ____ llueva.",
+   "answer": "aunque",
+   "en": "I am going even if it rains.",
+   "gloss": "although, even though"
+  },
+  {
+   "id": "z-w-125",
+   "rank": 125,
+   "text": "Estudié ____ dos horas.",
+   "answer": "durante",
+   "en": "I studied for two hours.",
+   "gloss": "during"
+  },
+  {
+   "id": "z-w-128",
+   "rank": 128,
+   "text": "____ es tarde.",
+   "answer": "Nunca",
+   "en": "It is never too late.",
+   "gloss": "never"
+  },
+  {
+   "id": "z-w-129",
+   "rank": 129,
+   "text": "Voy a ____ la cuenta.",
+   "answer": "pedir",
+   "en": "I am going to ask for the check.",
+   "gloss": "to ask for, to order"
+  },
+  {
+   "id": "z-w-130",
+   "rank": 130,
+   "text": "____ está tu café.",
+   "answer": "Aquí",
+   "en": "Here is your coffee.",
+   "gloss": "here"
+  },
+  {
+   "id": "z-w-136",
+   "rank": 136,
+   "text": "Llegué ____ otra vez.",
+   "answer": "tarde",
+   "en": "I arrived late again.",
+   "gloss": "late; afternoon"
+  },
+  {
+   "id": "z-w-137",
+   "rank": 137,
+   "text": "¿Qué significa esta ____?",
+   "answer": "palabra",
+   "en": "What does this word mean?",
+   "gloss": "word"
+  },
+  {
+   "id": "z-w-138",
+   "rank": 138,
+   "text": "¿Cuál es tu ____?",
+   "answer": "nombre",
+   "en": "What is your name?",
+   "gloss": "name"
+  },
+  {
+   "id": "z-w-139",
+   "rank": 139,
+   "text": "No traigo ____.",
+   "answer": "dinero",
+   "en": "I do not have money on me.",
+   "gloss": "money"
+  },
+  {
+   "id": "z-w-141",
+   "rank": 141,
+   "text": "Nos vemos la próxima ____.",
+   "answer": "semana",
+   "en": "See you next week.",
+   "gloss": "week"
+  },
+  {
+   "id": "z-w-142",
+   "rank": 142,
+   "text": "El ____ que viene viajo.",
+   "answer": "mes",
+   "en": "Next month I travel.",
+   "gloss": "month"
+  },
+  {
+   "id": "z-w-144",
+   "rank": 144,
+   "text": "Me encanta esta ____.",
+   "answer": "ciudad",
+   "en": "I love this city.",
+   "gloss": "city"
+  },
+  {
+   "id": "z-w-145",
+   "rank": 145,
+   "text": "Mi ____ vive lejos.",
+   "answer": "familia",
+   "en": "My family lives far away.",
+   "gloss": "family"
+  },
+  {
+   "id": "z-w-146",
+   "rank": 146,
+   "text": "Es un buen ____.",
+   "answer": "amigo",
+   "en": "He is a good friend.",
+   "gloss": "friend"
+  },
+  {
+   "id": "z-w-147",
+   "rank": 147,
+   "text": "Por ____, este.",
+   "answer": "ejemplo",
+   "en": "For example, this one.",
+   "gloss": "example"
+  },
+  {
+   "id": "z-w-148",
+   "rank": 148,
+   "text": "Tengo una ____.",
+   "answer": "pregunta",
+   "en": "I have a question.",
+   "gloss": "question"
+  },
+  {
+   "id": "z-w-149",
+   "rank": 149,
+   "text": "No hay ____.",
+   "answer": "problema",
+   "en": "No problem.",
+   "gloss": "problem"
+  },
+  {
+   "id": "z-w-150",
+   "rank": 150,
+   "text": "Es ____ practicar.",
+   "answer": "importante",
+   "en": "It is important to practice.",
+   "gloss": "important"
+  },
+  {
+   "id": "z-w-159",
+   "rank": 159,
+   "text": "____ termino.",
+   "answer": "Casi",
+   "en": "I am almost done.",
+   "gloss": "almost"
+  },
+  {
+   "id": "z-w-162",
+   "rank": 162,
+   "text": "____ tengo clase.",
+   "answer": "Mañana",
+   "en": "Tomorrow I have class.",
+   "gloss": "tomorrow; morning"
+  },
+  {
+   "id": "z-w-163",
+   "rank": 163,
+   "text": "____ es sábado.",
+   "answer": "Hoy",
+   "en": "Today is Saturday.",
+   "gloss": "today"
+  },
+  {
+   "id": "z-w-164",
+   "rank": 164,
+   "text": "Muchas ____.",
+   "answer": "gracias",
+   "en": "Thank you very much.",
+   "gloss": "thank you"
+  },
+  {
+   "id": "z-w-165",
+   "rank": 165,
+   "text": "____ no sé.",
+   "answer": "Pues",
+   "en": "Well, I do not know.",
+   "gloss": "well, then (filler)"
+  },
+  {
+   "id": "z-w-166",
+   "rank": 166,
+   "text": "____ que sí.",
+   "answer": "Claro",
+   "en": "Of course.",
+   "gloss": "of course; clear"
+  },
+  {
+   "id": "z-w-167",
+   "rank": 167,
+   "text": "Hasta ____.",
+   "answer": "luego",
+   "en": "See you later.",
+   "gloss": "later, then"
+  },
+  {
+   "id": "z-w-168",
+   "rank": 168,
+   "text": "Vivo ____ del centro.",
+   "answer": "cerca",
+   "en": "I live near downtown.",
+   "gloss": "near, close"
+  },
+  {
+   "id": "z-w-169",
+   "rank": 169,
+   "text": "¿Queda ____?",
+   "answer": "lejos",
+   "en": "Is it far?",
+   "gloss": "far"
+  },
+  {
+   "id": "z-w-172",
+   "rank": 172,
+   "text": "La ____ está abierta.",
+   "answer": "puerta",
+   "en": "The door is open.",
+   "gloss": "door"
+  },
+  {
+   "id": "z-w-173",
+   "rank": 173,
+   "text": "Vivo en esta ____.",
+   "answer": "calle",
+   "en": "I live on this street.",
+   "gloss": "street"
+  },
+  {
+   "id": "z-w-174",
+   "rank": 174,
+   "text": "Voy a ____ pan.",
+   "answer": "comprar",
+   "en": "I am going to buy bread.",
+   "gloss": "to buy"
+  },
+  {
+   "id": "z-w-175",
+   "rank": 175,
+   "text": "¿Puedo ____ con tarjeta?",
+   "answer": "pagar",
+   "en": "Can I pay by card?",
+   "gloss": "to pay"
+  },
+  {
+   "id": "z-w-176",
+   "rank": 176,
+   "text": "Está muy ____.",
+   "answer": "caro",
+   "en": "It is very expensive.",
+   "gloss": "expensive"
+  },
+  {
+   "id": "z-w-177",
+   "rank": 177,
+   "text": "Aquí es más ____.",
+   "answer": "barato",
+   "en": "It is cheaper here.",
+   "gloss": "cheap"
+  },
+  {
+   "id": "z-w-178",
+   "rank": 178,
+   "text": "¿Cuál es el ____?",
+   "answer": "precio",
+   "en": "What is the price?",
+   "gloss": "price"
+  },
+  {
+   "id": "z-w-179",
+   "rank": 179,
+   "text": "La ____ cierra a las ocho.",
+   "answer": "tienda",
+   "en": "The store closes at eight.",
+   "gloss": "store, shop"
+  },
+  {
+   "id": "z-w-180",
+   "rank": 180,
+   "text": "La ____, por favor.",
+   "answer": "cuenta",
+   "en": "The check, please.",
+   "gloss": "bill, account"
+  },
+  {
+   "id": "z-w-181",
+   "rank": 181,
+   "text": "La ____ está lista.",
+   "answer": "comida",
+   "en": "The food is ready.",
+   "gloss": "food, meal"
+  },
+  {
+   "id": "z-w-182",
+   "rank": 182,
+   "text": "¿Qué quieres ____?",
+   "answer": "beber",
+   "en": "What do you want to drink?",
+   "gloss": "to drink"
+  },
+  {
+   "id": "z-w-183",
+   "rank": 183,
+   "text": "____ recién hecho.",
+   "answer": "Pan",
+   "en": "Freshly made bread.",
+   "gloss": "bread"
+  },
+  {
+   "id": "z-w-184",
+   "rank": 184,
+   "text": "Café con ____, por favor.",
+   "answer": "leche",
+   "en": "Coffee with milk, please.",
+   "gloss": "milk"
+  },
+  {
+   "id": "z-w-185",
+   "rank": 185,
+   "text": "No como ____.",
+   "answer": "carne",
+   "en": "I do not eat meat.",
+   "gloss": "meat"
+  },
+  {
+   "id": "z-w-186",
+   "rank": 186,
+   "text": "Como ____ todos los días.",
+   "answer": "fruta",
+   "en": "I eat fruit every day.",
+   "gloss": "fruit"
+  },
+  {
+   "id": "z-w-187",
+   "rank": 187,
+   "text": "Una ____ para dos.",
+   "answer": "mesa",
+   "en": "A table for two.",
+   "gloss": "table"
+  },
+  {
+   "id": "z-w-188",
+   "rank": 188,
+   "text": "Esta ____ es cómoda.",
+   "answer": "silla",
+   "en": "This chair is comfortable.",
+   "gloss": "chair"
+  },
+  {
+   "id": "z-w-189",
+   "rank": 189,
+   "text": "Mi ____ es pequeño.",
+   "answer": "cuarto",
+   "en": "My room is small.",
+   "gloss": "room; quarter"
+  },
+  {
+   "id": "z-w-190",
+   "rank": 190,
+   "text": "Un perro ____.",
+   "answer": "pequeño",
+   "en": "A small dog.",
+   "gloss": "small"
+  },
+  {
+   "id": "z-w-193",
+   "rank": 193,
+   "text": "Un carro ____.",
+   "answer": "viejo",
+   "en": "An old car.",
+   "gloss": "old"
+  },
+  {
+   "id": "z-w-194",
+   "rank": 194,
+   "text": "Es muy ____ todavía.",
+   "answer": "joven",
+   "en": "She is still very young.",
+   "gloss": "young"
+  },
+  {
+   "id": "z-w-195",
+   "rank": 195,
+   "text": "Mi hermano es muy ____.",
+   "answer": "alto",
+   "en": "My brother is very tall.",
+   "gloss": "tall, high"
+  },
+  {
+   "id": "z-w-196",
+   "rank": 196,
+   "text": "Habla más ____.",
+   "answer": "bajo",
+   "en": "Speak more quietly.",
+   "gloss": "short, low; under"
+  },
+  {
+   "id": "z-w-197",
+   "rank": 197,
+   "text": "El examen fue ____.",
+   "answer": "fácil",
+   "en": "The exam was easy.",
+   "gloss": "easy"
+  },
+  {
+   "id": "z-w-198",
+   "rank": 198,
+   "text": "Es ____ pero posible.",
+   "answer": "difícil",
+   "en": "It is hard but possible.",
+   "gloss": "difficult"
+  },
+  {
+   "id": "z-w-199",
+   "rank": 199,
+   "text": "Hablas muy ____.",
+   "answer": "rápido",
+   "en": "You speak very fast.",
+   "gloss": "fast, quick"
+  },
+  {
+   "id": "z-w-200",
+   "rank": 200,
+   "text": "Más ____, por favor.",
+   "answer": "despacio",
+   "en": "Slower, please.",
+   "gloss": "slowly"
+  },
+  {
+   "id": "z-w-201",
+   "rank": 201,
+   "text": "____, soy Juan.",
+   "answer": "Mucho gusto",
+   "en": "Nice to meet you, I am Juan.",
+   "gloss": "nice to meet you"
+  },
+  {
+   "id": "z-w-202",
+   "rank": 202,
+   "text": "____, no te escuché.",
+   "answer": "Perdón",
+   "en": "Sorry, I did not hear you.",
+   "gloss": "sorry, excuse me"
+  },
+  {
+   "id": "z-w-203",
+   "rank": 203,
+   "text": "Abre la ____.",
+   "answer": "ventana",
+   "en": "Open the window.",
+   "gloss": "window"
+  },
+  {
+   "id": "z-w-204",
+   "rank": 204,
+   "text": "El ____ está estacionado.",
+   "answer": "coche",
+   "en": "The car is parked.",
+   "gloss": "car (also carro)"
+  },
+  {
+   "id": "z-w-205",
+   "rank": 205,
+   "text": "Voy en ____.",
+   "answer": "camino",
+   "en": "I am on my way.",
+   "gloss": "road, path, way"
+  },
+  {
+   "id": "z-w-206",
+   "rank": 206,
+   "text": "Buen ____.",
+   "answer": "viaje",
+   "en": "Have a good trip.",
+   "gloss": "trip, journey"
+  },
+  {
+   "id": "z-w-207",
+   "rank": 207,
+   "text": "Me gusta ____ en tren.",
+   "answer": "viajar",
+   "en": "I like traveling by train.",
+   "gloss": "to travel"
+  },
+  {
+   "id": "z-w-211",
+   "rank": 211,
+   "text": "Necesito ____ más.",
+   "answer": "dormir",
+   "en": "I need to sleep more.",
+   "gloss": "to sleep"
+  },
+  {
+   "id": "z-w-214",
+   "rank": 214,
+   "text": "Llegué ____ hoy.",
+   "answer": "temprano",
+   "en": "I arrived early today.",
+   "gloss": "early"
+  },
+  {
+   "id": "z-w-215",
+   "rank": 215,
+   "text": "Estoy muy ____.",
+   "answer": "cansado",
+   "en": "I am very tired.",
+   "gloss": "tired"
+  },
+  {
+   "id": "z-w-216",
+   "rank": 216,
+   "text": "Estoy ____ con el resultado.",
+   "answer": "contento",
+   "en": "I am happy with the result.",
+   "gloss": "happy, glad"
+  },
+  {
+   "id": "z-w-217",
+   "rank": 217,
+   "text": "La película es ____.",
+   "answer": "triste",
+   "en": "The movie is sad.",
+   "gloss": "sad"
+  },
+  {
+   "id": "z-w-218",
+   "rank": 218,
+   "text": "Estoy ____ hoy.",
+   "answer": "enfermo",
+   "en": "I am sick today.",
+   "gloss": "sick"
+  },
+  {
+   "id": "z-w-219",
+   "rank": 219,
+   "text": "Tengo cita con el ____.",
+   "answer": "médico",
+   "en": "I have a doctor's appointment.",
+   "gloss": "doctor"
+  },
+  {
+   "id": "z-w-220",
+   "rank": 220,
+   "text": "Me duele la ____.",
+   "answer": "cabeza",
+   "en": "My head hurts.",
+   "gloss": "head"
+  },
+  {
+   "id": "z-w-222",
+   "rank": 222,
+   "text": "El ____ necesita descanso.",
+   "answer": "cuerpo",
+   "en": "The body needs rest.",
+   "gloss": "body"
+  },
+  {
+   "id": "z-w-223",
+   "rank": 223,
+   "text": "Los niños están en la ____.",
+   "answer": "escuela",
+   "en": "The kids are at school.",
+   "gloss": "school"
+  },
+  {
+   "id": "z-w-224",
+   "rank": 224,
+   "text": "La ____ dura una hora.",
+   "answer": "clase",
+   "en": "The class lasts one hour.",
+   "gloss": "class"
+  },
+  {
+   "id": "z-w-228",
+   "rank": 228,
+   "text": "Este ____ es interesante.",
+   "answer": "libro",
+   "en": "This book is interesting.",
+   "gloss": "book"
+  },
+  {
+   "id": "z-w-231",
+   "rank": 231,
+   "text": "¿Puedes ____, por favor?",
+   "answer": "repetir",
+   "en": "Can you repeat, please?",
+   "gloss": "to repeat"
+  },
+  {
+   "id": "z-w-232",
+   "rank": 232,
+   "text": "____ llovió todo el día.",
+   "answer": "Ayer",
+   "en": "Yesterday it rained all day.",
+   "gloss": "yesterday"
+  },
+  {
+   "id": "z-w-233",
+   "rank": 233,
+   "text": "____ dormí mal.",
+   "answer": "Anoche",
+   "en": "Last night I slept badly.",
+   "gloss": "last night"
+  },
+  {
+   "id": "z-w-234",
+   "rank": 234,
+   "text": "____ no termino.",
+   "answer": "Todavía",
+   "en": "I am not done yet.",
+   "gloss": "still, yet"
+  },
+  {
+   "id": "z-w-235",
+   "rank": 235,
+   "text": "Nos vemos ____.",
+   "answer": "pronto",
+   "en": "See you soon.",
+   "gloss": "soon"
+  },
+  {
+   "id": "z-w-236",
+   "rank": 236,
+   "text": "____ mañana.",
+   "answer": "Quizás",
+   "en": "Maybe tomorrow.",
+   "gloss": "maybe, perhaps"
+  },
+  {
+   "id": "z-w-237",
+   "rank": 237,
+   "text": "¿Estás ____?",
+   "answer": "seguro",
+   "en": "Are you sure?",
+   "gloss": "sure, safe"
+  },
+  {
+   "id": "z-w-238",
+   "rank": 238,
+   "text": "Es ____.",
+   "answer": "verdad",
+   "en": "It is true.",
+   "gloss": "truth"
+  },
+  {
+   "id": "z-w-239",
+   "rank": 239,
+   "text": "Eso es ____.",
+   "answer": "mentira",
+   "en": "That is a lie.",
+   "gloss": "lie"
+  },
+  {
+   "id": "z-w-240",
+   "rank": 240,
+   "text": "Tienes ____.",
+   "answer": "razón",
+   "en": "You are right.",
+   "gloss": "reason; (tener razón: to be right)"
+  },
+  {
+   "id": "z-w-241",
+   "rank": 241,
+   "text": "Buena ____.",
+   "answer": "idea",
+   "en": "Good idea.",
+   "gloss": "idea"
+  },
+  {
+   "id": "z-w-242",
+   "rank": 242,
+   "text": "Cuéntame la ____.",
+   "answer": "historia",
+   "en": "Tell me the story.",
+   "gloss": "history, story"
+  },
+  {
+   "id": "z-w-243",
+   "rank": 243,
+   "text": "¿Qué ____ te gusta?",
+   "answer": "música",
+   "en": "What music do you like?",
+   "gloss": "music"
+  },
+  {
+   "id": "z-w-244",
+   "rank": 244,
+   "text": "Esta ____ me encanta.",
+   "answer": "canción",
+   "en": "I love this song.",
+   "gloss": "song"
+  },
+  {
+   "id": "z-w-245",
+   "rank": 245,
+   "text": "Vimos una ____ anoche.",
+   "answer": "película",
+   "en": "We watched a movie last night.",
+   "gloss": "movie"
+  },
+  {
+   "id": "z-w-246",
+   "rank": 246,
+   "text": "Es solo un ____.",
+   "answer": "juego",
+   "en": "It is just a game.",
+   "gloss": "game"
+  },
+  {
+   "id": "z-w-247",
+   "rank": 247,
+   "text": "¿Practicas algún ____?",
+   "answer": "deporte",
+   "en": "Do you play any sport?",
+   "gloss": "sport"
+  },
+  {
+   "id": "z-w-248",
+   "rank": 248,
+   "text": "Mi ____ ganó.",
+   "answer": "equipo",
+   "en": "My team won.",
+   "gloss": "team; equipment"
+  },
+  {
+   "id": "z-w-252",
+   "rank": 252,
+   "text": "El ____ está lleno hoy.",
+   "answer": "parque",
+   "en": "The park is full today.",
+   "gloss": "park"
+  },
+  {
+   "id": "z-w-253",
+   "rank": 253,
+   "text": "Hay un ____ enorme ahí.",
+   "answer": "árbol",
+   "en": "There is a huge tree there.",
+   "gloss": "tree"
+  },
+  {
+   "id": "z-w-255",
+   "rank": 255,
+   "text": "Hoy hay mucho ____.",
+   "answer": "sol",
+   "en": "It is very sunny today.",
+   "gloss": "sun"
+  },
+  {
+   "id": "z-w-256",
+   "rank": 256,
+   "text": "Me gusta la ____.",
+   "answer": "lluvia",
+   "en": "I like the rain.",
+   "gloss": "rain"
+  },
+  {
+   "id": "z-w-257",
+   "rank": 257,
+   "text": "Va a ____ esta tarde.",
+   "answer": "llover",
+   "en": "It is going to rain this afternoon.",
+   "gloss": "to rain"
+  },
+  {
+   "id": "z-w-258",
+   "rank": 258,
+   "text": "Hace ____ afuera.",
+   "answer": "frío",
+   "en": "It is cold outside.",
+   "gloss": "cold"
+  },
+  {
+   "id": "z-w-259",
+   "rank": 259,
+   "text": "Hace mucho ____.",
+   "answer": "calor",
+   "en": "It is very hot.",
+   "gloss": "heat"
+  },
+  {
+   "id": "z-w-260",
+   "rank": 260,
+   "text": "Necesito ____ fresco.",
+   "answer": "aire",
+   "en": "I need fresh air.",
+   "gloss": "air"
+  },
+  {
+   "id": "z-w-261",
+   "rank": 261,
+   "text": "Vivimos cerca del ____.",
+   "answer": "mar",
+   "en": "We live near the sea.",
+   "gloss": "sea"
+  },
+  {
+   "id": "z-w-262",
+   "rank": 262,
+   "text": "Vamos a la ____ el domingo.",
+   "answer": "playa",
+   "en": "We are going to the beach on Sunday.",
+   "gloss": "beach"
+  },
+  {
+   "id": "z-w-264",
+   "rank": 264,
+   "text": "El ____ pasa por la ciudad.",
+   "answer": "río",
+   "en": "The river runs through the city.",
+   "gloss": "river"
+  },
+  {
+   "id": "z-w-265",
+   "rank": 265,
+   "text": "¿Cuál es tu ____ favorito?",
+   "answer": "animal",
+   "en": "What is your favorite animal?",
+   "gloss": "animal"
+  },
+  {
+   "id": "z-w-266",
+   "rank": 266,
+   "text": "Mi ____ se llama Max.",
+   "answer": "perro",
+   "en": "My dog is named Max.",
+   "gloss": "dog"
+  },
+  {
+   "id": "z-w-267",
+   "rank": 267,
+   "text": "El ____ duerme todo el día.",
+   "answer": "gato",
+   "en": "The cat sleeps all day.",
+   "gloss": "cat"
+  },
+  {
+   "id": "z-w-269",
+   "rank": 269,
+   "text": "Trabaja en una ____ grande.",
+   "answer": "empresa",
+   "en": "He works at a big company.",
+   "gloss": "company, business"
+  },
+  {
+   "id": "z-w-270",
+   "rank": 270,
+   "text": "Mi ____ es amable.",
+   "answer": "jefe",
+   "en": "My boss is kind.",
+   "gloss": "boss"
+  },
+  {
+   "id": "z-w-271",
+   "rank": 271,
+   "text": "Tengo una ____ a las dos.",
+   "answer": "reunión",
+   "en": "I have a meeting at two.",
+   "gloss": "meeting"
+  },
+  {
+   "id": "z-w-272",
+   "rank": 272,
+   "text": "El ____ va bien.",
+   "answer": "proyecto",
+   "en": "The project is going well.",
+   "gloss": "project"
+  },
+  {
+   "id": "z-w-273",
+   "rank": 273,
+   "text": "Te mando un ____.",
+   "answer": "correo",
+   "en": "I will send you an email.",
+   "gloss": "mail, email"
+  },
+  {
+   "id": "z-w-274",
+   "rank": 274,
+   "text": "Recibí tu ____.",
+   "answer": "mensaje",
+   "en": "I got your message.",
+   "gloss": "message"
+  },
+  {
+   "id": "z-w-275",
+   "rank": 275,
+   "text": "Se me olvidó el ____.",
+   "answer": "teléfono",
+   "en": "I forgot my phone.",
+   "gloss": "phone"
+  },
+  {
+   "id": "z-w-276",
+   "rank": 276,
+   "text": "Mi ____ es lenta.",
+   "answer": "computadora",
+   "en": "My computer is slow.",
+   "gloss": "computer"
+  },
+  {
+   "id": "z-w-277",
+   "rank": 277,
+   "text": "No hay ____ aquí.",
+   "answer": "internet",
+   "en": "There is no internet here.",
+   "gloss": "internet"
+  },
+  {
+   "id": "z-w-278",
+   "rank": 278,
+   "text": "Tengo una buena ____.",
+   "answer": "noticia",
+   "en": "I have good news.",
+   "gloss": "news"
+  },
+  {
+   "id": "z-w-279",
+   "rank": 279,
+   "text": "Leo el ____ en línea.",
+   "answer": "periódico",
+   "en": "I read the newspaper online.",
+   "gloss": "newspaper"
+  },
+  {
+   "id": "z-w-280",
+   "rank": 280,
+   "text": "El ____ anunció cambios.",
+   "answer": "gobierno",
+   "en": "The government announced changes.",
+   "gloss": "government"
+  },
+  {
+   "id": "z-w-281",
+   "rank": 281,
+   "text": "Es la ____.",
+   "answer": "ley",
+   "en": "It is the law.",
+   "gloss": "law"
+  },
+  {
+   "id": "z-w-282",
+   "rank": 282,
+   "text": "Tienes ____ a preguntar.",
+   "answer": "derecho",
+   "en": "You have the right to ask.",
+   "gloss": "right; law; straight"
+  },
+  {
+   "id": "z-w-283",
+   "rank": 283,
+   "text": "Gira a la ____.",
+   "answer": "izquierda",
+   "en": "Turn left.",
+   "gloss": "left"
+  },
+  {
+   "id": "z-w-284",
+   "rank": 284,
+   "text": "El banco está a la ____.",
+   "answer": "derecha",
+   "en": "The bank is on the right.",
+   "gloss": "right (direction)"
+  },
+  {
+   "id": "z-w-285",
+   "rank": 285,
+   "text": "Voy al ____ a mediodía.",
+   "answer": "banco",
+   "en": "I am going to the bank at noon.",
+   "gloss": "bank; bench"
+  },
+  {
+   "id": "z-w-286",
+   "rank": 286,
+   "text": "Compro fruta en el ____.",
+   "answer": "mercado",
+   "en": "I buy fruit at the market.",
+   "gloss": "market"
+  },
+  {
+   "id": "z-w-287",
+   "rank": 287,
+   "text": "Conozco un buen ____.",
+   "answer": "restaurante",
+   "en": "I know a good restaurant.",
+   "gloss": "restaurant"
+  },
+  {
+   "id": "z-w-288",
+   "rank": 288,
+   "text": "El ____ está en el centro.",
+   "answer": "hotel",
+   "en": "The hotel is downtown.",
+   "gloss": "hotel"
+  },
+  {
+   "id": "z-w-289",
+   "rank": 289,
+   "text": "Salimos al ____ a las cinco.",
+   "answer": "aeropuerto",
+   "en": "We leave for the airport at five.",
+   "gloss": "airport"
+  },
+  {
+   "id": "z-w-290",
+   "rank": 290,
+   "text": "El ____ sale a tiempo.",
+   "answer": "avión",
+   "en": "The plane leaves on time.",
+   "gloss": "airplane"
+  },
+  {
+   "id": "z-w-291",
+   "rank": 291,
+   "text": "Perdimos el ____.",
+   "answer": "tren",
+   "en": "We missed the train.",
+   "gloss": "train"
+  },
+  {
+   "id": "z-w-292",
+   "rank": 292,
+   "text": "El ____ pasa cada diez minutos.",
+   "answer": "autobús",
+   "en": "The bus comes every ten minutes.",
+   "gloss": "bus"
+  },
+  {
+   "id": "z-w-294",
+   "rank": 294,
+   "text": "Mi ____ pesa mucho.",
+   "answer": "maleta",
+   "en": "My suitcase is very heavy.",
+   "gloss": "suitcase"
+  },
+  {
+   "id": "z-w-295",
+   "rank": 295,
+   "text": "Necesito lavar la ____.",
+   "answer": "ropa",
+   "en": "I need to wash the clothes.",
+   "gloss": "clothes"
+  },
+  {
+   "id": "z-w-297",
+   "rank": 297,
+   "text": "Me gusta esa ____.",
+   "answer": "camisa",
+   "en": "I like that shirt.",
+   "gloss": "shirt"
+  },
+  {
+   "id": "z-w-298",
+   "rank": 298,
+   "text": "El ____ me queda bien.",
+   "answer": "pantalón",
+   "en": "The pants fit me well.",
+   "gloss": "pants"
+  },
+  {
+   "id": "z-w-299",
+   "rank": 299,
+   "text": "¿De qué ____ es?",
+   "answer": "color",
+   "en": "What color is it?",
+   "gloss": "color"
+  },
+  {
+   "id": "z-w-301",
+   "rank": 301,
+   "text": "El gato ____.",
+   "answer": "negro",
+   "en": "The black cat.",
+   "gloss": "black"
+  },
+  {
+   "id": "z-w-302",
+   "rank": 302,
+   "text": "El semáforo está en ____.",
+   "answer": "rojo",
+   "en": "The light is red.",
+   "gloss": "red"
+  },
+  {
+   "id": "z-w-303",
+   "rank": 303,
+   "text": "El cielo está ____.",
+   "answer": "azul",
+   "en": "The sky is blue.",
+   "gloss": "blue"
+  },
+  {
+   "id": "z-w-304",
+   "rank": 304,
+   "text": "Me gusta el color ____.",
+   "answer": "verde",
+   "en": "I like the color green.",
+   "gloss": "green"
+  },
+  {
+   "id": "z-w-306",
+   "rank": 306,
+   "text": "El ____ está despejado.",
+   "answer": "cielo",
+   "en": "The sky is clear.",
+   "gloss": "sky; heaven"
+  },
+  {
+   "id": "z-w-307",
+   "rank": 307,
+   "text": "La ____ está mojada.",
+   "answer": "tierra",
+   "en": "The ground is wet.",
+   "gloss": "earth, land, soil"
+  },
+  {
+   "id": "z-w-308",
+   "rank": 308,
+   "text": "El ____ está encendido.",
+   "answer": "fuego",
+   "en": "The fire is lit.",
+   "gloss": "fire"
+  },
+  {
+   "id": "z-w-309",
+   "rank": 309,
+   "text": "Apaga la ____.",
+   "answer": "luz",
+   "en": "Turn off the light.",
+   "gloss": "light"
+  },
+  {
+   "id": "z-w-312",
+   "rank": 312,
+   "text": "Veo poca ____.",
+   "answer": "televisión",
+   "en": "I watch little TV.",
+   "gloss": "television"
+  },
+  {
+   "id": "z-w-313",
+   "rank": 313,
+   "text": "Escucho la ____ en el carro.",
+   "answer": "radio",
+   "en": "I listen to the radio in the car.",
+   "gloss": "radio"
+  },
+  {
+   "id": "z-w-314",
+   "rank": 314,
+   "text": "¿Me tomas una ____?",
+   "answer": "foto",
+   "en": "Will you take a photo of me?",
+   "gloss": "photo"
+  },
+  {
+   "id": "z-w-315",
+   "rank": 315,
+   "text": "Necesito una hoja de ____.",
+   "answer": "papel",
+   "en": "I need a sheet of paper.",
+   "gloss": "paper; role"
+  },
+  {
+   "id": "z-w-316",
+   "rank": 316,
+   "text": "Le escribí una ____.",
+   "answer": "carta",
+   "en": "I wrote her a letter.",
+   "gloss": "letter; menu; card"
+  },
+  {
+   "id": "z-w-317",
+   "rank": 317,
+   "text": "¿Cuál es tu ____?",
+   "answer": "número",
+   "en": "What is your number?",
+   "gloss": "number"
+  },
+  {
+   "id": "z-w-318",
+   "rank": 318,
+   "text": "Cuesta ____ pesos.",
+   "answer": "cien",
+   "en": "It costs one hundred pesos.",
+   "gloss": "one hundred"
+  },
+  {
+   "id": "z-w-319",
+   "rank": 319,
+   "text": "Hace ____ años.",
+   "answer": "mil",
+   "en": "A thousand years ago.",
+   "gloss": "one thousand"
+  },
+  {
+   "id": "z-w-322",
+   "rank": 322,
+   "text": "Un ____, por favor.",
+   "answer": "segundo",
+   "en": "One second, please.",
+   "gloss": "second"
+  },
+  {
+   "id": "z-w-323",
+   "rank": 323,
+   "text": "Tengo una ____ a las tres.",
+   "answer": "cita",
+   "en": "I have an appointment at three.",
+   "gloss": "appointment, date"
+  },
+  {
+   "id": "z-w-324",
+   "rank": 324,
+   "text": "La ____ es el sábado.",
+   "answer": "fiesta",
+   "en": "The party is on Saturday.",
+   "gloss": "party"
+  },
+  {
+   "id": "z-w-325",
+   "rank": 325,
+   "text": "Es un ____ para ti.",
+   "answer": "regalo",
+   "en": "It is a gift for you.",
+   "gloss": "gift"
+  },
+  {
+   "id": "z-w-326",
+   "rank": 326,
+   "text": "Feliz ____.",
+   "answer": "cumpleaños",
+   "en": "Happy birthday.",
+   "gloss": "birthday"
+  },
+  {
+   "id": "z-w-327",
+   "rank": 327,
+   "text": "Estoy ____ por ti.",
+   "answer": "feliz",
+   "en": "I am happy for you.",
+   "gloss": "happy"
+  },
+  {
+   "id": "z-w-328",
+   "rank": 328,
+   "text": "Con ____, tu madre.",
+   "answer": "amor",
+   "en": "With love, your mother.",
+   "gloss": "love"
+  },
+  {
+   "id": "z-w-329",
+   "rank": 329,
+   "text": "Mi ____ cocina muy bien.",
+   "answer": "madre",
+   "en": "My mother cooks very well.",
+   "gloss": "mother"
+  },
+  {
+   "id": "z-w-330",
+   "rank": 330,
+   "text": "Mi ____ trabaja mucho.",
+   "answer": "padre",
+   "en": "My father works a lot.",
+   "gloss": "father"
+  },
+  {
+   "id": "z-w-331",
+   "rank": 331,
+   "text": "Mi ____ menor estudia.",
+   "answer": "hermano",
+   "en": "My younger brother studies.",
+   "gloss": "brother"
+  },
+  {
+   "id": "z-w-332",
+   "rank": 332,
+   "text": "Mi ____ vive en Chile.",
+   "answer": "hermana",
+   "en": "My sister lives in Chile.",
+   "gloss": "sister"
+  },
+  {
+   "id": "z-w-333",
+   "rank": 333,
+   "text": "Mi ____ cuenta historias.",
+   "answer": "abuelo",
+   "en": "My grandfather tells stories.",
+   "gloss": "grandfather"
+  },
+  {
+   "id": "z-w-334",
+   "rank": 334,
+   "text": "Visito a mi ____ los domingos.",
+   "answer": "abuela",
+   "en": "I visit my grandmother on Sundays.",
+   "gloss": "grandmother"
+  },
+  {
+   "id": "z-w-335",
+   "rank": 335,
+   "text": "Su ____ es ingeniero.",
+   "answer": "esposo",
+   "en": "Her husband is an engineer.",
+   "gloss": "husband"
+  },
+  {
+   "id": "z-w-336",
+   "rank": 336,
+   "text": "Mi ____ habla tres idiomas.",
+   "answer": "esposa",
+   "en": "My wife speaks three languages.",
+   "gloss": "wife"
+  },
+  {
+   "id": "z-w-337",
+   "rank": 337,
+   "text": "La ____ es en junio.",
+   "answer": "boda",
+   "en": "The wedding is in June.",
+   "gloss": "wedding"
+  },
+  {
+   "id": "z-w-338",
+   "rank": 338,
+   "text": "No le teme a la ____.",
+   "answer": "muerte",
+   "en": "He does not fear death.",
+   "gloss": "death"
+  },
+  {
+   "id": "z-w-342",
+   "rank": 342,
+   "text": "¿Tienes ____?",
+   "answer": "cambio",
+   "en": "Do you have change?",
+   "gloss": "change"
+  },
+  {
+   "id": "z-w-343",
+   "rank": 343,
+   "text": "Gracias por tu ____.",
+   "answer": "ayuda",
+   "en": "Thanks for your help.",
+   "gloss": "help"
+  },
+  {
+   "id": "z-w-344",
+   "rank": 344,
+   "text": "¿Me haces un ____?",
+   "answer": "favor",
+   "en": "Will you do me a favor?",
+   "gloss": "favor"
+  },
+  {
+   "id": "z-w-346",
+   "rank": 346,
+   "text": "¿Puedo ____ tu baño?",
+   "answer": "usar",
+   "en": "May I use your bathroom?",
+   "gloss": "to use"
+  },
+  {
+   "id": "z-w-347",
+   "rank": 347,
+   "text": "¿Dónde está el ____?",
+   "answer": "baño",
+   "en": "Where is the bathroom?",
+   "gloss": "bathroom"
+  },
+  {
+   "id": "z-w-348",
+   "rank": 348,
+   "text": "La ____ está limpia.",
+   "answer": "cocina",
+   "en": "The kitchen is clean.",
+   "gloss": "kitchen; cooking"
+  },
+  {
+   "id": "z-w-349",
+   "rank": 349,
+   "text": "Me gusta ____.",
+   "answer": "cocinar",
+   "en": "I like to cook.",
+   "gloss": "to cook"
+  },
+  {
+   "id": "z-w-350",
+   "rank": 350,
+   "text": "Hoy me toca ____.",
+   "answer": "limpiar",
+   "en": "Today it is my turn to clean.",
+   "gloss": "to clean"
+  },
+  {
+   "id": "z-w-351",
+   "rank": 351,
+   "text": "Todo está ____.",
+   "answer": "limpio",
+   "en": "Everything is clean.",
+   "gloss": "clean"
+  },
+  {
+   "id": "z-w-353",
+   "rank": 353,
+   "text": "Mi ____ favorito.",
+   "answer": "plato",
+   "en": "My favorite dish.",
+   "gloss": "plate, dish"
+  },
+  {
+   "id": "z-w-354",
+   "rank": 354,
+   "text": "Un ____ de agua.",
+   "answer": "vaso",
+   "en": "A glass of water.",
+   "gloss": "glass (drinking)"
+  },
+  {
+   "id": "z-w-355",
+   "rank": 355,
+   "text": "El ____ está en la mesa.",
+   "answer": "cuchillo",
+   "en": "The knife is on the table.",
+   "gloss": "knife"
+  },
+  {
+   "id": "z-w-356",
+   "rank": 356,
+   "text": "El ____ es a las ocho.",
+   "answer": "desayuno",
+   "en": "Breakfast is at eight.",
+   "gloss": "breakfast"
+  },
+  {
+   "id": "z-w-357",
+   "rank": 357,
+   "text": "¿Qué hay de ____?",
+   "answer": "almuerzo",
+   "en": "What is for lunch?",
+   "gloss": "lunch"
+  },
+  {
+   "id": "z-w-358",
+   "rank": 358,
+   "text": "La ____ está servida.",
+   "answer": "cena",
+   "en": "Dinner is served.",
+   "gloss": "dinner"
+  },
+  {
+   "id": "z-w-360",
+   "rank": 360,
+   "text": "Un ____ tinto.",
+   "answer": "vino",
+   "en": "A red wine.",
+   "gloss": "wine"
+  },
+  {
+   "id": "z-w-361",
+   "rank": 361,
+   "text": "Sin ____, gracias.",
+   "answer": "azúcar",
+   "en": "No sugar, thanks.",
+   "gloss": "sugar"
+  },
+  {
+   "id": "z-w-362",
+   "rank": 362,
+   "text": "Le falta ____.",
+   "answer": "sal",
+   "en": "It needs salt.",
+   "gloss": "salt"
+  },
+  {
+   "id": "z-w-364",
+   "rank": 364,
+   "text": "Un sándwich de ____.",
+   "answer": "queso",
+   "en": "A cheese sandwich.",
+   "gloss": "cheese"
+  },
+  {
+   "id": "z-w-365",
+   "rank": 365,
+   "text": "____ con arroz.",
+   "answer": "Pollo",
+   "en": "Chicken with rice.",
+   "gloss": "chicken"
+  },
+  {
+   "id": "z-w-366",
+   "rank": 366,
+   "text": "El ____ ya está listo.",
+   "answer": "arroz",
+   "en": "The rice is ready.",
+   "gloss": "rice"
+  },
+  {
+   "id": "z-w-367",
+   "rank": 367,
+   "text": "Hoy comemos ____.",
+   "answer": "pescado",
+   "en": "Today we are eating fish.",
+   "gloss": "fish (as food)"
+  },
+  {
+   "id": "z-w-368",
+   "rank": 368,
+   "text": "¿Estás ____?",
+   "answer": "listo",
+   "en": "Are you ready?",
+   "gloss": "ready; clever"
+  },
+  {
+   "id": "z-w-369",
+   "rank": 369,
+   "text": "¿Está ____ hoy?",
+   "answer": "abierto",
+   "en": "Is it open today?",
+   "gloss": "open"
+  },
+  {
+   "id": "z-w-370",
+   "rank": 370,
+   "text": "El museo está ____.",
+   "answer": "cerrado",
+   "en": "The museum is closed.",
+   "gloss": "closed"
+  },
+  {
+   "id": "z-w-371",
+   "rank": 371,
+   "text": "El ____ es gratis los martes.",
+   "answer": "museo",
+   "en": "The museum is free on Tuesdays.",
+   "gloss": "museum"
+  },
+  {
+   "id": "z-w-372",
+   "rank": 372,
+   "text": "La entrada es ____.",
+   "answer": "gratis",
+   "en": "Admission is free.",
+   "gloss": "free (no cost)"
+  },
+  {
+   "id": "z-w-373",
+   "rank": 373,
+   "text": "La ____ está por allá.",
+   "answer": "entrada",
+   "en": "The entrance is over there.",
+   "gloss": "entrance; ticket"
+  },
+  {
+   "id": "z-w-374",
+   "rank": 374,
+   "text": "¿Dónde está la ____?",
+   "answer": "salida",
+   "en": "Where is the exit?",
+   "gloss": "exit"
+  },
+  {
+   "id": "z-w-376",
+   "rank": 376,
+   "text": "Trabajo en ese ____.",
+   "answer": "edificio",
+   "en": "I work in that building.",
+   "gloss": "building"
+  },
+  {
+   "id": "z-w-377",
+   "rank": 377,
+   "text": "Vivo en el tercer ____.",
+   "answer": "piso",
+   "en": "I live on the third floor.",
+   "gloss": "floor"
+  },
+  {
+   "id": "z-w-378",
+   "rank": 378,
+   "text": "Colgué la foto en la ____.",
+   "answer": "pared",
+   "en": "I hung the photo on the wall.",
+   "gloss": "wall"
+  },
+  {
+   "id": "z-w-379",
+   "rank": 379,
+   "text": "Me voy a la ____.",
+   "answer": "cama",
+   "en": "I am going to bed.",
+   "gloss": "bed"
+  },
+  {
+   "id": "z-w-380",
+   "rank": 380,
+   "text": "Tengo mucho ____.",
+   "answer": "sueño",
+   "en": "I am very sleepy.",
+   "gloss": "sleep, dream"
+  },
+  {
+   "id": "z-w-384",
+   "rank": 384,
+   "text": "Tiene buena ____.",
+   "answer": "memoria",
+   "en": "She has a good memory.",
+   "gloss": "memory"
+  },
+  {
+   "id": "z-w-385",
+   "rank": 385,
+   "text": "¿Me lo puedes ____?",
+   "answer": "explicar",
+   "en": "Can you explain it to me?",
+   "gloss": "to explain"
+  },
+  {
+   "id": "z-w-388",
+   "rank": 388,
+   "text": "La ____ es no.",
+   "answer": "respuesta",
+   "en": "The answer is no.",
+   "gloss": "answer"
+  },
+  {
+   "id": "z-w-396",
+   "rank": 396,
+   "text": "Nos vemos en la ____.",
+   "answer": "esquina",
+   "en": "See you at the corner.",
+   "gloss": "corner"
+  },
+  {
+   "id": "z-w-397",
+   "rank": 397,
+   "text": "Vamos al ____.",
+   "answer": "centro",
+   "en": "We are going downtown.",
+   "gloss": "center, downtown"
+  },
+  {
+   "id": "z-w-398",
+   "rank": 398,
+   "text": "Mi ____ es tranquilo.",
+   "answer": "barrio",
+   "en": "My neighborhood is quiet.",
+   "gloss": "neighborhood"
+  },
+  {
+   "id": "z-w-399",
+   "rank": 399,
+   "text": "Es una ____ tranquila.",
+   "answer": "zona",
+   "en": "It is a quiet area.",
+   "gloss": "zone, area"
+  },
+  {
+   "id": "z-w-400",
+   "rank": 400,
+   "text": "Queda al ____ de la ciudad.",
+   "answer": "norte",
+   "en": "It is north of the city.",
+   "gloss": "north"
+  },
+  {
+   "id": "z-w-401",
+   "rank": 401,
+   "text": "Viajamos al ____.",
+   "answer": "sur",
+   "en": "We traveled south.",
+   "gloss": "south"
+  },
+  {
+   "id": "z-w-402",
+   "rank": 402,
+   "text": "El ____ explica bien.",
+   "answer": "maestro",
+   "en": "The teacher explains well.",
+   "gloss": "teacher"
+  },
+  {
+   "id": "z-w-403",
+   "rank": 403,
+   "text": "Soy ____ de biología.",
+   "answer": "estudiante",
+   "en": "I am a biology student.",
+   "gloss": "student"
+  },
+  {
+   "id": "z-w-404",
+   "rank": 404,
+   "text": "Estudio en la ____.",
+   "answer": "universidad",
+   "en": "I study at the university.",
+   "gloss": "university"
+  },
+  {
+   "id": "z-w-405",
+   "rank": 405,
+   "text": "Tengo ____ el lunes.",
+   "answer": "examen",
+   "en": "I have an exam on Monday.",
+   "gloss": "exam"
+  },
+  {
+   "id": "z-w-406",
+   "rank": 406,
+   "text": "Ya hice la ____.",
+   "answer": "tarea",
+   "en": "I already did the homework.",
+   "gloss": "homework, task"
+  },
+  {
+   "id": "z-w-407",
+   "rank": 407,
+   "text": "Fue un ____ mío.",
+   "answer": "error",
+   "en": "It was my mistake.",
+   "gloss": "mistake, error"
+  },
+  {
+   "id": "z-w-412",
+   "rank": 412,
+   "text": "Pudo ser ____.",
+   "answer": "peor",
+   "en": "It could have been worse.",
+   "gloss": "worse, worst"
+  },
+  {
+   "id": "z-w-413",
+   "rank": 413,
+   "text": "Me da ____.",
+   "answer": "igual",
+   "en": "I do not mind either way.",
+   "gloss": "equal, the same"
+  },
+  {
+   "id": "z-w-414",
+   "rank": 414,
+   "text": "Cada caso es ____.",
+   "answer": "diferente",
+   "en": "Each case is different.",
+   "gloss": "different"
+  },
+  {
+   "id": "z-w-415",
+   "rank": 415,
+   "text": "Qué ____.",
+   "answer": "interesante",
+   "en": "How interesting.",
+   "gloss": "interesting"
+  },
+  {
+   "id": "z-w-417",
+   "rank": 417,
+   "text": "Fue muy ____.",
+   "answer": "divertido",
+   "en": "It was a lot of fun.",
+   "gloss": "fun, funny"
+  },
+  {
+   "id": "z-w-418",
+   "rank": 418,
+   "text": "Me hizo ____ mucho.",
+   "answer": "reír",
+   "en": "It made me laugh a lot.",
+   "gloss": "to laugh"
+  },
+  {
+   "id": "z-w-419",
+   "rank": 419,
+   "text": "El bebé no deja de ____.",
+   "answer": "llorar",
+   "en": "The baby will not stop crying.",
+   "gloss": "to cry"
+  },
+  {
+   "id": "z-w-420",
+   "rank": 420,
+   "text": "No tengas ____.",
+   "answer": "miedo",
+   "en": "Do not be afraid.",
+   "gloss": "fear"
+  },
+  {
+   "id": "z-w-422",
+   "rank": 422,
+   "text": "____, todo está bien.",
+   "answer": "Tranquilo",
+   "en": "Relax, everything is fine.",
+   "gloss": "calm, quiet"
+  },
+  {
+   "id": "z-w-423",
+   "rank": 423,
+   "text": "¿Estás ____ conmigo?",
+   "answer": "enojado",
+   "en": "Are you angry with me?",
+   "gloss": "angry"
+  },
+  {
+   "id": "z-w-424",
+   "rank": 424,
+   "text": "Qué ____ verte aquí.",
+   "answer": "sorpresa",
+   "en": "What a surprise to see you here.",
+   "gloss": "surprise"
+  },
+  {
+   "id": "z-w-425",
+   "rank": 425,
+   "text": "Buena ____ mañana.",
+   "answer": "suerte",
+   "en": "Good luck tomorrow.",
+   "gloss": "luck"
+  },
+  {
+   "id": "z-w-426",
+   "rank": 426,
+   "text": "Ten ____.",
+   "answer": "cuidado",
+   "en": "Be careful.",
+   "gloss": "care; watch out"
+  },
+  {
+   "id": "z-w-428",
+   "rank": 428,
+   "text": "Llama a la ____.",
+   "answer": "policía",
+   "en": "Call the police.",
+   "gloss": "police"
+  },
+  {
+   "id": "z-w-429",
+   "rank": 429,
+   "text": "La ____ terminó.",
+   "answer": "guerra",
+   "en": "The war ended.",
+   "gloss": "war"
+  },
+  {
+   "id": "z-w-430",
+   "rank": 430,
+   "text": "Déjame en ____.",
+   "answer": "paz",
+   "en": "Leave me alone.",
+   "gloss": "peace"
+  },
+  {
+   "id": "z-w-432",
+   "rank": 432,
+   "text": "Un café ____, por favor.",
+   "answer": "fuerte",
+   "en": "A strong coffee, please.",
+   "gloss": "strong, loud"
+  },
+  {
+   "id": "z-w-433",
+   "rank": 433,
+   "text": "La señal está ____.",
+   "answer": "débil",
+   "en": "The signal is weak.",
+   "gloss": "weak"
+  },
+  {
+   "id": "z-w-434",
+   "rank": 434,
+   "text": "____.",
+   "answer": "Salud",
+   "en": "Cheers.",
+   "gloss": "health; cheers"
+  },
+  {
+   "id": "z-w-435",
+   "rank": 435,
+   "text": "Toma la ____ con comida.",
+   "answer": "medicina",
+   "en": "Take the medicine with food.",
+   "gloss": "medicine"
+  },
+  {
+   "id": "z-w-436",
+   "rank": 436,
+   "text": "Tengo ____ de espalda.",
+   "answer": "dolor",
+   "en": "I have back pain.",
+   "gloss": "pain"
+  },
+  {
+   "id": "z-w-438",
+   "rank": 438,
+   "text": "El ____ queda cerca.",
+   "answer": "hospital",
+   "en": "The hospital is nearby.",
+   "gloss": "hospital"
+  },
+  {
+   "id": "z-w-439",
+   "rank": 439,
+   "text": "Hago ____ tres veces por semana.",
+   "answer": "ejercicio",
+   "en": "I exercise three times a week.",
+   "gloss": "exercise"
+  },
+  {
+   "id": "z-w-440",
+   "rank": 440,
+   "text": "Voy al ____ en la mañana.",
+   "answer": "gimnasio",
+   "en": "I go to the gym in the morning.",
+   "gloss": "gym"
+  },
+  {
+   "id": "z-w-441",
+   "rank": 441,
+   "text": "Aprendí a ____ de niño.",
+   "answer": "nadar",
+   "en": "I learned to swim as a kid.",
+   "gloss": "to swim"
+  },
+  {
+   "id": "z-w-442",
+   "rank": 442,
+   "text": "¿Quieres ____?",
+   "answer": "bailar",
+   "en": "Do you want to dance?",
+   "gloss": "to dance"
+  },
+  {
+   "id": "z-w-445",
+   "rank": 445,
+   "text": "Me interesa el ____ moderno.",
+   "answer": "arte",
+   "en": "I am interested in modern art.",
+   "gloss": "art"
+  },
+  {
+   "id": "z-w-446",
+   "rank": 446,
+   "text": "Cada país tiene su ____.",
+   "answer": "cultura",
+   "en": "Each country has its culture.",
+   "gloss": "culture"
+  },
+  {
+   "id": "z-w-447",
+   "rank": 447,
+   "text": "Es una ____ local.",
+   "answer": "costumbre",
+   "en": "It is a local custom.",
+   "gloss": "custom, habit"
+  },
+  {
+   "id": "z-w-450",
+   "rank": 450,
+   "text": "¿Cuál es tu ____?",
+   "answer": "dirección",
+   "en": "What is your address?",
+   "gloss": "address; direction"
+  },
+  {
+   "id": "z-w-451",
+   "rank": 451,
+   "text": "Un ____ fuerte.",
+   "answer": "abrazo",
+   "en": "A big hug.",
+   "gloss": "hug"
+  },
+  {
+   "id": "z-w-452",
+   "rank": 452,
+   "text": "Le dio un ____.",
+   "answer": "beso",
+   "en": "She gave him a kiss.",
+   "gloss": "kiss"
+  },
+  {
+   "id": "z-w-454",
+   "rank": 454,
+   "text": "Tiene una ____ bonita.",
+   "answer": "voz",
+   "en": "She has a nice voice.",
+   "gloss": "voice"
+  },
+  {
+   "id": "z-w-455",
+   "rank": 455,
+   "text": "Qué lugar tan ____.",
+   "answer": "bonito",
+   "en": "What a nice place.",
+   "gloss": "pretty, nice"
+  },
+  {
+   "id": "z-w-456",
+   "rank": 456,
+   "text": "El clima está ____ hoy.",
+   "answer": "feo",
+   "en": "The weather is nasty today.",
+   "gloss": "ugly"
+  },
+  {
+   "id": "z-w-457",
+   "rank": 457,
+   "text": "Este sillón es muy ____.",
+   "answer": "cómodo",
+   "en": "This armchair is very comfortable.",
+   "gloss": "comfortable"
+  },
+  {
+   "id": "z-w-459",
+   "rank": 459,
+   "text": "Un desayuno ____.",
+   "answer": "ligero",
+   "en": "A light breakfast.",
+   "gloss": "light (weight)"
+  },
+  {
+   "id": "z-w-460",
+   "rank": 460,
+   "text": "El restaurante está ____.",
+   "answer": "lleno",
+   "en": "The restaurant is full.",
+   "gloss": "full"
+  },
+  {
+   "id": "z-w-462",
+   "rank": 462,
+   "text": "Una ____ de agua.",
+   "answer": "botella",
+   "en": "A bottle of water.",
+   "gloss": "bottle"
+  },
+  {
+   "id": "z-w-463",
+   "rank": 463,
+   "text": "Pague en la ____.",
+   "answer": "caja",
+   "en": "Pay at the register.",
+   "gloss": "box; checkout"
+  },
+  {
+   "id": "z-w-464",
+   "rank": 464,
+   "text": "¿Necesita ____?",
+   "answer": "bolsa",
+   "en": "Do you need a bag?",
+   "gloss": "bag"
+  },
+  {
+   "id": "z-w-469",
+   "rank": 469,
+   "text": "La ____ está al fondo.",
+   "answer": "escalera",
+   "en": "The stairs are at the back.",
+   "gloss": "stairs, ladder"
+  },
+  {
+   "id": "z-w-470",
+   "rank": 470,
+   "text": "La ____ está enfrente.",
+   "answer": "parada",
+   "en": "The stop is across the street.",
+   "gloss": "stop (bus, etc.)"
+  },
+  {
+   "id": "z-w-471",
+   "rank": 471,
+   "text": "Aprendimos a ____ juntos.",
+   "answer": "esquiar",
+   "en": "We learned to ski together.",
+   "gloss": "to ski"
+  },
+  {
+   "id": "z-w-472",
+   "rank": 472,
+   "text": "El ____ aquí es suave.",
+   "answer": "invierno",
+   "en": "Winter here is mild.",
+   "gloss": "winter"
+  },
+  {
+   "id": "z-w-473",
+   "rank": 473,
+   "text": "En ____ vamos a la playa.",
+   "answer": "verano",
+   "en": "In summer we go to the beach.",
+   "gloss": "summer"
+  },
+  {
+   "id": "z-w-474",
+   "rank": 474,
+   "text": "La ____ llegó temprano.",
+   "answer": "primavera",
+   "en": "Spring came early.",
+   "gloss": "spring"
+  },
+  {
+   "id": "z-w-475",
+   "rank": 475,
+   "text": "En ____ caen las hojas.",
+   "answer": "otoño",
+   "en": "In fall the leaves drop.",
+   "gloss": "autumn, fall"
+  },
+  {
+   "id": "z-w-476",
+   "rank": 476,
+   "text": "Una ____ en blanco.",
+   "answer": "hoja",
+   "en": "A blank sheet.",
+   "gloss": "leaf; sheet"
+  },
+  {
+   "id": "z-w-477",
+   "rank": 477,
+   "text": "Hace mucho ____.",
+   "answer": "viento",
+   "en": "It is very windy.",
+   "gloss": "wind"
+  },
+  {
+   "id": "z-w-478",
+   "rank": 478,
+   "text": "La ____ cubre todo.",
+   "answer": "nieve",
+   "en": "Snow covers everything.",
+   "gloss": "snow"
+  },
+  {
+   "id": "z-w-479",
+   "rank": 479,
+   "text": "No hay ni una ____.",
+   "answer": "nube",
+   "en": "There is not a single cloud.",
+   "gloss": "cloud"
+  },
+  {
+   "id": "z-w-480",
+   "rank": 480,
+   "text": "La ____ está llena.",
+   "answer": "luna",
+   "en": "The moon is full.",
+   "gloss": "moon"
+  },
+  {
+   "id": "z-w-482",
+   "rank": 482,
+   "text": "Es por tu ____.",
+   "answer": "seguridad",
+   "en": "It is for your safety.",
+   "gloss": "security, safety"
+  },
+  {
+   "id": "z-w-483",
+   "rank": 483,
+   "text": "Todo es ____.",
+   "answer": "posible",
+   "en": "Anything is possible.",
+   "gloss": "possible"
+  },
+  {
+   "id": "z-w-484",
+   "rank": 484,
+   "text": "No es ____, solo difícil.",
+   "answer": "imposible",
+   "en": "It is not impossible, just hard.",
+   "gloss": "impossible"
+  },
+  {
+   "id": "z-w-485",
+   "rank": 485,
+   "text": "No es ____.",
+   "answer": "necesario",
+   "en": "It is not necessary.",
+   "gloss": "necessary"
+  },
+  {
+   "id": "z-w-486",
+   "rank": 486,
+   "text": "Es ____ por hoy.",
+   "answer": "suficiente",
+   "en": "That is enough for today.",
+   "gloss": "enough"
+  },
+  {
+   "id": "z-w-487",
+   "rank": 487,
+   "text": "Es ____ caro.",
+   "answer": "demasiado",
+   "en": "It is too expensive.",
+   "gloss": "too much"
+  },
+  {
+   "id": "z-w-488",
+   "rank": 488,
+   "text": "Está ____ bien.",
+   "answer": "bastante",
+   "en": "It is quite good.",
+   "gloss": "quite, enough"
+  },
+  {
+   "id": "z-w-489",
+   "rank": 489,
+   "text": "____, es gratis.",
+   "answer": "Además",
+   "en": "Besides, it is free.",
+   "gloss": "besides, in addition"
+  },
+  {
+   "id": "z-w-490",
+   "rank": 490,
+   "text": "____, lo intentamos.",
+   "answer": "Sin embargo",
+   "en": "However, we tried.",
+   "gloss": "however"
+  },
+  {
+   "id": "z-w-491",
+   "rank": 491,
+   "text": "Ven ____ un rato.",
+   "answer": "aunque sea",
+   "en": "Come even if just for a bit.",
+   "gloss": "even if only"
+  },
+  {
+   "id": "z-w-492",
+   "rank": 492,
+   "text": "____ que voy.",
+   "answer": "Por supuesto",
+   "en": "Of course I am going.",
+   "gloss": "of course"
+  },
+  {
+   "id": "z-w-493",
+   "rank": 493,
+   "text": "____ cocino yo.",
+   "answer": "A veces",
+   "en": "Sometimes I cook.",
+   "gloss": "sometimes"
+  },
+  {
+   "id": "z-w-494",
+   "rank": 494,
+   "text": "____ empezó a llover.",
+   "answer": "De repente",
+   "en": "Suddenly it started to rain.",
+   "gloss": "suddenly"
+  },
+  {
+   "id": "z-w-495",
+   "rank": 495,
+   "text": "¿____?",
+   "answer": "En serio",
+   "en": "Seriously?",
+   "gloss": "seriously"
+  },
+  {
+   "id": "z-w-496",
+   "rank": 496,
+   "text": "____ todo salió bien.",
+   "answer": "Al final",
+   "en": "In the end everything went well.",
+   "gloss": "in the end"
+  },
+  {
+   "id": "z-w-497",
+   "rank": 497,
+   "text": "____ del día.",
+   "answer": "Depende",
+   "en": "It depends on the day.",
+   "gloss": "it depends"
+  },
+  {
+   "id": "z-w-498",
+   "rank": 498,
+   "text": "Hablo español ____.",
+   "answer": "más o menos",
+   "en": "I speak Spanish more or less.",
+   "gloss": "more or less"
+  },
+  {
+   "id": "z-w-499",
+   "rank": 499,
+   "text": "Mañana, ____, el lunes.",
+   "answer": "o sea",
+   "en": "Tomorrow, that is, Monday.",
+   "gloss": "that is, I mean"
+  },
+  {
+   "id": "z-w-500",
+   "rank": 500,
+   "text": "____ intentarlo.",
+   "answer": "Vale la pena",
+   "en": "It is worth trying.",
+   "gloss": "it is worth it"
+  }
+ ]
+}

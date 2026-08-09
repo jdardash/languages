@@ -28,7 +28,11 @@ async function init() {
     $("typed").lang = data.bcp47;
     schedule = store.get(key(lang, "schedule"), {});
     const now = Date.now();
-    const due = data.sentences.filter(s => isDue(schedule[s.id] ?? newCard(), now));
+    // Tutor-correction cards drill alongside the islands, prompted with the
+    // learner's own error; corrections only stick when retrieved.
+    const userCards = store.get(key(lang, "usercards"), []);
+    const pool = [...data.sentences, ...userCards];
+    const due = pool.filter(s => isDue(schedule[s.id] ?? newCard(), now));
     // Dictation needs audio to transcribe; recall drills the whole queue.
     if (mode === "dictation" && !due.some(s => s.audio)) mode = "recall";
     queue = (mode === "dictation" ? due.filter(s => s.audio) : due).slice(0, settings.drillLimit);

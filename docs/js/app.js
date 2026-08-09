@@ -64,3 +64,8 @@ export function markNav() {
     else a.removeAttribute("aria-current");
   });
 }
+
+// Offline: the service worker makes the whole desk work without a network.
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js").catch(() => { /* http or unsupported */ });
+}

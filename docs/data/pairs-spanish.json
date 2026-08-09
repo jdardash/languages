@@ -1,18 +1,77 @@
 {
  "language": "spanish",
- "voices": ["es-MX-DaliaNeural", "es-MX-JorgeNeural", "es-US-AlonsoNeural", "es-US-PalomaNeural"],
+ "voices": [
+  "es-MX-DaliaNeural",
+  "es-MX-JorgeNeural",
+  "es-US-AlonsoNeural",
+  "es-US-PalomaNeural"
+ ],
  "contrasts": [
   {
    "id": "r-rr",
    "label": "r vs rr - tap vs trill",
    "tip": "The single r is one quick tap of the tongue; rr is a sustained trill. English has neither, so at first both sound identical.",
    "pairs": [
-    {"a": "pero", "b": "perro", "glossA": "but", "glossB": "dog"},
-    {"a": "caro", "b": "carro", "glossA": "expensive", "glossB": "car"},
-    {"a": "cero", "b": "cerro", "glossA": "zero", "glossB": "hill"},
-    {"a": "coro", "b": "corro", "glossA": "choir", "glossB": "I run"},
-    {"a": "para", "b": "parra", "glossA": "for", "glossB": "grapevine"},
-    {"a": "moro", "b": "morro", "glossA": "Moor", "glossB": "snout"}
+    {
+     "a": "pero",
+     "b": "perro",
+     "glossA": "but",
+     "glossB": "dog"
+    },
+    {
+     "a": "caro",
+     "b": "carro",
+     "glossA": "expensive",
+     "glossB": "car"
+    },
+    {
+     "a": "cero",
+     "b": "cerro",
+     "glossA": "zero",
+     "glossB": "hill"
+    },
+    {
+     "a": "coro",
+     "b": "corro",
+     "glossA": "choir",
+     "glossB": "I run"
+    },
+    {
+     "a": "para",
+     "b": "parra",
+     "glossA": "for",
+     "glossB": "grapevine"
+    },
+    {
+     "a": "moro",
+     "b": "morro",
+     "glossA": "Moor",
+     "glossB": "snout"
+    },
+    {
+     "a": "enterado",
+     "b": "enterrado",
+     "glossA": "informed",
+     "glossB": "buried"
+    },
+    {
+     "a": "enterar",
+     "b": "enterrar",
+     "glossA": "catch up",
+     "glossB": "bury"
+    },
+    {
+     "a": "vara",
+     "b": "barra",
+     "glossA": "rod",
+     "glossB": "bar, rod"
+    },
+    {
+     "a": "coral",
+     "b": "corral",
+     "glossA": "choral",
+     "glossB": "corral"
+    }
    ]
   },
   {
@@ -20,12 +79,42 @@
    "label": "d vs r between vowels",
    "tip": "Spanish d between vowels softens toward the th in English 'the', while the tap r sounds like the tt in American 'butter'. English ears swap them constantly.",
    "pairs": [
-    {"a": "todo", "b": "toro", "glossA": "everything", "glossB": "bull"},
-    {"a": "cada", "b": "cara", "glossA": "each", "glossB": "face"},
-    {"a": "mudo", "b": "muro", "glossA": "mute", "glossB": "wall"},
-    {"a": "codo", "b": "coro", "glossA": "elbow", "glossB": "choir"},
-    {"a": "lodo", "b": "loro", "glossA": "mud", "glossB": "parrot"},
-    {"a": "modo", "b": "moro", "glossA": "way, mode", "glossB": "Moor"}
+    {
+     "a": "todo",
+     "b": "toro",
+     "glossA": "everything",
+     "glossB": "bull"
+    },
+    {
+     "a": "cada",
+     "b": "cara",
+     "glossA": "each",
+     "glossB": "face"
+    },
+    {
+     "a": "mudo",
+     "b": "muro",
+     "glossA": "mute",
+     "glossB": "wall"
+    },
+    {
+     "a": "codo",
+     "b": "coro",
+     "glossA": "elbow",
+     "glossB": "choir"
+    },
+    {
+     "a": "lodo",
+     "b": "loro",
+     "glossA": "mud",
+     "glossB": "parrot"
+    },
+    {
+     "a": "modo",
+     "b": "moro",
+     "glossA": "way, mode",
+     "glossB": "Moor"
+    }
    ]
   },
   {
@@ -33,12 +122,54 @@
    "label": "n vs n with tilde",
    "tip": "The tilde n is a distinct letter: the tongue presses the palate, like the ny in 'canyon' but as a single sound.",
    "pairs": [
-    {"a": "una", "b": "uña", "glossA": "one (feminine)", "glossB": "fingernail"},
-    {"a": "sonar", "b": "soñar", "glossA": "to sound", "glossB": "to dream"},
-    {"a": "cana", "b": "caña", "glossA": "gray hair", "glossB": "cane, reed"},
-    {"a": "pena", "b": "peña", "glossA": "sorrow", "glossB": "crag"},
-    {"a": "mono", "b": "moño", "glossA": "monkey", "glossB": "hair bun"},
-    {"a": "campana", "b": "campaña", "glossA": "bell", "glossB": "campaign"}
+    {
+     "a": "una",
+     "b": "uña",
+     "glossA": "one (feminine)",
+     "glossB": "fingernail"
+    },
+    {
+     "a": "sonar",
+     "b": "soñar",
+     "glossA": "to sound",
+     "glossB": "to dream"
+    },
+    {
+     "a": "cana",
+     "b": "caña",
+     "glossA": "gray hair",
+     "glossB": "cane, reed"
+    },
+    {
+     "a": "pena",
+     "b": "peña",
+     "glossA": "sorrow",
+     "glossB": "crag"
+    },
+    {
+     "a": "mono",
+     "b": "moño",
+     "glossA": "monkey",
+     "glossB": "hair bun"
+    },
+    {
+     "a": "campana",
+     "b": "campaña",
+     "glossA": "bell",
+     "glossB": "campaign"
+    },
+    {
+     "a": "vano",
+     "b": "baño",
+     "glossA": "vain, useless",
+     "glossB": "bath"
+    },
+    {
+     "a": "ano",
+     "b": "año",
+     "glossA": "anus",
+     "glossB": "year"
+    }
    ]
   },
   {
@@ -46,12 +177,42 @@
    "label": "Stress placement",
    "tip": "Stress alone changes tense and person: hablo is 'I speak', hablo with final stress is 'he spoke'. If you cannot hear where the stress falls, you cannot hear the grammar.",
    "pairs": [
-    {"a": "papa", "b": "papá", "glossA": "potato", "glossB": "dad"},
-    {"a": "hablo", "b": "habló", "glossA": "I speak", "glossB": "he spoke"},
-    {"a": "canto", "b": "cantó", "glossA": "I sing", "glossB": "he sang"},
-    {"a": "esta", "b": "está", "glossA": "this (feminine)", "glossB": "he or she is"},
-    {"a": "termino", "b": "terminó", "glossA": "I finish", "glossB": "he finished"},
-    {"a": "llamo", "b": "llamó", "glossA": "I call", "glossB": "he called"}
+    {
+     "a": "papa",
+     "b": "papá",
+     "glossA": "potato",
+     "glossB": "dad"
+    },
+    {
+     "a": "hablo",
+     "b": "habló",
+     "glossA": "I speak",
+     "glossB": "he spoke"
+    },
+    {
+     "a": "canto",
+     "b": "cantó",
+     "glossA": "I sing",
+     "glossB": "he sang"
+    },
+    {
+     "a": "esta",
+     "b": "está",
+     "glossA": "this (feminine)",
+     "glossB": "he or she is"
+    },
+    {
+     "a": "termino",
+     "b": "terminó",
+     "glossA": "I finish",
+     "glossB": "he finished"
+    },
+    {
+     "a": "llamo",
+     "b": "llamó",
+     "glossA": "I call",
+     "glossB": "he called"
+    }
    ]
   }
  ]

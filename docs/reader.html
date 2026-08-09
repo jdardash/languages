@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reader - Languages</title>
+  <meta name="theme-color" content="#f5f5f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12141a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e40a6'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' font-weight='700' fill='white' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&display=swap">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">Languages</a>
+      <nav class="site-nav">
+        <a href="index.html">Today</a>
+        <a href="drill.html">Drill</a>
+        <a href="vocab.html">Vocab</a>
+        <a href="cloze.html">Cloze</a>
+        <a href="conj.html">Conjugate</a>
+        <a href="pairs.html">Pairs</a>
+        <a href="shadow.html">Shadow</a>
+        <a href="reader.html" aria-current="page">Reader</a>
+        <a href="input.html">Input</a>
+        <a href="capture.html">Capture</a>
+        <a href="method.html">Method</a>
+        <a href="progress.html">Progress</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <h1 id="heading">Reader</h1>
+    <section class="card" id="pickCard" hidden>
+      <p>
+        <label>Passage
+          <select id="passageSel" aria-label="Passage"></select>
+        </label>
+      </p>
+      <p class="muted small" id="sourceLine"></p>
+      <p class="muted small" id="coverLine"></p>
+      <div class="progress-track"><div class="progress-fill" id="coverFill"></div></div>
+    </section>
+    <section class="card" id="textCard" hidden>
+      <div id="text" class="reader-text" lang="es"></div>
+    </section>
+    <section class="card" id="wordCard" hidden>
+      <p><span class="headword" id="wWord" lang="es"></span></p>
+      <p id="wGloss" class="muted"></p>
+      <div class="mode-row">
+        <button id="wUnknown">Unknown</button>
+        <button id="wLearning">Learning</button>
+        <button id="wKnown">Known</button>
+      </div>
+      <p class="muted small">Tap any word in the text. Statuses persist across every passage and feed the coverage bar - aim to read at 95% known or better.</p>
+    </section>
+    <p id="status" class="muted">Loading...</p>
+    <p class="muted small">Bundled text: A First Spanish Reader (Project Gutenberg, public domain). Glosses: WikDict es-en (CC BY-SA) with Jehle verb forms (CC BY-NC-SA). Reading time credits itself to the input log.</p>
+  </main>
+  <script type="module" src="js/reader.js"></script>
+</body>
+</html>
