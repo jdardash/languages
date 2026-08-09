@@ -35,7 +35,7 @@ def cache_key(text: str, voice: str) -> str:
     return hashlib.sha1(f"{text}|{voice}".encode("utf-8")).hexdigest()
 
 
-async def synth_all(jobs: list[tuple[Path, str, str]]) -> None:
+async def synth_all(jobs: list[tuple[Path, str, str]]) -> list[str]:
     try:
         import edge_tts
     except ImportError:
@@ -66,8 +66,7 @@ async def synth_all(jobs: list[tuple[Path, str, str]]) -> None:
 
     await asyncio.gather(*(one(*job) for job in jobs))
     print()
-    if failed:
-        print(f"failed after retries: {len(failed)}: {', '.join(failed[:10])}")
+    return failed
 
 
 def main() -> None:
@@ -83,6 +82,9 @@ def main() -> None:
 
     audio_dir = DOCS / "audio" / args.lang / "vocab"
     audio_dir.mkdir(parents=True, exist_ok=True)
+    for p in audio_dir.glob("*.part"):
+        p.unlink()
+
     manifest_path = audio_dir / "manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {}
 
@@ -98,15 +100,38 @@ def main() -> None:
             if manifest.get(name) != k or not path.exists():
                 jobs.append((path, text, voice))
                 manifest[name] = k
-            w["audio" if not suffix else "exampleAudio"] = f"audio/{args.lang}/vocab/{name}"
 
     print(f"{len(deck['words'])} words, {len(jobs)} clips to synthesize")
-    if jobs:
-        asyncio.run(synth_all(jobs))
-        manifest_path.write_text(json.dumps(manifest, indent=1), encoding="utf-8")
+    failed: list[str] = []
+    try:
+        if jobs:
+            failed = asyncio.run(synth_all(jobs))
+    finally:
+        # Pop failed names from manifest before writing, so interruption still persists credit for completed clips
+        for name in failed:
+            manifest.pop(name, None)
+        if jobs:
+            manifest_path.write_text(json.dumps(manifest, indent=1), encoding="utf-8")
+
+    # Second pass: assign audio/exampleAudio fields only for files that exist
+    for idx, w in enumerate(deck["words"]):
+        voice = voices[idx % len(voices)]
+        n = w["id"].removeprefix("w-")
+        for suffix in ("", "-ex"):
+            name = f"w-{n}{suffix}.mp3"
+            path = audio_dir / name
+            field = "audio" if not suffix else "exampleAudio"
+            if path.exists():
+                w[field] = f"audio/{args.lang}/vocab/{name}"
+            else:
+                w.pop(field, None)
 
     deck_path.write_text(json.dumps(deck, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"rewrote {deck_path}")
+
+    if failed:
+        print(f"error: {len(failed)} clips failed after retries", file=sys.stderr)
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":
