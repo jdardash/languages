@@ -4,6 +4,11 @@
    "id": "spanish",
    "label": "Spanish",
    "data": "data/spanish.json"
+  },
+  {
+   "id": "french",
+   "label": "French",
+   "data": "data/french.json"
   }
  ],
  "methodDocs": [

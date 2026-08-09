@@ -1,5 +1,19 @@
 # Languages — even coverage, ten folders
 
+**Live study app: <https://jdardash.github.io/languages/>** — an evidence-based
+trainer built from these notes: active-recall drill with spaced repetition,
+shadowing player over recorded audio, the method documents rendered as a
+reference, and progress tracking. No accounts, no server; progress lives in the
+browser with JSON export/import.
+
+Repo map: `docs/` is the site (GitHub Pages serves it from `main`),
+`Sentence Islands/` holds the per-language sentence lists, audio, and the Python
+tooling (`build_site_data.py` regenerates the site data from `sentences.csv`),
+`specs/` and `plans/` hold the design history, and the method documents live at
+the root. Local development: `python -m http.server 8000 --directory docs`, and
+`npm test` runs the scheduler tests. Adding a language requires data files only —
+that claim is tested (French).
+
 Restructured 2026-07-28: the old priority tiers (01/02/03) are gone. All ten
 languages now sit as equal folders. Each folder README carries the complete path:
 the one fundamental book (the finish-test standard from `../Books & Fundamentals.md`),
