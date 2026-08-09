@@ -103,3 +103,13 @@ hours as the anchors in `../START HERE.md`.
 - Arabic script, once learned, discounts Farsi (and vice versa).
 - Russian pairs with the Orthodoxy and Russian-literature shelves.
 - The rest (Chinese, Japanese, Hebrew, Tagalog) are islands — no shared discount.
+
+## Data credits
+
+The study app bundles data derived from open sources:
+
+- Conjugations: [Fred Jehle Spanish verb database](https://github.com/ghidinelli/fred-jehle-spanish-verbs) (CC BY-NC-SA 3.0).
+- Reader glosses: [WikDict](https://www.wikdict.com/) es-en (CC BY-SA); the derived `docs/data/dict-spanish.json` carries the same license.
+- Minimal-pair mining: [ipa-dict](https://github.com/open-dict-data/ipa-dict) (MIT) and [FrequencyWords](https://github.com/hermitdave/FrequencyWords) (CC BY-SA 3.0).
+- Bundled reader text: *A First Spanish Reader*, Project Gutenberg #15353 (public domain).
+- Audio: synthesized with edge-tts; transcription tooling uses faster-whisper locally.
