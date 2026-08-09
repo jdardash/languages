@@ -25,8 +25,10 @@ async function init() {
     const schedule = store.get(key(data.language, "schedule"), {});
     const now = Date.now();
     const due = data.sentences.filter(s => isDue(schedule[s.id] ?? newCard(), now)).length;
+    const queued = Math.min(due, settings.drillLimit);
+    $("dueCount").textContent = String(queued);
     $("dueLine").textContent = due
-      ? `${data.label}: ${Math.min(due, settings.drillLimit)} of ${due} due sentences queued.`
+      ? `${data.label}: ${queued} of ${due} due sentences queued.`
       : `${data.label}: nothing due right now.`;
     $("startBtn").disabled = !due;
     if (new Date().getHours() < 17) $("nudge").hidden = false;
