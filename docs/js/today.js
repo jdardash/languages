@@ -6,6 +6,7 @@ import { newCard, isDue } from "./scheduler.js";
 import { store, key, getSettings, saveSettings, loadJSON, storageWarning, markNav } from "./app.js";
 import { PHASES, newPlan, todayKey, dayNumber, weekNumber, tutorDue, phaseZeroDone, checklist } from "./plan.js";
 import { NEW_PER_DAY } from "./deck.js";
+import { SYNC_META_KEY, syncNow } from "./sync.js";
 
 const $ = id => document.getElementById(id);
 markNav();
@@ -42,9 +43,25 @@ async function init() {
     lang = data.language;
     plan = store.get(key(lang, "plan"), null);
     plan ? renderDashboard() : renderSetup();
+    autoSync();
   } catch (err) {
     $("heading").textContent = `Could not load data: ${err.message}`;
   }
+}
+
+// Silent pull-merge-push after render, so phone-then-laptop needs no button.
+// Reloading only when the merge pulled changes cannot loop: the second pass
+// merges an already-synced state and `changed` comes back false.
+async function autoSync() {
+  if (!store.get(SYNC_META_KEY, {}).token) return;
+  try {
+    const result = await syncNow(store, localStorage, Date.now());
+    if (result.ok && result.changed) { location.reload(); return; }
+    $("syncLine").textContent = "Synced.";
+  } catch (err) {
+    $("syncLine").textContent = `Sync failed: ${err.message}`;
+  }
+  $("syncLine").hidden = false;
 }
 
 function renderSetup() {

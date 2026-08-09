@@ -7,6 +7,7 @@ import { store, key, getSettings, loadJSON, storageWarning, markNav } from "./ap
 import { PHASES, todayKey } from "./plan.js";
 import { forecast } from "./stats.js";
 import { bandStats, NEW_PER_DAY } from "./deck.js";
+import { SYNC_META_KEY, syncNow } from "./sync.js";
 
 const $ = id => document.getElementById(id);
 markNav();
@@ -221,6 +222,48 @@ function renderEngines(lang, inputMins) {
     `Tutor sessions logged: ${tutor}. Input: ${(inputMins / 60).toFixed(1)} hours. ` +
     `Captured sentences: ${captured}.`;
 }
+
+function renderSyncCard() {
+  const meta = store.get(SYNC_META_KEY, {});
+  $("syncForget").hidden = !meta.token;
+  $("syncNow").disabled = !meta.token;
+  if (meta.token) {
+    $("syncToken").placeholder = "token saved";
+    $("syncStatus").textContent = meta.lastSync
+      ? `Last synced ${new Date(meta.lastSync).toLocaleString()}.`
+      : "Connected - not synced yet.";
+  }
+}
+
+async function runSync() {
+  $("syncStatus").textContent = "Syncing...";
+  try {
+    const result = await syncNow(store, localStorage, Date.now());
+    $("syncStatus").textContent = result.message;
+    renderSyncCard();
+    if (result.ok) setTimeout(() => location.reload(), 600);
+  } catch (err) {
+    $("syncStatus").textContent = `Sync failed: ${err.message}`;
+  }
+}
+
+$("syncSave").addEventListener("click", () => {
+  const token = $("syncToken").value.trim();
+  if (!token) { $("syncStatus").textContent = "Paste a token first."; return; }
+  const meta = store.get(SYNC_META_KEY, {});
+  store.set(SYNC_META_KEY, { ...meta, token });
+  $("syncToken").value = "";
+  renderSyncCard();
+  runSync();
+});
+$("syncNow").addEventListener("click", runSync);
+$("syncForget").addEventListener("click", () => {
+  store.set(SYNC_META_KEY, {});
+  $("syncToken").placeholder = "github_pat_...";
+  $("syncStatus").textContent = "Disconnected. The gist itself is untouched.";
+  renderSyncCard();
+});
+renderSyncCard();
 
 $("exportBtn").addEventListener("click", () => {
   const keys = {};

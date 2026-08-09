@@ -59,13 +59,26 @@
       <p class="muted small">The honest yardstick (Nation 2006): 1,000 word families buys about 75-80% coverage, 2,000 makes conversation possible, 5,000 (95% coverage) is where a language becomes usable rather than studied. The core deck counts against this table directly; mature islands are production, not coverage.</p>
     </section>
     <section class="card">
+      <h2>Sync</h2>
+      <p class="muted small">Syncs progress between devices through a private GitHub gist.
+        Mint a fine-grained personal access token with only the <strong>Gists</strong>
+        permission; it is stored in this browser and sent only to api.github.com.</p>
+      <p>
+        <label>Token: <input type="password" id="syncToken" autocomplete="off" placeholder="github_pat_..."></label>
+        <button id="syncSave">Save</button>
+        <button id="syncNow">Sync now</button>
+        <button id="syncForget" hidden>Disconnect</button>
+      </p>
+      <p id="syncStatus" class="muted"></p>
+    </section>
+    <section class="card">
       <h2>Backup</h2>
       <p>
         <button id="exportBtn">Export progress</button>
         <label class="gap-left">Import: <input type="file" id="importFile" accept="application/json"></label>
       </p>
       <p id="backupStatus" class="muted"></p>
-      <p class="muted small">Progress lives only in this browser. Export before switching devices or clearing site data.</p>
+      <p class="muted small">Progress lives in this browser; sync or export before clearing site data.</p>
     </section>
   </main>
   <script type="module" src="js/progress.js"></script>
