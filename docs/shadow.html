@@ -35,6 +35,7 @@
       <p class="muted small" id="counter"></p>
       <p id="target" lang="es" class="shadow-target"></p>
       <p id="english" class="muted"></p>
+      <p id="revealRow" hidden><button id="revealText">Show the text</button></p>
       <div class="transport">
         <button id="prev">Prev</button>
         <button class="primary" id="playBtn">Play</button>
@@ -49,6 +50,12 @@
           <option value="0.75">0.75x</option>
         </select>
         <button id="toggleEn" aria-pressed="true">English</button>
+        <button id="listenFirst" aria-pressed="false">Listen first</button>
+      </div>
+      <div class="record-row">
+        <button id="recBtn">Record my attempt</button>
+        <button id="playMine" hidden>Play mine</button>
+        <span id="recStatus" class="muted small"></span>
       </div>
       <p class="muted small" style="margin-bottom:0">Say it simultaneously with the voice, not after it. Space plays, arrows move.</p>
     </section>
