@@ -2,6 +2,32 @@
  "language": "spanish",
  "label": "Spanish",
  "bcp47": "es-419",
+ "book": {
+  "title": "Complete Spanish Step-by-Step - Bregstein",
+  "free": "Language Transfer Complete Spanish (free audio course)"
+ },
+ "resources": [
+  {
+   "label": "Dreaming Spanish - graded comprehensible input, 7,000+ videos",
+   "url": "https://www.dreamingspanish.com/",
+   "kind": "video"
+  },
+  {
+   "label": "Language Transfer Complete Spanish - 90 audio tracks, absolute-beginner spine",
+   "url": "https://www.languagetransfer.org/complete-spanish",
+   "kind": "listening"
+  },
+  {
+   "label": "FSI / Peace Corps Spanish - public domain, with audio",
+   "url": "https://www.livelingua.com/courses/spanish",
+   "kind": "listening"
+  },
+  {
+   "label": "italki - book tutor sessions (send the standing instruction first)",
+   "url": "https://www.italki.com/",
+   "kind": "tutor"
+  }
+ ],
  "sentences": [
   {
    "id": "s-1",

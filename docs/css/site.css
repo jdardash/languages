@@ -31,3 +31,20 @@ article th, article td { border: 1px solid var(--muted); padding: .35rem .6rem; 
 article code { background: var(--card); padding: .1rem .3rem; border-radius: .25rem; }
 article pre { background: var(--card); padding: .75rem; border-radius: .5rem; overflow-x: auto; }
 article pre code { background: none; padding: 0; }
+.checklist { list-style: none; padding: 0; margin: 0 0 .75rem; }
+.checklist li { display: flex; gap: .55rem; align-items: baseline; margin: .4rem 0; }
+.checklist a { color: var(--fg); text-decoration: none; }
+.checklist a:hover { color: var(--accent); }
+blockquote { border-left: 3px solid var(--accent); margin: .75rem 0; padding: .25rem .9rem; background: var(--bg); border-radius: 0 .5rem .5rem 0; }
+.bands { display: grid; gap: .4rem; margin: .5rem 0 1rem; }
+.band { display: grid; grid-template-columns: 7.5rem 1fr 3.5rem; gap: .6rem; align-items: center; }
+.band .track, .progress-track { height: .55rem; background: var(--bg); border: 1px solid var(--muted); border-radius: .35rem; overflow: hidden; }
+.band .fill, .progress-fill { height: 100%; background: var(--accent); width: 0; }
+.choice-row { display: flex; gap: .75rem; margin: .75rem 0; }
+.choice-row button { font-size: 1.2rem; padding: .8rem 1.6rem; }
+.feedback-good { color: #24632a; }
+.feedback-bad { color: #8c2f24; }
+@media (prefers-color-scheme: dark) {
+  .feedback-good { color: #9fd39c; }
+  .feedback-bad { color: #f0a396; }
+}

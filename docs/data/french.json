@@ -2,6 +2,27 @@
  "language": "french",
  "label": "French",
  "bcp47": "fr-FR",
+ "book": {
+  "title": "Assimil New French with Ease",
+  "free": "FSI French Basic (livelingua.com)"
+ },
+ "resources": [
+  {
+   "label": "InnerFrench - intermediate podcast with transcripts",
+   "url": "https://innerfrench.com/",
+   "kind": "listening"
+  },
+  {
+   "label": "FSI French Basic - public domain, with audio",
+   "url": "https://www.livelingua.com/courses/french",
+   "kind": "listening"
+  },
+  {
+   "label": "italki - book tutor sessions (send the standing instruction first)",
+   "url": "https://www.italki.com/",
+   "kind": "tutor"
+  }
+ ],
  "sentences": [
   {
    "id": "s-1",
