@@ -1,115 +1,123 @@
-# Languages — even coverage, ten folders
+# Languages
 
-**Live study app: <https://jdardash.github.io/languages/>** — a complete
-from-zero system built from these notes, all four evidence-backed engines on
-one site. A first-visit fork ("starting from zero?") starts a phased path:
-phase 0 is two weeks of multi-voice minimal-pair ear training (HVPT) plus
-sentence capture; phase 1 adds the frequency core deck (recognition cards,
-20 new/day cap, band progress), the grammar-spine checklist and graded input;
-week 6 surfaces the tutor card with the standing correction instruction; the
-progress page leads with one phase-appropriate headline metric and a 7-day
-review forecast. Input hours track Dreaming Spanish-style with automatic
-credit from the shadowing player. Phases prescribe, they never lock. No
-accounts, no server; progress lives in the browser with JSON export/import.
+**Live app: <https://jdardash.github.io/languages/>**
 
-Repo map: `docs/` is the site (GitHub Pages serves it from `main`),
-`Sentence Islands/` holds the per-language sentence lists, audio, and the Python
-tooling (`build_site_data.py` regenerates the site data from `sentences.csv`),
-`specs/` and `plans/` hold the design history, and the method documents live at
-the root. Local development: `python -m http.server 8000 --directory docs`, and
-`npm test` runs the scheduler tests. Adding a language requires data files only —
-that claim is tested (French).
+An offline-first study app that turns four evidence-backed interventions into one
+site: high-variability phonetic training, a frequency-core vocabulary deck on a
+spaced-repetition schedule, a grammar-spine checklist, and graded comprehensible
+input with automatic hour tracking. No accounts, no server, no network calls after
+first load. Progress lives in the browser with JSON export and import.
 
-Restructured 2026-07-28: the old priority tiers (01/02/03) are gone. All ten
-languages now sit as equal folders. Each folder README carries the complete path:
-the one fundamental book (the finish-test standard from `../Books & Fundamentals.md`),
-a free-and-legal alternative, a first move, and a **Path to fluency** ladder —
-book sequence, linked input engine (graded listening and reading), speaking
-practice, and the milestone that means "fluent" (B2/C1). Work a folder's ladder to
-the end and fluency in that language is the outcome, not just book knowledge.
+Ten languages ship with it. Adding an eleventh requires data files only, and that
+claim is covered by a test.
+
+## What is interesting technically
+
+- **Zero runtime dependencies.** Twenty ES modules, plain DOM, no framework and no
+  build step for the app itself. `docs/` is the site; GitHub Pages serves it from
+  `main`.
+- **Conflict-free multi-device sync without a backend.** State merges per key with
+  day-level ORing of activity flags, so two devices that worked the same day both
+  keep their work. The merge is idempotent and tested against divergent histories.
+- **A scheduler under test.** 56 unit tests run on `node --test` with no test
+  framework installed — deck scheduling, review forecasting, phase gating,
+  dictation scoring, statistics and sync merges.
+- **A generated data layer.** Python builders turn `sentences.csv`, open dictionary
+  dumps and frequency lists into the JSON the site reads, so content changes never
+  touch application code.
+
+```sh
+python -m http.server 8000 --directory docs   # run the site locally
+npm test                                       # 56 scheduler and sync tests
+python "Sentence Islands/tools/build_site_data.py"   # regenerate site data
+```
+
+## How the app is laid out
+
+A first visit asks whether you are starting from zero and, if so, opens a phased
+path. Phase 0 is two weeks of multi-voice minimal-pair ear training plus sentence
+capture. Phase 1 adds the frequency core deck (recognition cards, 20 new per day,
+band progress), the grammar-spine checklist and graded input. Week 6 surfaces the
+tutor card with a standing correction instruction. The progress page leads with one
+phase-appropriate headline metric and a seven-day review forecast. Phases prescribe;
+they never lock.
+
+| Path | What it holds |
+| --- | --- |
+| `docs/` | The site itself — pages, ES modules, generated JSON, audio |
+| `Sentence Islands/` | Per-language sentence lists, audio, and the Python builders |
+| `tests/` | Node test suite for the scheduler, sync and scoring |
+| `specs/`, `plans/` | Design history for each feature |
+| Language folders | One per language: the book, a free alternative, and a fluency ladder |
+
+## The method behind it
+
+[METHOD.md](METHOD.md) is the daily routine — the sentence-island system, what in it
+is evidence-backed and what is its author selling his own app, and how drilling,
+the book and the input engine divide the day.
+
+[How To Learn Languages](notes/how-to-learn-languages.md) is the evidence layer
+underneath, researched from nine meta-analyses in August 2026: the four
+interventions with real effect sizes, a vocabulary-coverage table that turns
+"fluent" into a countable target, SRS policy, and pronunciation training. It
+corrects three claims made elsewhere in this repository — delayed output, card
+direction, and reading-with-audio — and reconciles the frequency-list versus
+personal-sentences question that METHOD.md raises.
+
+The two are layers rather than rivals: one is the routine, the other is why the
+routine is shaped that way and what it costs.
+
+## The ten languages
+
+Each folder carries the same structure: one fundamental book as the finish-test
+standard, a free and legal alternative, a first move, and a ladder of book, graded
+input, speaking practice, and the milestone that counts as fluent (B2/C1).
 
 | Language | Fundamental book | Free alternative |
-|---|---|---|
+| --- | --- | --- |
 | Arabic | Mastering Arabic 1 — Wightwick & Gaafar | FSI / Language Transfer |
 | Chinese | Integrated Chinese Vol. 1 (4th ed.) | FSI Standard Chinese |
-| Farsi | Complete Modern Persian — Farzad | DLI/Peace Corps (livelingua) |
+| Farsi | Complete Modern Persian — Farzad | DLI / Peace Corps (livelingua) |
 | French | Assimil New French with Ease | FSI French Basic |
 | Hebrew | Hebrew from Scratch, Part 1 | FSI Hebrew Basic |
 | Japanese | Genki I (3rd ed.) | Tae Kim; Irodori (official, free) |
 | Portuguese | Colloquial Portuguese of Brazil | FSI Portuguese Programmatic |
 | Russian | The New Penguin Russian Course — Brown | FSI Russian FAST |
-| Spanish | Complete Spanish Step-by-Step — Bregstein | Language Transfer (best free start) |
+| Spanish | Complete Spanish Step-by-Step — Bregstein | Language Transfer |
 | Tagalog | Tagalog for Beginners — Barrios | FSI / Peace Corps Tagalog |
 
-Almost every language here has a public-domain US government course (FSI/DLI/Peace
-Corps) hosted free at **livelingua.com** — dated but complete, with audio.
+Almost every language here has a public-domain US government course (FSI, DLI or
+Peace Corps) hosted free at livelingua.com — dated but complete, with audio.
 
-**How to work a ladder day to day:** [METHOD.md](METHOD.md) — the sentence-island
-system (personal sentence lists, shadowing, active recall), what in it is
-evidence-backed and what is the author selling his app, and the split between
-drilling, the book and the input engine. The books above stay: they give you the
-ability to build sentences you have never heard, which memorized islands cannot.
-Working files and tooling in [Sentence Islands/](Sentence%20Islands/).
+## What running ten at once actually costs
 
-**Why any of it works:** [How To Learn Languages.md](How%20To%20Learn%20Languages.md)
-— the evidence layer under both docs, researched 2026-08-08 from nine meta-analyses.
-The four interventions with real effect sizes, the vocabulary-coverage table that
-turns "fluent" into a countable target, SRS policy, pronunciation training, and the
-portfolio arithmetic below. It corrects three things stated elsewhere in this library
-(delayed output, card direction, reading-with-audio) and reconciles the frequency-list
-vs. personal-sentences question METHOD.md raises. Raw evidence and citations in
-`../_Research/2026-08-08 - Language Learning Research.md`.
+The goal is broad, even familiarity rather than ten parallel pushes, so the app
+assumes one focus language at a time (45-60 min/day), rotating on milestone rather
+than on the calendar, with maintenance capped at two more.
 
-The two are layers, not rivals: METHOD.md is the daily routine, How To Learn
-Languages.md is why that routine is shaped the way it is and what it costs.
+The arithmetic is the reason for that cap. Steady-state SRS load is roughly mature
+cards divided by mean interval, so ten languages held at a 1,000-word floor really
+does cost only about 15 min/day — but 1,000 word families buys under 80% text
+coverage, which is the ability to understand nothing unassisted, and it is exactly
+the level attrition research says evaporates. Held at a usable 5,000 words, or 95%
+coverage, ten languages cost about 75 min/day, forever, before any input or
+speaking. Acquisition ends; maintenance does not. Full arithmetic and the resulting
+three-language cap are in section 8 of
+[How To Learn Languages](notes/how-to-learn-languages.md).
 
-## Running them "a bit evenly" — and what that actually costs
-
-The goal is broad, even familiarity — a real base in each — not ten parallel pushes.
-A rotation that fits the rest of the library:
-
-- **One focus language at a time** (its book is the active book; 45-60 min/day),
-  rotating **on milestone, not on calendar** — a language leaves focus when it
-  reaches a durable level, not when the month ends. Intensity of instruction is a
-  verified moderator of how well instruction works, and higher peak attainment
-  predicts less later attrition; monthly rotation fights both.
-- **Maintenance is capped at two languages** beyond the focus one. Shared Anki
-  session, long intervals, zero new cards.
-- **Everything else is parked, not maintained** — no daily obligation, no guilt.
-  Log where each stopped so the next rotation resumes instead of restarting.
-- **Sentence islands belong to the focus language only.** One list at a time —
-  ten personal sentence lists in parallel is exactly the failure this rotation
-  exists to prevent. When a language leaves focus its list freezes and its
-  sentences fall back into the shared Anki session.
-
-⚠ **The ~15 min/day figure this README used to quote was arithmetically right and
-strategically wrong.** Steady-state SRS load is roughly (mature cards ÷ mean
-interval), so ten languages held at a **1,000-word floor** really does cost ~15
-min/day — but 1,000 word families buys under 80% text coverage, i.e. the ability to
-understand nothing unassisted, and it is exactly the low level the attrition research
-says evaporates. Held at a **usable 5,000 words** (95% coverage), ten languages cost
-**~75 min/day, forever** — vocabulary alone, before any input, islands or speaking.
-Full arithmetic and the resulting three-language cap in
-[How To Learn Languages.md](How%20To%20Learn%20Languages.md) §8.
-
-Acquisition ends; maintenance doesn't. Skills parked high are nearly free to keep;
-skills parked low decay and the upkeep was wasted. That is the whole case for pushing
-few languages far rather than ten a little — and it is a permanent claim on the same
-hours as the anchors in `../START HERE.md`.
-
-## Useful cross-language discounts
-
-- Spanish → Portuguese → French share heavy grammar/vocabulary overlap.
-- Arabic script, once learned, discounts Farsi (and vice versa).
-- Russian pairs with the Orthodoxy and Russian-literature shelves.
-- The rest (Chinese, Japanese, Hebrew, Tagalog) are islands — no shared discount.
+Useful discounts: Spanish, Portuguese and French share heavy grammar and vocabulary
+overlap, and the Arabic script discounts Farsi once learned. Chinese, Japanese,
+Hebrew and Tagalog are islands.
 
 ## Data credits
 
-The study app bundles data derived from open sources:
+The app bundles data derived from open sources:
 
 - Conjugations: [Fred Jehle Spanish verb database](https://github.com/ghidinelli/fred-jehle-spanish-verbs) (CC BY-NC-SA 3.0).
 - Reader glosses: [WikDict](https://www.wikdict.com/) es-en (CC BY-SA); the derived `docs/data/dict-spanish.json` carries the same license.
 - Minimal-pair mining: [ipa-dict](https://github.com/open-dict-data/ipa-dict) (MIT) and [FrequencyWords](https://github.com/hermitdave/FrequencyWords) (CC BY-SA 3.0).
 - Bundled reader text: *A First Spanish Reader*, Project Gutenberg #15353 (public domain).
 - Audio: synthesized with edge-tts; transcription tooling uses faster-whisper locally.
+
+Application code is MIT licensed (see [LICENSE](LICENSE)). Bundled third-party data
+keeps the licenses listed above.
