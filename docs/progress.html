@@ -4,32 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Progress - Languages</title>
+  <meta name="theme-color" content="#f5f5f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12141a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e40a6'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' font-weight='700' fill='white' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&display=swap">
   <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-  <nav class="site-nav">
-    <a href="index.html">Today</a>
-    <a href="drill.html">Drill</a>
-    <a href="shadow.html">Shadow</a>
-    <a href="method.html">Method</a>
-    <a href="progress.html">Progress</a>
-    <a href="station.html">Station</a>
-  </nav>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">Languages</a>
+      <nav class="site-nav">
+        <a href="index.html">Today</a>
+        <a href="drill.html">Drill</a>
+        <a href="shadow.html">Shadow</a>
+        <a href="method.html">Method</a>
+        <a href="progress.html">Progress</a>
+        <a href="station.html">Station</a>
+      </nav>
+    </div>
+  </header>
   <main id="main">
     <h1 id="heading">Progress</h1>
     <section class="card" id="stats">Loading...</section>
     <section class="card">
       <h2>Coverage context</h2>
-      <p class="muted">Mature sentences are a rough proxy, not word families. The honest yardstick (Nation 2006): 1,000 word families buys about 75-80% coverage, 2,000 makes conversation possible, 5,000 (95% coverage) is where a language becomes usable rather than studied. The frequency-deck feature that counts against this table directly is planned for v2.</p>
+      <p class="muted small">Mature sentences are a rough proxy, not word families. The honest yardstick (Nation 2006): 1,000 word families buys about 75-80% coverage, 2,000 makes conversation possible, 5,000 (95% coverage) is where a language becomes usable rather than studied. The frequency-deck feature that counts against this table directly is planned for v2.</p>
     </section>
     <section class="card">
       <h2>Backup</h2>
       <p>
         <button id="exportBtn">Export progress</button>
-        <label style="margin-left:1rem">Import: <input type="file" id="importFile" accept="application/json"></label>
+        <label class="gap-left">Import: <input type="file" id="importFile" accept="application/json"></label>
       </p>
       <p id="backupStatus" class="muted"></p>
-      <p class="muted">Progress lives only in this browser. Export before switching devices or clearing site data.</p>
+      <p class="muted small">Progress lives only in this browser. Export before switching devices or clearing site data.</p>
     </section>
   </main>
   <script type="module" src="js/progress.js"></script>
