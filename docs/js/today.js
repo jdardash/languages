@@ -5,12 +5,12 @@
 import { newCard, isDue } from "./scheduler.js";
 import { store, key, getSettings, saveSettings, loadJSON, storageWarning, markNav } from "./app.js";
 import { PHASES, newPlan, todayKey, dayNumber, weekNumber, tutorDue, phaseZeroDone, checklist } from "./plan.js";
+import { NEW_PER_DAY } from "./deck.js";
 
 const $ = id => document.getElementById(id);
 markNav();
 storageWarning($("main"));
 
-const NEW_PER_DAY = 20;
 let lang, data, plan;
 
 const ADVANCE_CHECKS = {

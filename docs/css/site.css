@@ -363,24 +363,19 @@ article pre code { background: none; padding: 0; border: 0; }
 article blockquote { margin: 1rem 0; padding: .1rem 1rem; border-left: 3px solid var(--accent); color: var(--muted); }
 .doc-list { display: flex; flex-direction: column; gap: .4rem; }
 
-/* Onboarding, phase dashboard, and drill pages added by the complete system. */
+/* Guided-path components: daily checklist, band bars, pair choices, tutor quote */
 .checklist { list-style: none; padding: 0; margin: 0 0 .75rem; }
 .checklist li { display: flex; gap: .55rem; align-items: baseline; margin: .4rem 0; }
 .checklist a { color: var(--fg); text-decoration: none; }
 .checklist a:hover { color: var(--accent); }
-blockquote {
-  border-left: 3px solid var(--accent);
-  margin: .75rem 0;
-  padding: .35rem .9rem;
-  background: var(--bg);
-  border-radius: 0 .45rem .45rem 0;
-}
+main blockquote { border-left: 3px solid var(--accent); margin: .75rem 0; padding: .25rem .9rem; background: var(--bg); border-radius: 0 .45rem .45rem 0; font-family: var(--serif); }
 .bands { display: grid; gap: .4rem; margin: .5rem 0 1rem; }
-.band { display: grid; grid-template-columns: 7.5rem 1fr 3.5rem; gap: .6rem; align-items: center; font-size: .9rem; }
-.band .track { height: .55rem; background: var(--border); border-radius: .3rem; overflow: hidden; }
+.band { display: grid; grid-template-columns: 7.5rem 1fr 3.5rem; gap: .6rem; align-items: center; }
+.band .track { height: .55rem; background: var(--bg); border: 1px solid var(--border); border-radius: .35rem; overflow: hidden; }
 .band .fill { height: 100%; background: var(--accent); width: 0; }
+.band .muted { font-family: var(--mono); font-size: .8rem; }
 .choice-row { display: flex; gap: .75rem; margin: .75rem 0; }
-.choice-row button { font-size: 1.15rem; padding: .8rem 1.6rem; font-family: var(--serif); }
+.choice-row button { font-size: 1.15rem; min-height: 3.25rem; flex: 1; }
 .feedback-good { color: var(--good-fg); }
 .feedback-bad { color: var(--miss-fg); }
 .headword { font-size: 1.8rem; font-weight: 500; margin: .5rem 0; }
