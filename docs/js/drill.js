@@ -36,8 +36,8 @@ async function init() {
     const pool = [...data.sentences, ...userCards];
     const due = pool.filter(s => isDue(schedule[s.id] ?? newCard(), now));
     // Dictation and speak need audio; recall drills the whole queue.
-    const needsAudio = mode === "dictation" || mode === "speak";
-    if (needsAudio && !due.some(s => s.audio)) mode = "recall";
+    let needsAudio = mode === "dictation" || mode === "speak";
+    if (needsAudio && !due.some(s => s.audio)) { mode = "recall"; needsAudio = false; }
     queue = (needsAudio ? due.filter(s => s.audio) : due).slice(0, settings.drillLimit);
     $("heading").textContent = `Drill - ${data.label}`;
     $("modeRow").hidden = false;
@@ -195,6 +195,7 @@ document.addEventListener("keydown", e => {
 });
 
 function finish() {
+  rec.reset();
   $("stage").hidden = true;
   $("done").hidden = false;
   $("summary").textContent = `${reviewed} reviews, ${sessionMisses.size} sentences missed.`;
