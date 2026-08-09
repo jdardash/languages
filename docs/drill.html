@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drill - Languages</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="index.html">Today</a>
+    <a href="drill.html">Drill</a>
+    <a href="shadow.html">Shadow</a>
+    <a href="method.html">Method</a>
+    <a href="progress.html">Progress</a>
+    <a href="station.html">Station</a>
+  </nav>
+  <main id="main">
+    <h1 id="heading">Drill</h1>
+    <section id="stage" class="card" hidden>
+      <p class="muted" id="counter"></p>
+      <p id="prompt" style="font-size:1.4rem"></p>
+      <p id="answer" lang="es" style="font-size:1.4rem" hidden></p>
+      <div id="controls">
+        <button class="primary" id="reveal">Reveal</button>
+        <span id="grades" hidden>
+          <button id="miss">Miss (1)</button>
+          <button id="hard">Hard (2)</button>
+          <button id="good">Good (3)</button>
+        </span>
+      </div>
+    </section>
+    <section id="done" class="card" hidden>
+      <h2>Session complete</h2>
+      <p id="summary"></p>
+      <ul id="missList"></ul>
+      <p class="muted">Sentences you missed are tomorrow's syllabus - add anything you could not say to the sentence list.</p>
+    </section>
+    <p id="status" class="muted">Loading...</p>
+  </main>
+  <audio id="player" preload="none"></audio>
+  <script type="module" src="js/drill.js"></script>
+</body>
+</html>
