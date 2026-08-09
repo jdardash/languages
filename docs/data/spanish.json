@@ -1,0 +1,263 @@
+{
+ "language": "spanish",
+ "label": "Spanish",
+ "bcp47": "es-419",
+ "sentences": [
+  {
+   "id": "s-1",
+   "en": "I just woke up and I'm not fully awake yet.",
+   "target": "Me acabo de despertar y todavía no estoy despierto del todo.",
+   "topic": "morning",
+   "audio": "audio/spanish/t-1.mp3",
+   "promptAudio": "audio/spanish/e-1.mp3"
+  },
+  {
+   "id": "s-2",
+   "en": "I'm going to make myself a coffee before anything else.",
+   "target": "Voy a hacerme un café antes de cualquier otra cosa.",
+   "topic": "morning",
+   "audio": "audio/spanish/t-2.mp3",
+   "promptAudio": "audio/spanish/e-2.mp3"
+  },
+  {
+   "id": "s-3",
+   "en": "I have class at ten today and then I'm going to the library.",
+   "target": "Hoy tengo clase a las diez y después voy a la biblioteca.",
+   "topic": "morning",
+   "audio": "audio/spanish/t-3.mp3",
+   "promptAudio": "audio/spanish/e-3.mp3"
+  },
+  {
+   "id": "s-4",
+   "en": "This meeting could have been an email.",
+   "target": "Esta reunión pudo haber sido un correo.",
+   "topic": "work",
+   "audio": "audio/spanish/t-4.mp3",
+   "promptAudio": "audio/spanish/e-4.mp3"
+  },
+  {
+   "id": "s-5",
+   "en": "I'm working on a machine learning project.",
+   "target": "Estoy trabajando en un proyecto de aprendizaje automático.",
+   "topic": "work",
+   "audio": "audio/spanish/t-5.mp3",
+   "promptAudio": "audio/spanish/e-5.mp3"
+  },
+  {
+   "id": "s-6",
+   "en": "Basically, I teach a program to find patterns in a lot of data.",
+   "target": "Básicamente, le enseño a un programa a encontrar patrones en muchos datos.",
+   "topic": "work",
+   "audio": "audio/spanish/t-6.mp3",
+   "promptAudio": "audio/spanish/e-6.mp3"
+  },
+  {
+   "id": "s-7",
+   "en": "My code broke again and I don't know why.",
+   "target": "Se me rompió el código otra vez y no sé por qué.",
+   "topic": "work",
+   "audio": "audio/spanish/t-7.mp3",
+   "promptAudio": "audio/spanish/e-7.mp3"
+  },
+  {
+   "id": "s-8",
+   "en": "I've tried everything already and it still doesn't work.",
+   "target": "Ya probé de todo y sigue sin funcionar.",
+   "topic": "work",
+   "audio": "audio/spanish/t-8.mp3",
+   "promptAudio": "audio/spanish/e-8.mp3"
+  },
+  {
+   "id": "s-9",
+   "en": "Can you explain that again, but slower?",
+   "target": "¿Me puedes explicar eso otra vez, pero más despacio?",
+   "topic": "glue",
+   "audio": "audio/spanish/t-9.mp3",
+   "promptAudio": "audio/spanish/e-9.mp3"
+  },
+  {
+   "id": "s-10",
+   "en": "Sorry, I didn't understand even half of what you said.",
+   "target": "Perdón, no entendí ni la mitad de lo que dijiste.",
+   "topic": "glue",
+   "audio": "audio/spanish/t-10.mp3",
+   "promptAudio": "audio/spanish/e-10.mp3"
+  },
+  {
+   "id": "s-11",
+   "en": "How do you say this in Spanish?",
+   "target": "¿Cómo se dice esto en español?",
+   "topic": "glue",
+   "audio": "audio/spanish/t-11.mp3",
+   "promptAudio": "audio/spanish/e-11.mp3"
+  },
+  {
+   "id": "s-12",
+   "en": "I've been learning Spanish for a few months, so be patient with me.",
+   "target": "Llevo unos meses aprendiendo español, así que ten paciencia conmigo.",
+   "topic": "glue",
+   "audio": "audio/spanish/t-12.mp3",
+   "promptAudio": "audio/spanish/e-12.mp3"
+  },
+  {
+   "id": "s-13",
+   "en": "I'm from California and I study in Santa Cruz.",
+   "target": "Soy de California y estudio en Santa Cruz.",
+   "topic": "self",
+   "audio": "audio/spanish/t-13.mp3",
+   "promptAudio": "audio/spanish/e-13.mp3"
+  },
+  {
+   "id": "s-14",
+   "en": "I study computer science, but I'm more interested in artificial intelligence.",
+   "target": "Estudio informática, pero me interesa más la inteligencia artificial.",
+   "topic": "self",
+   "audio": "audio/spanish/t-14.mp3",
+   "promptAudio": "audio/spanish/e-14.mp3"
+  },
+  {
+   "id": "s-15",
+   "en": "I started because I wanted to understand how these things work underneath.",
+   "target": "Empecé porque quería entender cómo funcionan estas cosas por dentro.",
+   "topic": "self",
+   "audio": "audio/spanish/t-15.mp3",
+   "promptAudio": "audio/spanish/e-15.mp3"
+  },
+  {
+   "id": "s-16",
+   "en": "On weekends I usually go for a walk or stay in and read.",
+   "target": "Los fines de semana normalmente salgo a caminar o me quedo leyendo.",
+   "topic": "self",
+   "audio": "audio/spanish/t-16.mp3",
+   "promptAudio": "audio/spanish/e-16.mp3"
+  },
+  {
+   "id": "s-17",
+   "en": "Honestly, I haven't had much free time lately.",
+   "target": "La verdad es que no he tenido mucho tiempo libre últimamente.",
+   "topic": "self",
+   "audio": "audio/spanish/t-17.mp3",
+   "promptAudio": "audio/spanish/e-17.mp3"
+  },
+  {
+   "id": "s-18",
+   "en": "Could you bring me the check, please?",
+   "target": "¿Me traes la cuenta, por favor?",
+   "topic": "transaction",
+   "audio": "audio/spanish/t-18.mp3",
+   "promptAudio": "audio/spanish/e-18.mp3"
+  },
+  {
+   "id": "s-19",
+   "en": "How much does this cost?",
+   "target": "¿Cuánto cuesta esto?",
+   "topic": "transaction",
+   "audio": "audio/spanish/t-19.mp3",
+   "promptAudio": "audio/spanish/e-19.mp3"
+  },
+  {
+   "id": "s-20",
+   "en": "I'd like a latte and something to eat.",
+   "target": "Quisiera un café con leche y algo de comer.",
+   "topic": "transaction",
+   "audio": "audio/spanish/t-20.mp3",
+   "promptAudio": "audio/spanish/e-20.mp3"
+  },
+  {
+   "id": "s-21",
+   "en": "Excuse me, where's the bathroom?",
+   "target": "Disculpa, ¿dónde está el baño?",
+   "topic": "transaction",
+   "audio": "audio/spanish/t-21.mp3",
+   "promptAudio": "audio/spanish/e-21.mp3"
+  },
+  {
+   "id": "s-22",
+   "en": "Can you give me the wifi password?",
+   "target": "¿Me pasas la contraseña del wifi?",
+   "topic": "transaction",
+   "audio": "audio/spanish/t-22.mp3",
+   "promptAudio": "audio/spanish/e-22.mp3"
+  },
+  {
+   "id": "s-23",
+   "en": "I think that's overrated, but I understand why people like it.",
+   "target": "Creo que eso está sobrevalorado, pero entiendo por qué le gusta a la gente.",
+   "topic": "opinion",
+   "audio": "audio/spanish/t-23.mp3",
+   "promptAudio": "audio/spanish/e-23.mp3"
+  },
+  {
+   "id": "s-24",
+   "en": "I partly agree, but not completely.",
+   "target": "Estoy de acuerdo en parte, pero no del todo.",
+   "topic": "opinion",
+   "audio": "audio/spanish/t-24.mp3",
+   "promptAudio": "audio/spanish/e-24.mp3"
+  },
+  {
+   "id": "s-25",
+   "en": "It depends on what you mean.",
+   "target": "Depende de a qué te refieras.",
+   "topic": "opinion",
+   "audio": "audio/spanish/t-25.mp3",
+   "promptAudio": "audio/spanish/e-25.mp3"
+  },
+  {
+   "id": "s-26",
+   "en": "Hold on a second, I'm thinking.",
+   "target": "Espérame un segundo, estoy pensando.",
+   "topic": "glue",
+   "audio": "audio/spanish/t-26.mp3",
+   "promptAudio": "audio/spanish/e-26.mp3"
+  },
+  {
+   "id": "s-27",
+   "en": "I have to go now, it got late.",
+   "target": "Ya me tengo que ir, se me hizo tarde.",
+   "topic": "social",
+   "audio": "audio/spanish/t-27.mp3",
+   "promptAudio": "audio/spanish/e-27.mp3"
+  },
+  {
+   "id": "s-28",
+   "en": "I'll let you know when I get there.",
+   "target": "Te aviso cuando llegue.",
+   "topic": "social",
+   "audio": "audio/spanish/t-28.mp3",
+   "promptAudio": "audio/spanish/e-28.mp3"
+  },
+  {
+   "id": "s-29",
+   "en": "I'm tired because I went to bed really late last night.",
+   "target": "Estoy cansado porque anoche me dormí muy tarde.",
+   "topic": "social",
+   "audio": "audio/spanish/t-29.mp3",
+   "promptAudio": "audio/spanish/e-29.mp3"
+  },
+  {
+   "id": "s-30",
+   "en": "And what do you do for a living?",
+   "target": "¿Y tú a qué te dedicas?",
+   "topic": "question",
+   "audio": "audio/spanish/t-30.mp3",
+   "promptAudio": "audio/spanish/e-30.mp3"
+  },
+  {
+   "id": "s-31",
+   "en": "How long have you lived here?",
+   "target": "¿Desde cuándo vives aquí?",
+   "topic": "question",
+   "audio": "audio/spanish/t-31.mp3",
+   "promptAudio": "audio/spanish/e-31.mp3"
+  },
+  {
+   "id": "s-32",
+   "en": "What do you recommend?",
+   "target": "¿Qué me recomiendas?",
+   "topic": "question",
+   "audio": "audio/spanish/t-32.mp3",
+   "promptAudio": "audio/spanish/e-32.mp3"
+  }
+ ]
+}
