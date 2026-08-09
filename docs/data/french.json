@@ -2,24 +2,51 @@
  "language": "french",
  "label": "French",
  "bcp47": "fr-FR",
+ "book": {
+  "title": "Assimil New French with Ease",
+  "free": "FSI French Basic (livelingua.com)"
+ },
+ "resources": [
+  {
+   "label": "InnerFrench - intermediate podcast with transcripts",
+   "url": "https://innerfrench.com/",
+   "kind": "listening"
+  },
+  {
+   "label": "FSI French Basic - public domain, with audio",
+   "url": "https://www.livelingua.com/courses/french",
+   "kind": "listening"
+  },
+  {
+   "label": "italki - book tutor sessions (send the standing instruction first)",
+   "url": "https://www.italki.com/",
+   "kind": "tutor"
+  }
+ ],
  "sentences": [
   {
    "id": "s-1",
    "en": "I just woke up.",
    "target": "Je viens de me réveiller.",
-   "topic": "morning"
+   "topic": "morning",
+   "audio": "audio/french/t-1.mp3",
+   "promptAudio": "audio/french/e-1.mp3"
   },
   {
    "id": "s-2",
    "en": "This meeting could have been an email.",
    "target": "Cette réunion aurait pu être un courriel.",
-   "topic": "work"
+   "topic": "work",
+   "audio": "audio/french/t-2.mp3",
+   "promptAudio": "audio/french/e-2.mp3"
   },
   {
    "id": "s-3",
    "en": "I am going to read before sleeping.",
    "target": "Je vais lire avant de dormir.",
-   "topic": "evening"
+   "topic": "evening",
+   "audio": "audio/french/t-3.mp3",
+   "promptAudio": "audio/french/e-3.mp3"
   }
  ]
 }

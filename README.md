@@ -1,10 +1,16 @@
 # Languages — even coverage, ten folders
 
-**Live study app: <https://jdardash.github.io/languages/>** — an evidence-based
-trainer built from these notes: active-recall drill with spaced repetition,
-shadowing player over recorded audio, the method documents rendered as a
-reference, and progress tracking. No accounts, no server; progress lives in the
-browser with JSON export/import.
+**Live study app: <https://jdardash.github.io/languages/>** — a complete
+from-zero system built from these notes, all four evidence-backed engines on
+one site. A first-visit fork ("starting from zero?") starts a phased path:
+phase 0 is two weeks of multi-voice minimal-pair ear training (HVPT) plus
+sentence capture; phase 1 adds the frequency core deck (recognition cards,
+20 new/day cap, band progress), the grammar-spine checklist and graded input;
+week 6 surfaces the tutor card with the standing correction instruction; the
+progress page leads with one phase-appropriate headline metric and a 7-day
+review forecast. Input hours track Dreaming Spanish-style with automatic
+credit from the shadowing player. Phases prescribe, they never lock. No
+accounts, no server; progress lives in the browser with JSON export/import.
 
 Repo map: `docs/` is the site (GitHub Pages serves it from `main`),
 `Sentence Islands/` holds the per-language sentence lists, audio, and the Python

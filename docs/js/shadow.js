@@ -1,13 +1,35 @@
 // Shadowing player over the per-sentence recorded clips. Rate control keeps
 // pitch (preservesPitch); loop-one and auto-advance are mutually exclusive.
+// Play time credits itself to the input-hour log in whole minutes.
 
-import { getSettings, saveSettings, loadJSON, playAudio, markNav } from "./app.js";
+import { store, key, getSettings, saveSettings, loadJSON, playAudio, markNav } from "./app.js";
 
 const $ = id => document.getElementById(id);
 markNav();
 
-let clips = [], i = 0;
+let clips = [], i = 0, lang = null;
 const player = $("player");
+
+let listenedMs = 0, playStart = null;
+player.addEventListener("play", () => { playStart = Date.now(); });
+player.addEventListener("pause", () => {
+  if (playStart) { listenedMs += Date.now() - playStart; playStart = null; }
+  creditListening();
+});
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState !== "hidden") return;
+  if (playStart) { listenedMs += Date.now() - playStart; playStart = null; }
+  creditListening();
+});
+
+function creditListening() {
+  const mins = Math.floor(listenedMs / 60_000);
+  if (!mins || !lang) return;
+  listenedMs -= mins * 60_000;
+  const log = store.get(key(lang, "inputlog"), []);
+  log.push({ ts: Date.now(), mins, kind: "shadow", note: "" });
+  store.set(key(lang, "inputlog"), log);
+}
 
 async function init() {
   try {
@@ -15,6 +37,7 @@ async function init() {
     const manifest = await loadJSON("data/manifest.json");
     const entry = manifest.languages.find(l => l.id === settings.language) ?? manifest.languages[0];
     const data = await loadJSON(entry.data);
+    lang = data.language;
     clips = data.sentences.filter(s => s.audio);
     $("target").lang = data.bcp47;
     if (!clips.length) { $("status").textContent = "No recorded audio for this language yet."; return; }

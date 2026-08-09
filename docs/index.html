@@ -19,24 +19,70 @@
       <nav class="site-nav">
         <a href="index.html" aria-current="page">Today</a>
         <a href="drill.html">Drill</a>
+        <a href="vocab.html">Vocab</a>
+        <a href="pairs.html">Pairs</a>
         <a href="shadow.html">Shadow</a>
+        <a href="input.html">Input</a>
+        <a href="capture.html">Capture</a>
         <a href="method.html">Method</a>
         <a href="progress.html">Progress</a>
-        <a href="station.html">Station</a>
       </nav>
     </div>
   </header>
   <main id="main">
     <h1 id="heading">Today</h1>
-    <section class="card">
-      <p class="due-count" id="dueCount">&nbsp;</p>
-      <p id="dueLine" class="muted">Loading...</p>
-      <div class="action-row">
-        <a href="drill.html"><button class="primary" id="startBtn">Start drill</button></a>
-        <a href="shadow.html"><button>Shadow</button></a>
-      </div>
-      <p class="muted small" id="nudge" hidden>Evidence note: vocabulary consolidates better across sleep - if you have one session in you today, make it the evening one.</p>
+
+    <section class="card" id="setup" hidden>
+      <h2>Are you starting this language from zero?</h2>
+      <p class="muted">One question, then today's work is laid out for you. Nothing is locked either way.</p>
+      <p>
+        <button class="primary" id="setupZero">Starting from zero</button>
+        <button id="setupSome">I already know some</button>
+      </p>
+      <p class="muted small">From zero begins with two weeks of ear training before vocabulary volume - perception errors fossilize, and this fortnight prevents them. If you already know some, you start directly on the core deck and grammar spine. The full evidence lives under <a href="method.html">Method</a>.</p>
     </section>
+
+    <div id="dash" hidden>
+      <section class="card">
+        <p id="phaseLine" class="muted small"></p>
+        <h2 id="phaseName"></h2>
+        <p id="phaseDesc" class="muted small"></p>
+      </section>
+
+      <section class="card" id="advanceCard" hidden>
+        <h2>Ready to advance?</h2>
+        <p id="advanceCheck" class="muted small"></p>
+        <p><button id="advanceBtn">Advance to the next phase</button></p>
+      </section>
+
+      <section class="card">
+        <h2>Today's work</h2>
+        <ul id="checklist" class="checklist"></ul>
+        <p id="queueLine" class="muted small"></p>
+        <div class="action-row">
+          <a id="ctaLink"><button class="primary" id="ctaBtn"></button></a>
+          <a href="shadow.html"><button>Shadow</button></a>
+        </div>
+        <p class="muted small" id="nudge" hidden>Evidence note: vocabulary consolidates better across sleep - if you have one session in you today, make it the evening one.</p>
+      </section>
+
+      <section class="card" id="tutorCard" hidden>
+        <h2 id="tutor">Speaking practice</h2>
+        <p id="tutorWhy" class="muted small"></p>
+        <blockquote id="instruction">When I make an error, do not rephrase it correctly and move on. Signal that something was wrong and make me produce the correct form myself. I would rather be stopped often than sound polished.</blockquote>
+        <p>
+          <button id="copyInstruction">Copy the standing instruction</button>
+          <a id="tutorLink" target="_blank" rel="noopener"><button>Find a tutor</button></a>
+          <button id="logSession">Log a session</button>
+        </p>
+        <p id="tutorCount" class="muted small"></p>
+        <div id="prepWrap" hidden>
+          <p class="muted small">Bring these - your most-missed sentences:</p>
+          <ul id="prepList"></ul>
+        </div>
+      </section>
+    </div>
+
     <section class="card">
       <h2>Settings</h2>
       <p>

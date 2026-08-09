@@ -15,8 +15,34 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
 LANGS = {
-    "Spanish": {"id": "spanish", "label": "Spanish", "bcp47": "es-419"},
-    "French": {"id": "french", "label": "French", "bcp47": "fr-FR"},
+    "Spanish": {
+        "id": "spanish", "label": "Spanish", "bcp47": "es-419",
+        "book": {"title": "Complete Spanish Step-by-Step - Bregstein",
+                 "free": "Language Transfer Complete Spanish (free audio course)"},
+        "resources": [
+            {"label": "Dreaming Spanish - graded comprehensible input, 7,000+ videos",
+             "url": "https://www.dreamingspanish.com/", "kind": "video"},
+            {"label": "Language Transfer Complete Spanish - 90 audio tracks, absolute-beginner spine",
+             "url": "https://www.languagetransfer.org/complete-spanish", "kind": "listening"},
+            {"label": "FSI / Peace Corps Spanish - public domain, with audio",
+             "url": "https://www.livelingua.com/courses/spanish", "kind": "listening"},
+            {"label": "italki - book tutor sessions (send the standing instruction first)",
+             "url": "https://www.italki.com/", "kind": "tutor"},
+        ],
+    },
+    "French": {
+        "id": "french", "label": "French", "bcp47": "fr-FR",
+        "book": {"title": "Assimil New French with Ease",
+                 "free": "FSI French Basic (livelingua.com)"},
+        "resources": [
+            {"label": "InnerFrench - intermediate podcast with transcripts",
+             "url": "https://innerfrench.com/", "kind": "listening"},
+            {"label": "FSI French Basic - public domain, with audio",
+             "url": "https://www.livelingua.com/courses/french", "kind": "listening"},
+            {"label": "italki - book tutor sessions (send the standing instruction first)",
+             "url": "https://www.italki.com/", "kind": "tutor"},
+        ],
+    },
 }
 METHOD_DOCS = [
     ("README.md", "overview.md", "Overview"),
@@ -48,6 +74,7 @@ def build(folder_name: str) -> None:
     data_dir = DOCS / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
     out = {"language": meta["id"], "label": meta["label"], "bcp47": meta["bcp47"],
+           "book": meta["book"], "resources": meta["resources"],
            "sentences": sentences}
     (data_dir / f"{meta['id']}.json").write_text(
         json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")

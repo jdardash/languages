@@ -140,7 +140,9 @@ def list_voices(prefix: str) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("lang", nargs="?", help="language folder, e.g. Spanish")
-    ap.add_argument("--voice", help="target-language voice, e.g. es-MX-JorgeNeural")
+    ap.add_argument("--voice", help="target-language voice, or a comma-separated list "
+                    "rotated across sentences (talker variability aids perception), "
+                    "e.g. es-MX-JorgeNeural,es-MX-DaliaNeural")
     ap.add_argument("--en-voice", default="en-US-AriaNeural", help="voice for the English prompts")
     ap.add_argument("--mode", choices=["shadow", "recall", "both"], default="both")
     ap.add_argument("--rate", default="+0%", help="speech rate for the target language, e.g. -10%%")
@@ -173,12 +175,14 @@ def main() -> None:
     jobs: list[tuple[Path, str, str]] = []
     plan: list[tuple[dict, Path, Path | None]] = []
 
-    for row in rows:
+    voices = [v.strip() for v in args.voice.split(",") if v.strip()]
+    for idx, row in enumerate(rows):
+        voice = voices[idx % len(voices)]
         rid = (row.get("id") or "").strip()
         target_path = audio_dir / f"t-{rid}.mp3"
-        key = cache_key(row["target"].strip(), args.voice, args.rate)
+        key = cache_key(row["target"].strip(), voice, args.rate)
         if manifest.get(f"t-{rid}") != key or not target_path.exists():
-            jobs.append((target_path, row["target"].strip(), args.voice))
+            jobs.append((target_path, row["target"].strip(), voice))
             manifest[f"t-{rid}"] = key
 
         en_path = None
