@@ -119,11 +119,13 @@ function renderChecklist(now) {
 async function renderQueues(now) {
   const schedule = store.get(key(lang, "schedule"), {});
   const islandsDue = data.sentences.filter(s => isDue(schedule[s.id] ?? newCard(), now)).length;
+  let totalDue = islandsDue;
   let vocabLine = "";
   try {
     const deck = await loadJSON(`data/vocab-${lang}.json`);
     const vSchedule = store.get(key(lang, "vocab-schedule"), {});
     const due = deck.words.filter(w => vSchedule[w.id] && isDue(vSchedule[w.id], now)).length;
+    totalDue += due;
     const unseen = deck.words.filter(w => !vSchedule[w.id]).length;
     const intro = store.get(key(lang, "vocab-intro"), { day: "", count: 0 });
     const introToday = intro.day === todayKey(now) ? intro.count : 0;
@@ -131,6 +133,8 @@ async function renderQueues(now) {
     vocabLine = ` Core deck: ${due} reviews due, ${newAvail} new words available today (cap ${NEW_PER_DAY}).`;
   } catch { /* deck not shipped for this language yet */ }
   $("queueLine").textContent = `Islands: ${islandsDue} due.${vocabLine}`;
+  $("dueCount").textContent = String(totalDue);
+  $("dueCount").hidden = false;
 }
 
 function renderTutor(now) {

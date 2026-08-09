@@ -39,12 +39,21 @@ async function init() {
   }
 }
 
+function updateBar() {
+  const total = reviewed + queue.length;
+  const pct = total ? Math.round(100 * reviewed / total) : 0;
+  $("fill").style.width = `${pct}%`;
+  $("bar").setAttribute("aria-valuenow", String(pct));
+}
+
 function show() {
   current = queue[0];
+  updateBar();
   $("counter").textContent = `${queue.length} remaining - say it out loud before revealing`;
   $("prompt").textContent = current.en;
   $("answer").hidden = true;
   $("answer").textContent = current.target;
+  $("replayRow").hidden = true;
   $("grades").hidden = true;
   $("reveal").hidden = false;
   $("reveal").focus();
@@ -55,7 +64,14 @@ $("reveal").addEventListener("click", async () => {
   $("reveal").hidden = true;
   $("grades").hidden = false;
   $("good").focus();
-  if (current.audio) await playAudio($("player"), current.audio);
+  if (current.audio) {
+    $("replayRow").hidden = false;
+    await playAudio($("player"), current.audio);
+  }
+});
+
+$("replay").addEventListener("click", () => {
+  if (current.audio) playAudio($("player"), current.audio);
 });
 
 function grade(g) {
