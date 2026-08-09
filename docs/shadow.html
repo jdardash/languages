@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shadow - Languages</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="index.html">Today</a>
+    <a href="drill.html">Drill</a>
+    <a href="shadow.html">Shadow</a>
+    <a href="method.html">Method</a>
+    <a href="progress.html">Progress</a>
+    <a href="station.html">Station</a>
+  </nav>
+  <main id="main">
+    <h1 id="heading">Shadow</h1>
+    <section id="stage" class="card" hidden>
+      <p class="muted" id="counter"></p>
+      <p id="target" lang="es" style="font-size:1.6rem"></p>
+      <p id="english" class="muted"></p>
+      <div style="display:flex; gap:.5rem; flex-wrap:wrap">
+        <button id="prev">Prev</button>
+        <button class="primary" id="playBtn">Play</button>
+        <button id="next">Next</button>
+        <button id="loop" aria-pressed="false">Loop</button>
+        <button id="chain" aria-pressed="false">Auto-advance</button>
+        <select id="rate" aria-label="Playback rate">
+          <option value="1">1.0x</option>
+          <option value="0.85">0.85x</option>
+          <option value="0.75">0.75x</option>
+        </select>
+        <button id="toggleEn" aria-pressed="true">English</button>
+      </div>
+      <p class="muted" style="margin-bottom:0">Say it simultaneously with the voice, not after it. Space plays, arrows move.</p>
+    </section>
+    <p id="status" class="muted">Loading...</p>
+  </main>
+  <audio id="player" preload="none"></audio>
+  <script type="module" src="js/shadow.js"></script>
+</body>
+</html>
