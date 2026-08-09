@@ -1,0 +1,74 @@
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import { newCard, nextState, isDue, LEARNING_STEPS, DAY_MS } from "../docs/js/scheduler.js";
+
+const NOW = 1_800_000_000_000;
+
+test("new card is due and pristine", () => {
+  const c = newCard();
+  assert.equal(c.state, "new");
+  assert.equal(isDue(c, NOW), true);
+});
+
+test("good climbs the learning ladder", () => {
+  let c = newCard();
+  c = nextState(c, "good", NOW);
+  assert.equal(c.state, "learning");
+  assert.equal(c.due, NOW + LEARNING_STEPS[0] * DAY_MS);
+  c = nextState(c, "good", NOW);
+  assert.equal(c.due, NOW + LEARNING_STEPS[1] * DAY_MS);
+});
+
+test("finishing the ladder matures with interval = last step * ease", () => {
+  let c = newCard();
+  for (let i = 0; i <= LEARNING_STEPS.length; i++) c = nextState(c, "good", NOW);
+  assert.equal(c.state, "mature");
+  assert.equal(c.interval, Math.round(14 * 2.5));
+});
+
+test("miss lapses a mature card back to step 0 and drops ease", () => {
+  let c = { state: "mature", stepIndex: 0, interval: 35, ease: 2.5, due: NOW, lapses: 0, reps: 9 };
+  c = nextState(c, "miss", NOW);
+  assert.equal(c.state, "learning");
+  assert.equal(c.stepIndex, 0);
+  assert.equal(c.lapses, 1);
+  assert.equal(c.ease, 2.3);
+});
+
+test("ease never drops below 1.3 and interval caps at 180", () => {
+  let c = { state: "mature", stepIndex: 0, interval: 170, ease: 1.31, due: NOW, lapses: 0, reps: 9 };
+  c = nextState(c, "good", NOW);
+  assert.equal(c.interval, 180);
+  let d = { state: "mature", stepIndex: 0, interval: 10, ease: 1.3, due: NOW, lapses: 0, reps: 9 };
+  d = nextState(d, "miss", NOW);
+  assert.equal(d.ease, 1.3);
+});
+
+test("hard on mature grows slowly and reduces ease", () => {
+  let c = { state: "mature", stepIndex: 0, interval: 30, ease: 2.0, due: NOW, lapses: 0, reps: 9 };
+  c = nextState(c, "hard", NOW);
+  assert.equal(c.interval, 36);
+  assert.equal(c.ease, 1.85);
+});
+
+test("hard on learning repeats the current step without advancing", () => {
+  let c = newCard();
+  c = nextState(c, "good", NOW);          // learning, stepIndex 0
+  c = nextState(c, "hard", NOW);
+  assert.equal(c.state, "learning");
+  assert.equal(c.stepIndex, 0);
+  assert.equal(c.due, NOW + LEARNING_STEPS[0] * DAY_MS);
+});
+
+test("scheduled cards are not due before their date and due after", () => {
+  let c = newCard();
+  c = nextState(c, "good", NOW);
+  assert.equal(isDue(c, NOW + DAY_MS - 1), false);
+  assert.equal(isDue(c, NOW + DAY_MS), true);
+});
+
+test("nextState does not mutate its input", () => {
+  const c = newCard();
+  nextState(c, "good", NOW);
+  assert.equal(c.state, "new");
+});
