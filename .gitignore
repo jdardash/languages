@@ -33,3 +33,7 @@ ehthumbs.db
 # Logs
 *.log
 Sentence Islands/tools/vendor-data/
+
+# Session tooling scratch
+.superpowers/
+.playwright-mcp/

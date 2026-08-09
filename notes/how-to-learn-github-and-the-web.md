@@ -2,7 +2,7 @@
 
 Written 2026-08-09. Every URL here was fetched and confirmed live on that date; the
 handful of claims that rest on community sources rather than official documentation
-are marked ⚠ where they appear.
+are marked "Caveat" where they appear.
 
 The premise: you do not learn version control by reading about version control. This
 folder is the vehicle. By the end you will have these notes on GitHub, a study page
@@ -26,7 +26,7 @@ Set-Location C:\Dev\languages
 If you keep it in OneDrive, pause sync during Git operations. The risk is real, not
 theoretical.
 
-**Do not put the audio in Git LFS.** ⚠ GitHub Pages checks out repositories without
+**Do not put the audio in Git LFS.** GitHub Pages checks out repositories without
 resolving LFS pointers, so a browser asking for `t-6.mp3` receives a ~130-byte text
 file instead of audio, and the study page silently loses sound. This is confirmed by
 several git-lfs issues and a GitHub community discussion but is not stated in the
@@ -196,7 +196,7 @@ ssh -T git@github.com
 
 **Stay on HTTPS.** It already works on this machine.
 
-⚠ One machine-specific trap: your active `gh` account authenticates from a
+One machine-specific trap: your active `gh` account authenticates from a
 `GITHUB_TOKEN` environment variable carrying `admin:org`, `admin:enterprise` and
 `delete_repo` — far more privilege than a notes repository needs — with a second
 keyring token sitting inactive behind it. While that variable is set, it **overrides**
@@ -232,7 +232,7 @@ gh repo view --web
 
 Use `--private` if you want it closed — but a private repository **cannot serve GitHub
 Pages on the free plan**, so if the study page is the goal, this repository has to be
-public. ⚠ That plan restriction is assembled from GitHub's plans documentation rather
+public. That plan restriction is assembled from GitHub's plans documentation rather
 than one canonical Pages page; confirm in your own Settings → Pages. Before choosing
 public, read back through the ten language READMEs for anything personal.
 
@@ -448,7 +448,7 @@ grader. Build it as an optional, clearly-labelled enhancement or skip it entirel
 | **The Odin Project** | https://www.theodinproject.com/ | Makes you work on your own machine with your own editor and Git from day one — which is the actual skill. |
 | **Can I Use** | https://caniuse.com/ | Check real browser support before depending on any API. |
 
-⚠ **Two naming changes that make most existing tutorials stale.** GitHub Learning Lab
+**Caveat — Two naming changes that make most existing tutorials stale.** GitHub Learning Lab
 shut down on 2022-09-01; anything pointing at `lab.github.com` is dead. And GitHub
 Skills has been folded into **GitHub Learn** — `skills.github.com` still returns 200
 but serves only a meta-refresh stub redirecting to `learn.github.com/skills`. GitHub's

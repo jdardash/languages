@@ -1,9 +1,9 @@
 # How To Learn Languages — the method, the dose, and the honest cost
 
-Distilled 2026-08-08 from `../_Research/2026-08-08 - Language Learning Research.md` (nine
-meta-analyses, effect sizes and honesty labels in the source). Read `../How To Learn.md` first for
+Distilled 2026-08-08 from a private research note (nine meta-analyses, effect sizes and honesty labels in the source) (nine
+meta-analyses, effect sizes and honesty labels in the source). Read the general learning notes first for
 the general learning hierarchy; this file is the language-specific layer, and it **corrects three
-things** that file and the folder READMEs currently say. Corrections are marked ⚠.
+things** that file and the folder READMEs currently say. Corrections are marked **Correction**.
 
 ---
 
@@ -27,7 +27,7 @@ can't move to the country.** At g ≈ 1.06 it is the largest single effect in th
 beats sprinkled. The one-book-per-folder design already in `Books & Fundamentals.md` is the
 evidence-backed structure; the failure mode is doing it thinly across ten fronts.
 
-⚠ **Correction 1 — do not delay speaking.** `Japanese/Japanese Learning Research.md` records
+**Correction 1 — do not delay speaking.** `Japanese/Japanese Learning Research.md` records
 Refold's input-first, output-at-Phase-4 roadmap, and Dreaming Spanish recommends silence for
 ~600 hours. That is contradicted by the interaction and feedback meta-analyses above, and by
 Swain's Canadian French immersion finding: students with *thousands of hours* of comprehensible
@@ -80,7 +80,7 @@ Plan every language against this table, not against an hour count.
   consolidate and how you get the long tail. It is a bad way to acquire the frequent core — do that
   deliberately.
 
-⚠ **Correction 2 — card direction should change with level.** `../How To Learn.md` currently
+**Correction 2 — card direction should change with level.** the general learning notes currently
 prescribes production cards (English prompt → produce the L2) from the start. SSLA 2021 found
 **L2→L1 more effective for lower-proficiency learners** and **L1→L2 more effective at higher
 proficiency**. So: recognition direction while you are a beginner, flip to production around the
@@ -90,7 +90,7 @@ disagreed.
 **Deck policy:** one frequency-ordered core deck per language (top 1,000 → 2,000 → 5,000), sentence
 cards with audio once past the first thousand, 20 new/day in push mode, **0 new/day in maintenance
 mode**. Do not interleave vocabulary across languages within a session — interleaving is verified
-null-to-negative for vocabulary (`../How To Learn.md`).
+null-to-negative for vocabulary (the general learning notes).
 
 ## 4. Pronunciation — the strong finding nobody uses
 
@@ -116,7 +116,7 @@ speakers, 10 min/day for the first fortnight, then twice weekly.
   video, always.
 - **Listening strategy instruction**: d = 0.69 (Dalman & Plonsky 2025).
 
-⚠ **Correction 3 — reading-while-listening is not a comprehension multiplier.** A 2023
+**Correction 3 — reading-while-listening is not a comprehension multiplier.** A 2023
 meta-analysis (30 studies, N = 1,945) found g = **0.18** overall, and **g = 0.06 when self-paced** —
 which a solo learner always is. For higher-proficiency learners, reading-only sometimes beat it
 (split attention). Keep the practice for what it does do: forcing pace, and training
@@ -124,7 +124,7 @@ sound-to-spelling mapping. Do not treat it as an upgrade over reading.
 
 ## 6. Sleep
 
-New since the 2026-07-17 run. `../How To Learn.md` records that sleep-consolidation claims did not
+New since the 2026-07-17 run. the general learning notes records that sleep-consolidation claims did not
 survive verification — true for the *general* learning literature. For **vocabulary specifically**
 there is a dedicated evidence base: word meanings are retained better across 12 hours including
 sleep than 12 waking hours, and at least one study found interleaving sleep between sessions halved
@@ -190,7 +190,7 @@ METHOD.md guessed right on both. One scope note: the L2→L1-for-beginners findi
 paired-associate **vocabulary** research, so it governs the frequency deck. Island recall is
 explicitly production training, where L1→L2 is the point; leave step 3 as written.
 
-**⚠ "Do not obsess about pronunciation" is the one place METHOD.md is clearly wrong.**
+**Correction — "Do not obsess about pronunciation" is the one place METHOD.md is clearly wrong.**
 Explicit pronunciation instruction runs d = 0.89, HVPT runs g = 0.92 on perception and g = 0.77 on
 production, and effects are **largest for beginners** — while perception errors fossilize into
 every word learned afterward. Worse, shadowing a single TTS voice is the *low*-variability version
@@ -198,13 +198,13 @@ of the exact training that works: **number of talkers is a meta-analytic moderat
 nearly free — generate the sentence audio in several different voices rather than one, and spend
 the first fortnight on minimal pairs (§4).
 
-**⚠ Shadowing's evidence is thinner than METHOD.md implies.** There is no meta-analysis. The best
+**Correction — Shadowing's evidence is thinner than METHOD.md implies.** There is no meta-analysis. The best
 study (Hamada 2016) found phoneme-perception gains in both proficiency groups but
 listening-comprehension gains **only for low-proficiency learners**. Its provenance in
 conference-interpreter training is real but is not efficacy evidence for L2 learners. Keep it as a
 beginner bottom-up decoding drill; do not expect it to carry comprehension.
 
-**⚠ The AI-translation warning is right and the fix is specifiable.** Get the first hundred
+**Correction — The AI-translation warning is right and the fix is specifiable.** Get the first hundred
 sentences checked by a tutor with the §10 instruction — prompted correction is d = 0.83 versus
 d = 0.53 for a tutor who just reads the good version back at you. And METHOD.md's FSI hour figures
 should be read the way §7 says: ordinal only. Its own "three to five times longer in Japanese,
@@ -309,7 +309,7 @@ and low-level portfolios evaporate.
 
 ## 12. If-then plans
 
-From `../How To Be Consistent.md` — implementation intentions, d = 0.65 (Gollwitzer & Sheeran 2006),
+From the consistency notes — implementation intentions, d = 0.65 (Gollwitzer & Sheeran 2006),
 the best-evidenced tool for closing the planning-doing gap. Anchor to stable cues, keep them
 flexible enough to survive a bad week:
 

@@ -14,7 +14,7 @@ One static site with three faces:
 2. **Method reference** — the existing research and method documents, readable
    on the web.
 3. **Learning vehicle** — a codebase clean enough to serve as the web-development
-   curriculum from `../How To Learn GitHub And The Web.md`. Every feature lands
+   curriculum from `../notes/how-to-learn-github-and-the-web.md`. Every feature lands
    as a small PR with a written description; the PR history is the course.
 
 Spanish is the first and only language at launch (per How To Learn Languages.md
@@ -29,7 +29,7 @@ files alone — no JavaScript changes.
   Privacy decision made explicitly by the user on 2026-08-09.
 - **Repo lives at `C:\Dev\languages`.** The folder moves out of OneDrive before
   `git init` (OneDrive/Git corruption risk, documented in
-  How To Learn GitHub And The Web.md §0). OneDrive retains its historical cloud
+  notes/how-to-learn-github-and-the-web.md §0). OneDrive retains its historical cloud
   copy; Git becomes the working history.
 - **No server-side anything.** No accounts, no analytics, no secrets. All state
   is client-side.

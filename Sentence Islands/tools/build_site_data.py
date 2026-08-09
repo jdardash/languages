@@ -47,8 +47,8 @@ LANGS = {
 METHOD_DOCS = [
     ("README.md", "overview.md", "Overview"),
     ("METHOD.md", "method.md", "The Method (Sentence Islands)"),
-    ("How To Learn Languages.md", "how-to-learn-languages.md", "How To Learn Languages (Evidence)"),
-    ("Polyglot Practices Research.md", "polyglot-practices.md", "What Top Learners Actually Do"),
+    ("notes/how-to-learn-languages.md", "how-to-learn-languages.md", "How To Learn Languages (Evidence)"),
+    ("notes/polyglot-practices-research.md", "polyglot-practices.md", "What Top Learners Actually Do"),
     ("Sentence Islands/README.md", "sentence-islands.md", "Sentence Islands Pipeline"),
 ]
 
