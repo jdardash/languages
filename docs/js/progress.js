@@ -8,6 +8,7 @@ import { PHASES, todayKey } from "./plan.js";
 import { forecast } from "./stats.js";
 import { bandStats, NEW_PER_DAY } from "./deck.js";
 import { SYNC_META_KEY, syncNow } from "./sync.js";
+import { average } from "./checkpoint.js";
 
 const $ = id => document.getElementById(id);
 markNav();
@@ -47,6 +48,7 @@ async function init() {
     renderIslands(data, schedule, lang);
     if (deck) renderVocab(deck, vSchedule);
     if (pairsData) renderPairs(pairsData, pairsStats);
+    renderCheckpoints(store.get(key(lang, "checkpoints"), []));
     renderEngines(lang, inputMins);
   } catch (err) { $("stats").textContent = `Could not load data: ${err.message}`; }
 }
@@ -212,6 +214,20 @@ function renderPairs(pairsData, pairsStats) {
     const acc = accuracy(pairsStats[c.id]);
     li.textContent = `${c.label}: ${acc === null ? "not trained" : `${acc}%`}`;
     $("pairsList").append(li);
+  }
+}
+
+function renderCheckpoints(history) {
+  if (!history.length) return;
+  $("checkpointCard").hidden = false;
+  $("checkpointList").textContent = "";
+  for (const e of [...history].sort((a, b) => b.ts - a.ts).slice(0, 12)) {
+    const li = document.createElement("li");
+    const avg = average(e);
+    const kind = e.kind === "advance" ? `advanced out of phase ${e.phase}` : `phase ${e.phase} check-in`;
+    li.textContent = `${new Date(e.ts).toLocaleDateString()} - ${kind} - ` +
+      (avg === null ? "no ratings" : `${avg.toFixed(1)} / 3`);
+    $("checkpointList").append(li);
   }
 }
 

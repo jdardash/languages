@@ -54,6 +54,21 @@
         <h2>Ready to advance?</h2>
         <p id="advanceCheck" class="muted small"></p>
         <p><button id="advanceBtn">Advance to the next phase</button></p>
+        <div id="advanceForm" hidden>
+          <p class="muted small">Rate yourself first - honestly. Nothing locks; this becomes your trend line on Progress.</p>
+          <ul id="advanceStmts" class="checkpoint-list"></ul>
+          <p>
+            <button class="primary" id="advanceConfirm">Record and advance</button>
+            <button id="advanceCancel">Not yet</button>
+          </p>
+        </div>
+      </section>
+
+      <section class="card" id="checkinCard" hidden>
+        <h2>Monthly check-in</h2>
+        <p class="muted small">Thirty days since your last self-assessment. Two minutes: rate each honestly.</p>
+        <ul id="checkinStmts" class="checkpoint-list"></ul>
+        <p><button id="checkinBtn">Record check-in</button></p>
       </section>
 
       <section class="card">

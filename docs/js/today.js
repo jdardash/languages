@@ -7,6 +7,7 @@ import { store, key, getSettings, saveSettings, loadJSON, storageWarning, markNa
 import { PHASES, newPlan, todayKey, dayNumber, weekNumber, tutorDue, phaseZeroDone, checklist } from "./plan.js";
 import { NEW_PER_DAY } from "./deck.js";
 import { SYNC_META_KEY, syncNow } from "./sync.js";
+import { STATEMENTS, RATINGS, checkpointDue, record } from "./checkpoint.js";
 
 const $ = id => document.getElementById(id);
 markNav();
@@ -92,6 +93,7 @@ async function renderDashboard() {
   $("advanceCard").hidden = !check || (plan.phase === 0 && !phaseZeroDone(plan, now));
   if (check) $("advanceCheck").textContent = check;
 
+  renderCheckin(now);
   renderChecklist(now);
   await renderQueues(now);
   renderTutor(now);
@@ -102,9 +104,76 @@ async function renderDashboard() {
   if (new Date(now).getHours() < 17) $("nudge").hidden = false;
 }
 
+// The can-do checklist: rendered into either the advance form or the monthly
+// check-in card. Ratings default to "Can't yet" so an unconsidered statement
+// reads as an honest zero, not a flattering blank.
+function checkpointForm(listEl, phase) {
+  listEl.textContent = "";
+  for (const s of STATEMENTS[phase] ?? []) {
+    const li = document.createElement("li");
+    const text = document.createElement("span");
+    text.textContent = s.text;
+    const ratings = document.createElement("span");
+    ratings.className = "ratings";
+    RATINGS.forEach((label, i) => {
+      const lab = document.createElement("label");
+      const radio = document.createElement("input");
+      radio.type = "radio";
+      radio.name = `${listEl.id}-${s.id}`;
+      radio.value = String(i);
+      radio.checked = i === 0;
+      lab.append(radio, ` ${label}`);
+      ratings.append(lab);
+    });
+    li.append(text, ratings);
+    listEl.append(li);
+  }
+}
+
+function readRatings(listEl, phase) {
+  const ratings = {};
+  for (const s of STATEMENTS[phase] ?? []) {
+    const picked = listEl.querySelector(`input[name="${listEl.id}-${s.id}"]:checked`);
+    ratings[s.id] = picked ? Number(picked.value) : 0;
+  }
+  return ratings;
+}
+
+function saveCheckpoint(kind, phase, ratings) {
+  const history = store.get(key(lang, "checkpoints"), []);
+  store.set(key(lang, "checkpoints"),
+    record(history, { ts: Date.now(), phase, kind, ratings }));
+}
+
+function renderCheckin(now) {
+  const history = store.get(key(lang, "checkpoints"), []);
+  const due = checkpointDue(plan, history, now);
+  $("checkinCard").hidden = !due;
+  if (due) checkpointForm($("checkinStmts"), plan.phase);
+}
+
+$("checkinBtn").addEventListener("click", () => {
+  saveCheckpoint("monthly", plan.phase, readRatings($("checkinStmts"), plan.phase));
+  $("checkinCard").hidden = true;
+});
+
 $("advanceBtn").addEventListener("click", () => {
+  checkpointForm($("advanceStmts"), plan.phase);
+  $("advanceForm").hidden = false;
+  $("advanceBtn").hidden = true;
+});
+
+$("advanceCancel").addEventListener("click", () => {
+  $("advanceForm").hidden = true;
+  $("advanceBtn").hidden = false;
+});
+
+$("advanceConfirm").addEventListener("click", () => {
+  saveCheckpoint("advance", plan.phase, readRatings($("advanceStmts"), plan.phase));
   plan = { ...plan, phase: Math.min(3, plan.phase + 1), phaseStarted: todayKey(Date.now()) };
   store.set(key(lang, "plan"), plan);
+  $("advanceForm").hidden = true;
+  $("advanceBtn").hidden = false;
   renderDashboard();
 });
 

@@ -374,6 +374,10 @@ main blockquote { border-left: 3px solid var(--accent); margin: .75rem 0; paddin
 .band .track { height: .55rem; background: var(--bg); border: 1px solid var(--border); border-radius: .35rem; overflow: hidden; }
 .band .fill { height: 100%; background: var(--accent); width: 0; }
 .band .muted { font-family: var(--mono); font-size: .8rem; }
+.checkpoint-list { list-style: none; padding: 0; margin: 0 0 .75rem; }
+.checkpoint-list li { margin: .65rem 0; }
+.checkpoint-list .ratings { display: flex; flex-wrap: wrap; gap: .35rem .9rem; margin-top: .25rem; }
+.checkpoint-list .ratings label { font-size: .85rem; color: var(--muted); white-space: nowrap; }
 .choice-row { display: flex; gap: .75rem; margin: .75rem 0; }
 .choice-row button { font-size: 1.15rem; min-height: 3.25rem; flex: 1; }
 .feedback-good { color: var(--good-fg); }
