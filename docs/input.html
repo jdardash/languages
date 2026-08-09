@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Input - Languages</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="index.html">Today</a>
+    <a href="drill.html">Drill</a>
+    <a href="vocab.html">Vocab</a>
+    <a href="pairs.html">Pairs</a>
+    <a href="shadow.html">Shadow</a>
+    <a href="input.html">Input</a>
+    <a href="capture.html">Capture</a>
+    <a href="method.html">Method</a>
+    <a href="progress.html">Progress</a>
+  </nav>
+  <main id="main">
+    <h1 id="heading">Input hours</h1>
+    <section class="card">
+      <p style="font-size:1.6rem; margin:.25rem 0" id="hours"></p>
+      <div class="progress-track"><div class="progress-fill" id="fill"></div></div>
+      <p class="muted" id="milestone"></p>
+      <p class="muted" id="byKind"></p>
+    </section>
+    <section class="card">
+      <h2>Log time</h2>
+      <p>
+        <label>Minutes <input id="mins" type="number" min="1" max="600" step="5" value="20" style="width:4.5rem"></label>
+        <label style="margin-left:.75rem">Kind
+          <select id="kind">
+            <option value="listening">Listening</option>
+            <option value="video">Captioned video</option>
+            <option value="reading">Reading</option>
+          </select>
+        </label>
+        <input id="note" placeholder="what was it?" style="margin-left:.75rem; font:inherit; padding:.3rem .5rem">
+        <button class="primary" id="addBtn">Add</button>
+      </p>
+      <p class="muted">Shadow-player time logs itself. Everything external is two fields - the Dreaming Spanish rule: if logging takes effort, it stops happening.</p>
+    </section>
+    <section class="card">
+      <h2>Pre-input comprehension</h2>
+      <p class="muted">Before any native video or podcast: get the transcript, read it, learn the new words, then watch. This moves you from ~10% comprehension (noise) to 70-90% (where every sentence reinforces something) - the cheapest way to make native content usable months early.</p>
+    </section>
+    <section class="card">
+      <h2>Where to get input</h2>
+      <ul id="resources"></ul>
+      <p class="muted">Target-language subtitles on target-language video, always - captions produce large gains at every level. Milestone hours below the bar are Dreaming Spanish reference points and explicitly estimates, not evidence.</p>
+    </section>
+    <section class="card">
+      <h2>Recent log</h2>
+      <ul id="logList"></ul>
+    </section>
+  </main>
+  <script type="module" src="js/input.js"></script>
+</body>
+</html>
