@@ -38,7 +38,8 @@
     <div class="mode-row" id="modeRow" hidden>
       <button id="modeRecall" aria-pressed="true">Recall</button>
       <button id="modeDictation" aria-pressed="false">Dictation</button>
-      <span class="muted small">Recall: say it from English. Dictation: type what you hear.</span>
+      <button id="modeSpeak" aria-pressed="false">Speak</button>
+      <span class="muted small">Recall: say it from English. Dictation: type what you hear. Speak: record yourself, compare with the native clip.</span>
     </div>
     <section id="stage" class="card" hidden>
       <div class="progress-track" role="progressbar" aria-label="Session progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="bar">
@@ -50,6 +51,11 @@
         <p id="answer" lang="es" class="drill-answer" hidden></p>
         <p id="diffOut" class="diff-out" lang="es" hidden></p>
         <p class="replay-row" id="replayRow" hidden><button id="replay">Replay audio</button></p>
+        <div class="record-row" id="recordRow" hidden>
+          <button id="recBtn">Record my attempt</button>
+          <button id="playMine" hidden>Play mine</button>
+          <span id="recStatus" class="muted small"></span>
+        </div>
       </div>
       <div id="typeZone" hidden>
         <textarea id="typed" rows="2" lang="es" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="Type the sentence you hear"></textarea>

@@ -5,10 +5,12 @@
 import { newCard, nextState, isDue, isLeech, seedFrom } from "./scheduler.js";
 import { diffTokens, accuracy } from "./dictation.js";
 import { store, key, getSettings, saveSettings, loadJSON, playAudio, storageWarning, markNav } from "./app.js";
+import { createRecorder } from "./recorder.js";
 
 const $ = id => document.getElementById(id);
 markNav();
 storageWarning($("main"));
+const rec = createRecorder({ recBtn: $("recBtn"), playBtn: $("playMine"), statusEl: $("recStatus") });
 
 let lang, schedule, queue, current;
 let mode = getSettings().drillMode;   // "recall" | "dictation"
@@ -33,9 +35,10 @@ async function init() {
     const userCards = store.get(key(lang, "usercards"), []);
     const pool = [...data.sentences, ...userCards];
     const due = pool.filter(s => isDue(schedule[s.id] ?? newCard(), now));
-    // Dictation needs audio to transcribe; recall drills the whole queue.
-    if (mode === "dictation" && !due.some(s => s.audio)) mode = "recall";
-    queue = (mode === "dictation" ? due.filter(s => s.audio) : due).slice(0, settings.drillLimit);
+    // Dictation and speak need audio; recall drills the whole queue.
+    let needsAudio = mode === "dictation" || mode === "speak";
+    if (needsAudio && !due.some(s => s.audio)) { mode = "recall"; needsAudio = false; }
+    queue = (needsAudio ? due.filter(s => s.audio) : due).slice(0, settings.drillLimit);
     $("heading").textContent = `Drill - ${data.label}`;
     $("modeRow").hidden = false;
     syncModeButtons();
@@ -54,10 +57,11 @@ async function init() {
 function syncModeButtons() {
   $("modeRecall").setAttribute("aria-pressed", String(mode === "recall"));
   $("modeDictation").setAttribute("aria-pressed", String(mode === "dictation"));
+  $("modeSpeak").setAttribute("aria-pressed", String(mode === "speak"));
 }
 
 // Switching mode restarts the session cleanly rather than mixing prompt types.
-for (const [btn, m] of [["modeRecall", "recall"], ["modeDictation", "dictation"]]) {
+for (const [btn, m] of [["modeRecall", "recall"], ["modeDictation", "dictation"], ["modeSpeak", "speak"]]) {
   $(btn).addEventListener("click", () => {
     if (mode === m) return;
     saveSettings({ drillMode: m });
@@ -79,6 +83,8 @@ function show() {
   $("answer").textContent = current.target;
   $("diffOut").hidden = true;
   $("grades").hidden = true;
+  $("recordRow").hidden = mode !== "speak";
+  rec.reset();
   if (mode === "dictation") {
     $("counter").textContent = `${queue.length} remaining - type exactly what you hear`;
     $("prompt").textContent = "";
@@ -89,7 +95,9 @@ function show() {
     $("typed").focus();
     playAudio($("player"), current.audio);
   } else {
-    $("counter").textContent = `${queue.length} remaining - say it out loud before revealing`;
+    $("counter").textContent = mode === "speak"
+      ? `${queue.length} remaining - record yourself saying it, then reveal`
+      : `${queue.length} remaining - say it out loud before revealing`;
     $("prompt").textContent = current.en;
     $("replayRow").hidden = true;
     $("typeZone").hidden = true;
@@ -170,6 +178,11 @@ $("good").addEventListener("click", () => grade("good"));
 
 document.addEventListener("keydown", e => {
   if ($("stage").hidden) return;
+  if (mode === "speak" && (e.key === "r" || e.key === "R") && e.target.tagName !== "TEXTAREA") {
+    e.preventDefault();
+    $("recBtn").click();
+    return;
+  }
   if (!$("reveal").hidden && (e.key === "Enter" || e.key === " ")) {
     if (e.target === $("reveal")) return;   // native button activation handles it
     e.preventDefault();
@@ -182,6 +195,7 @@ document.addEventListener("keydown", e => {
 });
 
 function finish() {
+  rec.reset();
   $("stage").hidden = true;
   $("done").hidden = false;
   $("summary").textContent = `${reviewed} reviews, ${sessionMisses.size} sentences missed.`;
