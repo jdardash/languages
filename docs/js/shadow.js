@@ -3,12 +3,18 @@
 // Play time credits itself to the input-hour log in whole minutes.
 
 import { store, key, getSettings, saveSettings, loadJSON, playAudio, markNav } from "./app.js";
+import { createRecorder } from "./recorder.js";
 
 const $ = id => document.getElementById(id);
 markNav();
 
 let clips = [], i = 0, lang = null;
 const player = $("player");
+
+const rec = createRecorder({
+  recBtn: $("recBtn"), playBtn: $("playMine"), statusEl: $("recStatus"),
+  recordingMsg: "Recording - shadow the clip now.",
+});
 
 let listenedMs = 0, playStart = null;
 player.addEventListener("play", () => { playStart = Date.now(); });
@@ -58,7 +64,7 @@ function render() {
   $("target").textContent = s.target;
   $("english").textContent = s.en;
   applyTextVisibility(false);
-  resetRecording();
+  rec.reset();
   saveSettings({ shadowIndex: i });
 }
 
@@ -108,47 +114,6 @@ function setEnglish(on) {
   $("toggleEn").setAttribute("aria-pressed", String(on));
   saveSettings({ showEnglish: on });
 }
-
-// Record-and-compare (Speechling/Mango mechanic, minus the fake scoring):
-// hearing your own attempt against the native clip is the feedback loop.
-// Takes are ephemeral - one per clip, gone on navigation.
-let recorder = null, takeUrl = null;
-function resetRecording() {
-  if (recorder && recorder.state === "recording") recorder.stop();
-  if (takeUrl) { URL.revokeObjectURL(takeUrl); takeUrl = null; }
-  $("playMine").hidden = true;
-  $("recBtn").textContent = "Record my attempt";
-  $("recStatus").textContent = "";
-}
-$("recBtn").addEventListener("click", async () => {
-  if (recorder && recorder.state === "recording") { recorder.stop(); return; }
-  if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === "undefined") {
-    $("recStatus").textContent = "Recording is not supported in this browser.";
-    return;
-  }
-  try {
-    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    const chunks = [];
-    recorder = new MediaRecorder(stream);
-    recorder.addEventListener("dataavailable", e => chunks.push(e.data));
-    recorder.addEventListener("stop", () => {
-      stream.getTracks().forEach(t => t.stop());
-      if (takeUrl) URL.revokeObjectURL(takeUrl);
-      takeUrl = URL.createObjectURL(new Blob(chunks, { type: recorder.mimeType }));
-      $("playMine").hidden = false;
-      $("recBtn").textContent = "Record again";
-      $("recStatus").textContent = "Play the native clip, then yours - where do they differ?";
-    });
-    recorder.start();
-    $("recBtn").textContent = "Stop recording";
-    $("recStatus").textContent = "Recording - shadow the clip now.";
-  } catch {
-    $("recStatus").textContent = "Microphone unavailable or permission denied.";
-  }
-});
-$("playMine").addEventListener("click", () => {
-  if (takeUrl) new Audio(takeUrl).play();
-});
 
 player.addEventListener("ended", () => {
   if ($("loop").getAttribute("aria-pressed") === "true") { play(); return; }
