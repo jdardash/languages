@@ -4,9 +4,9 @@
 // languages:* key; there is deliberately no sync server.
 
 import { store, key, getSettings, loadJSON, storageWarning, markNav } from "./app.js";
-import { PHASES } from "./plan.js";
+import { PHASES, todayKey } from "./plan.js";
 import { forecast } from "./stats.js";
-import { bandStats } from "./deck.js";
+import { bandStats, NEW_PER_DAY } from "./deck.js";
 
 const $ = id => document.getElementById(id);
 markNav();
@@ -31,7 +31,18 @@ async function init() {
     const plan = store.get(key(lang, "plan"), null);
 
     renderHeadline(plan, { deck, vSchedule, pairsData, pairsStats, inputMins, data, schedule });
-    renderForecast([...Object.values(schedule), ...Object.values(vSchedule)]);
+    // Unseen cards have no schedule entry but are real work today: every unseen
+    // island is in the drill queue, and new vocab counts up to today's allowance.
+    const unseenIslands = data.sentences.filter(s => !schedule[s.id]).length;
+    let vocabNews = 0;
+    if (deck) {
+      const intro = store.get(key(lang, "vocab-intro"), { day: "", count: 0 });
+      const introToday = intro.day === todayKey(Date.now()) ? intro.count : 0;
+      const unseenWords = deck.words.filter(w => !vSchedule[w.id]).length;
+      vocabNews = Math.min(unseenWords, Math.max(0, NEW_PER_DAY - introToday));
+    }
+    const synthetic = Array.from({ length: unseenIslands + vocabNews }, () => ({ state: "new", due: null }));
+    renderForecast([...Object.values(schedule), ...Object.values(vSchedule), ...synthetic]);
     renderIslands(data, schedule, lang);
     if (deck) renderVocab(deck, vSchedule);
     if (pairsData) renderPairs(pairsData, pairsStats);

@@ -4,7 +4,9 @@
 
 import { isDue } from "./scheduler.js";
 
-export function pickSession(words, schedule, introducedToday, now, { newPerDay = 20, limit = 60 } = {}) {
+export const NEW_PER_DAY = 20;
+
+export function pickSession(words, schedule, introducedToday, now, { newPerDay = NEW_PER_DAY, limit = 60 } = {}) {
   const reviews = words
     .filter(w => schedule[w.id] && isDue(schedule[w.id], now))
     .sort((a, b) => (schedule[a.id].due ?? 0) - (schedule[b.id].due ?? 0))

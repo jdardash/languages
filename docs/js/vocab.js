@@ -4,14 +4,13 @@
 
 import { newCard, nextState, DAY_MS } from "./scheduler.js";
 import { store, key, getSettings, loadJSON, storageWarning, markNav } from "./app.js";
-import { pickSession, bandStats } from "./deck.js";
+import { pickSession, bandStats, NEW_PER_DAY } from "./deck.js";
 import { todayKey } from "./plan.js";
 
 const $ = id => document.getElementById(id);
 markNav();
 storageWarning($("main"));
 
-const NEW_PER_DAY = 20;
 let lang, bcp47, deck, schedule, queue, current;
 const newIds = new Set();
 const sessionMisses = new Map();
