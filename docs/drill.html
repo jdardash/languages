@@ -4,41 +4,61 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Drill - Languages</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232456a4'/%3E%3Ctext x='32' y='46' font-family='system-ui,sans-serif' font-size='38' font-weight='700' fill='white' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#f5f5f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12141a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e40a6'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' font-weight='700' fill='white' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&display=swap">
   <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-  <nav class="site-nav">
-    <a href="index.html">Today</a>
-    <a href="drill.html">Drill</a>
-    <a href="vocab.html">Vocab</a>
-    <a href="pairs.html">Pairs</a>
-    <a href="shadow.html">Shadow</a>
-    <a href="input.html">Input</a>
-    <a href="capture.html">Capture</a>
-    <a href="method.html">Method</a>
-    <a href="progress.html">Progress</a>
-  </nav>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">Languages</a>
+      <nav class="site-nav">
+        <a href="index.html">Today</a>
+        <a href="drill.html" aria-current="page">Drill</a>
+        <a href="vocab.html">Vocab</a>
+        <a href="pairs.html">Pairs</a>
+        <a href="shadow.html">Shadow</a>
+        <a href="input.html">Input</a>
+        <a href="capture.html">Capture</a>
+        <a href="method.html">Method</a>
+        <a href="progress.html">Progress</a>
+      </nav>
+    </div>
+  </header>
   <main id="main">
     <h1 id="heading">Drill</h1>
     <section id="stage" class="card" hidden>
-      <p class="muted" id="counter"></p>
-      <p id="prompt" style="font-size:1.4rem"></p>
-      <p id="answer" lang="es" style="font-size:1.4rem" hidden></p>
+      <div class="progress-track" role="progressbar" aria-label="Session progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="bar">
+        <div class="progress-fill" id="fill"></div>
+      </div>
+      <p class="muted small" id="counter"></p>
+      <p id="prompt" class="drill-prompt"></p>
+      <div class="answer-zone">
+        <p id="answer" lang="es" class="drill-answer" hidden></p>
+        <p class="replay-row" id="replayRow" hidden><button id="replay">Replay audio</button></p>
+      </div>
       <div id="controls">
-        <button class="primary" id="reveal">Reveal</button>
-        <span id="grades" hidden>
-          <button id="miss">Miss (1)</button>
-          <button id="hard">Hard (2)</button>
-          <button id="good">Good (3)</button>
-        </span>
+        <button class="primary big" id="reveal">Reveal</button>
+        <div class="grades" id="grades" hidden>
+          <button id="miss" class="grade-miss">Miss<kbd>1</kbd></button>
+          <button id="hard" class="grade-hard">Hard<kbd>2</kbd></button>
+          <button id="good" class="grade-good">Good<kbd>3</kbd></button>
+        </div>
       </div>
     </section>
     <section id="done" class="card" hidden>
       <h2>Session complete</h2>
       <p id="summary"></p>
       <ul id="missList"></ul>
-      <p class="muted">Sentences you missed are tomorrow's syllabus - add anything you could not say to the sentence list.</p>
+      <p class="muted small">Sentences you missed are tomorrow's syllabus - add anything you could not say to the sentence list.</p>
+      <div class="action-row">
+        <a href="index.html"><button>Back to Today</button></a>
+        <a href="shadow.html"><button>Shadow next</button></a>
+      </div>
     </section>
     <p id="status" class="muted">Loading...</p>
   </main>

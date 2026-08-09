@@ -124,18 +124,61 @@ function renderIslands(data, schedule, lang) {
   const recent = log.filter(e => e.ts >= cutoff);
   const hits = recent.filter(e => e.grade !== "miss").length;
   const retention = recent.length ? Math.round(100 * hits / recent.length) : 0;
+  const total = data.sentences.length;
+  const unseen = total - cards.length;
+  const learning = by("new") + by("learning");
+  const mature = by("mature");
+
   $("stats").textContent = "";
   const h = document.createElement("h2");
   h.textContent = "Islands";
-  const p1 = document.createElement("p");
-  p1.textContent = `${data.sentences.length} sentences total: ` +
-    `${data.sentences.length - cards.length} unseen, ` +
-    `${by("new") + by("learning")} learning, ${by("mature")} mature.`;
-  const p2 = document.createElement("p");
-  p2.textContent = recent.length
-    ? `Last 30 days: ${recent.length} reviews, ${retention}% retention.`
-    : "No reviews in the last 30 days.";
-  $("stats").append(h, p1, p2);
+  const tile = (value, label) => {
+    const d = document.createElement("div");
+    d.className = "tile";
+    const v = document.createElement("div");
+    v.className = "value";
+    v.textContent = value;
+    const l = document.createElement("div");
+    l.className = "label";
+    l.textContent = label;
+    d.append(v, l);
+    return d;
+  };
+  const tiles = document.createElement("div");
+  tiles.className = "tiles";
+  tiles.append(
+    tile(String(recent.length), "Reviews, last 30 days"),
+    tile(recent.length ? `${retention}%` : "-", "Retention, last 30 days"),
+    tile(`${mature}/${total}`, "Mature sentences"),
+  );
+
+  const segs = [
+    ["seg-unseen", unseen, "Unseen"],
+    ["seg-learning", learning, "Learning"],
+    ["seg-mature", mature, "Mature"],
+  ];
+  const bar = document.createElement("div");
+  bar.className = "stack-bar";
+  bar.setAttribute("role", "img");
+  bar.setAttribute("aria-label",
+    `${unseen} unseen, ${learning} learning, ${mature} mature of ${total} sentences`);
+  for (const [cls, count] of segs) {
+    if (!count) continue;
+    const s = document.createElement("div");
+    s.className = cls;
+    s.style.flex = String(count);
+    bar.append(s);
+  }
+  const legend = document.createElement("p");
+  legend.className = "stack-legend";
+  for (const [cls, count, label] of segs) {
+    const item = document.createElement("span");
+    const swatch = document.createElement("span");
+    swatch.className = `swatch ${cls}`;
+    item.append(swatch, `${label} ${count}`);
+    legend.append(item);
+  }
+  $("stats").append(h, tiles, bar, legend);
 }
 
 function renderVocab(deck, vSchedule) {
