@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { newCard, nextState, DAY_MS } from "../docs/js/scheduler.js";
-import { pickSession, bandStats } from "../docs/js/deck.js";
+import { pickSession, bandStats, pickPictureRound } from "../docs/js/deck.js";
 
 const NOW = 1_800_000_000_000;
 const words = Array.from({ length: 30 }, (_, i) => ({ id: `w-${i + 1}`, rank: i + 1, word: `palabra${i + 1}` }));
@@ -58,4 +58,20 @@ test("a mark-known mature card counts mature and is not offered as new", () => {
   const { news } = pickSession(words, schedule, 0, NOW, { newPerDay: 5 });
   assert.ok(!news.some(w => w.id === "w-5"));
   assert.equal(bandStats(words, schedule, [10])[0].mature, 1);
+});
+
+test("picture round takes only seen, due, image-bearing cards, oldest due first", () => {
+  const imgWords = words.map(w => ["w-1", "w-2", "w-3"].includes(w.id) ? { ...w, image: `img/${w.id}.webp` } : w);
+  const schedule = {
+    "w-1": seenCard(-1),   // due, image -> in
+    "w-2": seenCard(2),    // not due -> out
+    "w-3": seenCard(-3),   // most overdue -> first
+    "w-4": seenCard(-5),   // due but no image -> out
+  };
+  assert.deepEqual(pickPictureRound(imgWords, schedule, NOW).map(w => w.id), ["w-3", "w-1"]);
+});
+
+test("unseen image cards never enter the picture round", () => {
+  const imgWords = words.map(w => ({ ...w, image: `img/${w.id}.webp` }));
+  assert.deepEqual(pickPictureRound(imgWords, {}, NOW), []);
 });

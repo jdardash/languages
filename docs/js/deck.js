@@ -16,6 +16,13 @@ export function pickSession(words, schedule, introducedToday, now, { newPerDay =
   return { reviews, news };
 }
 
+export function pickPictureRound(words, schedule, now, limit = 60) {
+  return words
+    .filter(w => w.image && schedule[w.id] && isDue(schedule[w.id], now))
+    .sort((a, b) => (schedule[a.id].due ?? 0) - (schedule[b.id].due ?? 0))
+    .slice(0, limit);
+}
+
 export function bandStats(words, schedule, bands = [100, 250, 500, 1000]) {
   const maxRank = words.reduce((m, w) => Math.max(m, w.rank), 0);
   return bands.filter(b => b <= maxRank).map(limit => {
