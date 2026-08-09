@@ -4,10 +4,10 @@
 // automatic scoring runs 75-80% accuracy on learner speech and mistrains.
 
 export function createRecorder({ recBtn, playBtn, statusEl, recordingMsg = "Recording - speak now." }) {
-  let recorder = null, takeUrl = null;
+  let recorder = null, takeUrl = null, discarded = false;
 
   function reset() {
-    if (recorder && recorder.state === "recording") recorder.stop();
+    if (recorder && recorder.state === "recording") { discarded = true; recorder.stop(); }
     if (takeUrl) { URL.revokeObjectURL(takeUrl); takeUrl = null; }
     playBtn.hidden = true;
     recBtn.textContent = "Record my attempt";
@@ -27,12 +27,14 @@ export function createRecorder({ recBtn, playBtn, statusEl, recordingMsg = "Reco
       recorder.addEventListener("dataavailable", e => chunks.push(e.data));
       recorder.addEventListener("stop", () => {
         stream.getTracks().forEach(t => t.stop());
+        if (discarded) return;
         if (takeUrl) URL.revokeObjectURL(takeUrl);
         takeUrl = URL.createObjectURL(new Blob(chunks, { type: recorder.mimeType }));
         playBtn.hidden = false;
         recBtn.textContent = "Record again";
         statusEl.textContent = "Play the native clip, then yours - where do they differ?";
       });
+      discarded = false;
       recorder.start();
       recBtn.textContent = "Stop recording";
       statusEl.textContent = recordingMsg;
