@@ -3,7 +3,7 @@
 // words capped per day. Audio is on-demand speechSynthesis: no shipped files.
 
 import { newCard, nextState, seedFrom, DAY_MS } from "./scheduler.js";
-import { store, key, getSettings, loadJSON, storageWarning, markNav } from "./app.js";
+import { store, key, getSettings, loadJSON, storageWarning, markNav, playAudio } from "./app.js";
 import { pickSession, bandStats, NEW_PER_DAY } from "./deck.js";
 import { todayKey } from "./plan.js";
 
@@ -72,7 +72,7 @@ function renderBands() {
   }
 }
 
-function speak(text) {
+function synthesize(text) {
   try {
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
@@ -81,6 +81,14 @@ function speak(text) {
     if (voice) u.voice = voice;
     speechSynthesis.speak(u);
   } catch { /* no speech synthesis available */ }
+}
+
+// Shipped clips beat speechSynthesis (rejected for quality); keep synthesis
+// as the fallback so a deck without generated audio still speaks.
+async function speak(kind) {
+  const src = kind === "word" ? current.audio : current.exampleAudio;
+  const text = kind === "word" ? current.word : current.example;
+  if (!src || !(await playAudio($("player"), src))) synthesize(text);
 }
 
 function show() {
@@ -97,17 +105,17 @@ function show() {
   $("grades").hidden = true;
   $("reveal").hidden = false;
   $("reveal").focus();
-  speak(current.word);
+  speak("word");
 }
 
-$("speak").addEventListener("click", () => speak($("back").hidden ? current.word : current.example));
+$("speak").addEventListener("click", () => speak($("back").hidden ? "word" : "example"));
 
 $("reveal").addEventListener("click", () => {
   $("back").hidden = false;
   $("reveal").hidden = true;
   $("grades").hidden = false;
   $("good").focus();
-  speak(current.example);
+  speak("example");
 });
 
 function bumpIntro() {
