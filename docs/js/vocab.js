@@ -2,7 +2,7 @@
 // front - SSLA 2021: L2->L1 wins at low proficiency). Reviews first, then new
 // words capped per day. Audio is on-demand speechSynthesis: no shipped files.
 
-import { newCard, nextState, DAY_MS } from "./scheduler.js";
+import { newCard, nextState, seedFrom, DAY_MS } from "./scheduler.js";
 import { store, key, getSettings, loadJSON, storageWarning, markNav } from "./app.js";
 import { pickSession, bandStats, NEW_PER_DAY } from "./deck.js";
 import { todayKey } from "./plan.js";
@@ -120,7 +120,7 @@ function bumpIntro() {
 function grade(g) {
   const now = Date.now();
   const wasNew = !schedule[current.id];
-  schedule[current.id] = nextState(schedule[current.id] ?? newCard(), g, now);
+  schedule[current.id] = nextState(schedule[current.id] ?? newCard(), g, now, seedFrom(current.id));
   store.set(key(lang, "vocab-schedule"), schedule);
   if (wasNew) bumpIntro();
   const log = store.get(key(lang, "vocab-log"), []);

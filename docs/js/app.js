@@ -29,7 +29,7 @@ export const store = {
 
 export function key(lang, kind) { return `languages:${lang}:${kind}:v1`; }
 
-const DEFAULTS = { language: "spanish", rate: 1, drillLimit: 25, shadowIndex: 0, showEnglish: true };
+const DEFAULTS = { language: "spanish", rate: 1, drillLimit: 25, shadowIndex: 0, showEnglish: true, drillMode: "recall", listenFirst: false };
 export function getSettings() { return { ...DEFAULTS, ...store.get(SETTINGS_KEY, {}) }; }
 export function saveSettings(patch) { store.set(SETTINGS_KEY, { ...getSettings(), ...patch }); }
 

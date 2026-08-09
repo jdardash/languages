@@ -378,3 +378,38 @@ main blockquote { border-left: 3px solid var(--accent); margin: .75rem 0; paddin
 .choice-row button { font-size: 1.15rem; min-height: 3.25rem; flex: 1; }
 .feedback-good { color: var(--good-fg); }
 .feedback-bad { color: var(--miss-fg); }
+.headword { font-size: 1.8rem; font-weight: 500; margin: .5rem 0; }
+.stat-big, .stat-mid {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  margin: .25rem 0;
+  line-height: 1.3;
+}
+.stat-big { font-size: 1.9rem; }
+.stat-mid { font-size: 1.2rem; }
+
+/* Dictation mode */
+.mode-row { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin: 0 0 .75rem; }
+.mode-row button { min-height: 2.25rem; padding: .25rem .9rem; font-size: .9rem; }
+#typeZone { display: grid; gap: .5rem; margin: .5rem 0; }
+#typeZone textarea {
+  font: inherit;
+  font-size: 1.15rem;
+  font-family: var(--serif);
+  padding: .6rem .75rem;
+  border-radius: .45rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--fg);
+  resize: vertical;
+}
+.diff-out { font-size: clamp(1.2rem, 4vw, 1.45rem); line-height: 1.6; }
+.diff-same { color: var(--good-fg); }
+.diff-missing { color: var(--miss-fg); text-decoration: underline wavy; }
+.diff-extra { color: var(--miss-fg); text-decoration: line-through; }
+.diff-note { display: block; font-family: var(--sans); margin-top: .3rem; }
+
+/* Shadow: record-and-compare */
+.record-row { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; margin: .75rem 0 .25rem; }
+.record-row button { min-height: 2.25rem; padding: .25rem .9rem; font-size: .9rem; }

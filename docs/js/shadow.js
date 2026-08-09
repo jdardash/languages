@@ -44,6 +44,7 @@ async function init() {
     i = Math.min(settings.shadowIndex, clips.length - 1);
     $("rate").value = String(settings.rate);
     setEnglish(settings.showEnglish);
+    $("listenFirst").setAttribute("aria-pressed", String(settings.listenFirst));
     $("status").hidden = true;
     $("stage").hidden = false;
     $("heading").textContent = `Shadow - ${data.label}`;
@@ -56,8 +57,20 @@ function render() {
   $("counter").textContent = `${i + 1} / ${clips.length} - ${s.topic}`;
   $("target").textContent = s.target;
   $("english").textContent = s.en;
+  applyTextVisibility(false);
+  resetRecording();
   saveSettings({ shadowIndex: i });
 }
+
+// Listen-first (Voracious pattern): decode by ear before the text confirms it.
+function applyTextVisibility(revealed) {
+  const hideText = listenFirstOn() && !revealed;
+  $("target").hidden = hideText;
+  $("english").hidden = hideText || !getSettings().showEnglish;
+  $("revealRow").hidden = !hideText;
+}
+const listenFirstOn = () => $("listenFirst").getAttribute("aria-pressed") === "true";
+$("revealText").addEventListener("click", () => applyTextVisibility(true));
 
 async function play() {
   player.playbackRate = Number($("rate").value);
@@ -84,12 +97,58 @@ $("rate").addEventListener("change", () => {
   player.playbackRate = Number($("rate").value);
 });
 $("toggleEn").addEventListener("click", e => setEnglish(toggle(e.currentTarget)));
+$("listenFirst").addEventListener("click", e => {
+  const on = toggle(e.currentTarget);
+  saveSettings({ listenFirst: on });
+  applyTextVisibility(false);
+});
 
 function setEnglish(on) {
   $("english").hidden = !on;
   $("toggleEn").setAttribute("aria-pressed", String(on));
   saveSettings({ showEnglish: on });
 }
+
+// Record-and-compare (Speechling/Mango mechanic, minus the fake scoring):
+// hearing your own attempt against the native clip is the feedback loop.
+// Takes are ephemeral - one per clip, gone on navigation.
+let recorder = null, takeUrl = null;
+function resetRecording() {
+  if (recorder && recorder.state === "recording") recorder.stop();
+  if (takeUrl) { URL.revokeObjectURL(takeUrl); takeUrl = null; }
+  $("playMine").hidden = true;
+  $("recBtn").textContent = "Record my attempt";
+  $("recStatus").textContent = "";
+}
+$("recBtn").addEventListener("click", async () => {
+  if (recorder && recorder.state === "recording") { recorder.stop(); return; }
+  if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === "undefined") {
+    $("recStatus").textContent = "Recording is not supported in this browser.";
+    return;
+  }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    const chunks = [];
+    recorder = new MediaRecorder(stream);
+    recorder.addEventListener("dataavailable", e => chunks.push(e.data));
+    recorder.addEventListener("stop", () => {
+      stream.getTracks().forEach(t => t.stop());
+      if (takeUrl) URL.revokeObjectURL(takeUrl);
+      takeUrl = URL.createObjectURL(new Blob(chunks, { type: recorder.mimeType }));
+      $("playMine").hidden = false;
+      $("recBtn").textContent = "Record again";
+      $("recStatus").textContent = "Play the native clip, then yours - where do they differ?";
+    });
+    recorder.start();
+    $("recBtn").textContent = "Stop recording";
+    $("recStatus").textContent = "Recording - shadow the clip now.";
+  } catch {
+    $("recStatus").textContent = "Microphone unavailable or permission denied.";
+  }
+});
+$("playMine").addEventListener("click", () => {
+  if (takeUrl) new Audio(takeUrl).play();
+});
 
 player.addEventListener("ended", () => {
   if ($("loop").getAttribute("aria-pressed") === "true") { play(); return; }
