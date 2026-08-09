@@ -64,6 +64,13 @@
       <p class="muted" id="dictateStatus"></p>
     </section>
     <section class="card">
+      <h2>Tutor corrections</h2>
+      <p class="muted small">After a session, paste every correction as one line: what you said, then <code>-&gt;</code>, then the corrected form. Each becomes a drill card prompted with your own error - corrective feedback only sticks when it is retrieved.</p>
+      <textarea id="corrEntry" rows="3" lang="es" style="width:100%; font:inherit; padding:.5rem" placeholder="lo que dije -> lo que debi haber dicho (one per line)"></textarea>
+      <p><button class="primary" id="corrAdd">Add correction cards</button></p>
+      <ul id="corrList"></ul>
+    </section>
+    <section class="card">
       <h2>Captured</h2>
       <ul id="list"></ul>
       <p>

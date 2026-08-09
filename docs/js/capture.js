@@ -112,3 +112,47 @@ $("dictate").addEventListener("click", () => {
 });
 
 init();
+
+// Tutor corrections -> drill cards prompted with the learner's own error.
+function corrections() { return store.get(key(lang, "usercards"), []); }
+
+function renderCorrections() {
+  const all = corrections();
+  $("corrList").textContent = "";
+  for (const c of all.slice(-30).reverse()) {
+    const li = document.createElement("li");
+    li.append(`${c.attempt} -> `);
+    const strong = document.createElement("strong");
+    strong.textContent = c.target;
+    li.append(strong, " ");
+    const del = document.createElement("button");
+    del.textContent = "Delete";
+    del.className = "small";
+    del.addEventListener("click", () => {
+      store.set(key(lang, "usercards"), corrections().filter(x => x.id !== c.id));
+      renderCorrections();
+    });
+    li.append(del);
+    $("corrList").append(li);
+  }
+}
+
+$("corrAdd").addEventListener("click", () => {
+  const lines = $("corrEntry").value.split("\n").map(l => l.trim()).filter(Boolean);
+  const all = corrections();
+  let n = 0;
+  for (const line of lines) {
+    const m = line.split(/->|→/);
+    if (m.length !== 2) continue;
+    const attempt = m[0].trim(), target = m[1].trim();
+    if (!attempt || !target) continue;
+    all.push({ id: `u-${Date.now()}-${n++}`, attempt, target, en: `Fix: ${attempt}`, ts: Date.now() });
+  }
+  if (n) {
+    store.set(key(lang, "usercards"), all);
+    $("corrEntry").value = "";
+  }
+  renderCorrections();
+});
+
+renderCorrections();
