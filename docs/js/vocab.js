@@ -1,9 +1,9 @@
 // Frequency core deck, recognition direction while a beginner (L2 word on the
 // front - SSLA 2021: L2->L1 wins at low proficiency). Reviews first, then new
-// words capped per day. Audio is on-demand speechSynthesis: no shipped files.
+// words capped per day. Audio prefers shipped clips, speechSynthesis as fallback.
 
 import { newCard, nextState, seedFrom, DAY_MS } from "./scheduler.js";
-import { store, key, getSettings, loadJSON, storageWarning, markNav } from "./app.js";
+import { store, key, getSettings, loadJSON, storageWarning, markNav, playAudio } from "./app.js";
 import { pickSession, bandStats, NEW_PER_DAY } from "./deck.js";
 import { todayKey } from "./plan.js";
 
@@ -16,6 +16,7 @@ const newIds = new Set();
 const sessionMisses = new Map();
 const correctStreak = new Map();
 let reviewed = 0;
+let speakSeq = 0;
 
 async function init() {
   try {
@@ -72,7 +73,7 @@ function renderBands() {
   }
 }
 
-function speak(text) {
+function synthesize(text) {
   try {
     speechSynthesis.cancel();
     const u = new SpeechSynthesisUtterance(text);
@@ -81,6 +82,18 @@ function speak(text) {
     if (voice) u.voice = voice;
     speechSynthesis.speak(u);
   } catch { /* no speech synthesis available */ }
+}
+
+// One voice at a time: silence both channels, and if a newer speak() started
+// while we awaited the clip, skip the fallback (superseded, not failed).
+async function speak(kind) {
+  const src = kind === "word" ? current.audio : current.exampleAudio;
+  const text = kind === "word" ? current.word : current.example;
+  try { speechSynthesis.cancel(); } catch { /* no synthesis available */ }
+  $("player").pause();
+  const call = ++speakSeq;
+  if (src && (await playAudio($("player"), src))) return;
+  if (call === speakSeq) synthesize(text);
 }
 
 function show() {
@@ -97,17 +110,17 @@ function show() {
   $("grades").hidden = true;
   $("reveal").hidden = false;
   $("reveal").focus();
-  speak(current.word);
+  speak("word");
 }
 
-$("speak").addEventListener("click", () => speak($("back").hidden ? current.word : current.example));
+$("speak").addEventListener("click", () => speak($("back").hidden ? "word" : "example"));
 
 $("reveal").addEventListener("click", () => {
   $("back").hidden = false;
   $("reveal").hidden = true;
   $("grades").hidden = false;
   $("good").focus();
-  speak(current.example);
+  speak("example");
 });
 
 function bumpIntro() {
