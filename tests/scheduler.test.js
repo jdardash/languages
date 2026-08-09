@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { newCard, nextState, isDue, LEARNING_STEPS, DAY_MS } from "../docs/js/scheduler.js";
+import { newCard, nextState, isDue, isLeech, seedFrom, LEARNING_STEPS, DAY_MS } from "../docs/js/scheduler.js";
 
 const NOW = 1_800_000_000_000;
 
@@ -71,4 +71,42 @@ test("nextState does not mutate its input", () => {
   const c = newCard();
   nextState(c, "good", NOW);
   assert.equal(c.state, "new");
+});
+
+test("leech: flagged at the fourth lapse, not before", () => {
+  const c = { ...newCard(), lapses: 3 };
+  assert.equal(isLeech(c), false);
+  assert.equal(isLeech({ ...c, lapses: 4 }), true);
+  assert.equal(isLeech({ ...c, lapses: 9 }), true);
+});
+
+test("seeded scheduling fuzzes long due dates within 5% and stays deterministic", () => {
+  const mature = { state: "mature", stepIndex: 0, interval: 60, ease: 2.5, due: NOW, lapses: 0, reps: 9 };
+  const a = nextState(mature, "good", NOW, 42);
+  const b = nextState(mature, "good", NOW, 42);
+  assert.equal(a.due, b.due);                       // deterministic per seed
+  assert.equal(a.interval, Math.min(150, 180));     // interval itself unfuzzed
+  const exact = NOW + a.interval * DAY_MS;
+  const span = Math.round(a.interval * 0.05) * DAY_MS;
+  assert.ok(Math.abs(a.due - exact) <= span);
+  const dues = new Set();
+  for (let seed = 0; seed < 20; seed++) dues.add(nextState(mature, "good", NOW, seed).due);
+  assert.ok(dues.size > 5);                         // seeds spread across the fuzz window
+});
+
+test("seeded scheduling leaves short learning steps exact", () => {
+  const c = nextState(newCard(), "good", NOW, 42);
+  assert.equal(c.due, NOW + LEARNING_STEPS[0] * DAY_MS);
+});
+
+test("unseeded calls stay exact for backward compatibility", () => {
+  const mature = { state: "mature", stepIndex: 0, interval: 60, ease: 2.5, due: NOW, lapses: 0, reps: 9 };
+  const c = nextState(mature, "good", NOW);
+  assert.equal(c.due, NOW + c.interval * DAY_MS);
+});
+
+test("seedFrom hashes strings deterministically to ints", () => {
+  assert.equal(seedFrom("s-14"), seedFrom("s-14"));
+  assert.notEqual(seedFrom("s-14"), seedFrom("s-15"));
+  assert.equal(typeof seedFrom("w-203"), "number");
 });

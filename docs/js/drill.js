@@ -2,7 +2,7 @@
 // loud -> reveal -> self-grade). Misses requeue within the session until
 // answered correctly twice: 5-7 retrievals beat 1-3 (Nakata 2017).
 
-import { newCard, nextState, isDue } from "./scheduler.js";
+import { newCard, nextState, isDue, isLeech, seedFrom } from "./scheduler.js";
 import { store, key, getSettings, loadJSON, playAudio, storageWarning, markNav } from "./app.js";
 
 const $ = id => document.getElementById(id);
@@ -77,7 +77,7 @@ $("replay").addEventListener("click", () => {
 function grade(g) {
   const now = Date.now();
   const card = schedule[current.id] ?? newCard();
-  schedule[current.id] = nextState(card, g, now);
+  schedule[current.id] = nextState(card, g, now, seedFrom(current.id));
   store.set(key(lang, "schedule"), schedule);
   const log = store.get(key(lang, "log"), []);
   log.push({ ts: now, grade: g, id: current.id });
@@ -120,6 +120,15 @@ function finish() {
     const li = document.createElement("li");
     li.textContent = `${s.en} - ${s.target}`;
     $("missList").append(li);
+  }
+  const leeches = [...sessionMisses.values()].filter(s => isLeech(schedule[s.id]));
+  if (leeches.length) {
+    $("leechWrap").hidden = false;
+    for (const s of leeches) {
+      const li = document.createElement("li");
+      li.textContent = `${s.en} - ${s.target}`;
+      $("leechList").append(li);
+    }
   }
 }
 
