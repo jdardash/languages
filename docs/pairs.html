@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pairs - Languages</title>
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="index.html">Today</a>
+    <a href="drill.html">Drill</a>
+    <a href="vocab.html">Vocab</a>
+    <a href="pairs.html">Pairs</a>
+    <a href="shadow.html">Shadow</a>
+    <a href="input.html">Input</a>
+    <a href="capture.html">Capture</a>
+    <a href="method.html">Method</a>
+    <a href="progress.html">Progress</a>
+  </nav>
+  <main id="main">
+    <h1 id="heading">Minimal pairs</h1>
+    <section class="card" id="picker" hidden>
+      <p class="muted">Forced-choice ear training, many voices per word - High Variability Phonetic Training, the strongest beginner effect in the pronunciation literature (g = 0.92 perception, largest for beginners). Ten minutes a day for the first fortnight, then twice a week.</p>
+      <div id="contrastList"></div>
+    </section>
+    <section id="stage" class="card" hidden>
+      <p class="muted" id="counter"></p>
+      <p id="tip" class="muted"></p>
+      <p><button class="primary" id="playBtn">Play the word</button></p>
+      <div class="choice-row">
+        <button id="choiceA"></button>
+        <button id="choiceB"></button>
+      </div>
+      <p id="feedback">&nbsp;</p>
+      <p class="muted">Keys: 1 left, 2 right, space replays. A new random voice speaks each trial.</p>
+    </section>
+    <section id="done" class="card" hidden>
+      <h2>Round complete</h2>
+      <p id="summary"></p>
+      <p id="rolling" class="muted"></p>
+      <p><button class="primary" id="again">Another round</button> <button id="back">All contrasts</button></p>
+    </section>
+    <p id="status" class="muted">Loading...</p>
+    <audio id="player" preload="none"></audio>
+  </main>
+  <script type="module" src="js/pairs.js"></script>
+</body>
+</html>
