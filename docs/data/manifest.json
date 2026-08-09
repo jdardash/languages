@@ -1,0 +1,31 @@
+{
+ "languages": [
+  {
+   "id": "spanish",
+   "label": "Spanish",
+   "data": "data/spanish.json"
+  }
+ ],
+ "methodDocs": [
+  {
+   "title": "Overview",
+   "file": "method/overview.md"
+  },
+  {
+   "title": "The Method (Sentence Islands)",
+   "file": "method/method.md"
+  },
+  {
+   "title": "How To Learn Languages (Evidence)",
+   "file": "method/how-to-learn-languages.md"
+  },
+  {
+   "title": "What Top Learners Actually Do",
+   "file": "method/polyglot-practices.md"
+  },
+  {
+   "title": "Sentence Islands Pipeline",
+   "file": "method/sentence-islands.md"
+  }
+ ]
+}
