@@ -1,0 +1,1476 @@
+<meta charset="utf-8">
+<title>Station — a language training desk</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A daily language training desk: the merged day plan, a live recall drill, the DLI technique library, and the honest proficiency ladder.">
+
+<style>
+/* ============================================================
+   TOKENS
+   Light palette lives on bare :root. Dark is redefined twice --
+   once for the un-stamped system-dark case, once for an explicit
+   toggle -- so all three viewer states resolve as a full set.
+   ============================================================ */
+:root {
+  --paper:      #F5F5F1;
+  --paper-2:    #ECECE5;
+  --paper-3:    #E4E4DC;
+  --edge:       #D6D7CF;
+  --edge-soft:  #E3E4DC;
+  --ink:        #141A18;
+  --ink-2:      #4E5A56;
+  --ink-3:      #7B8783;
+  --accent:     #0F5B58;
+  --accent-2:   #0B4442;
+  --accent-wash:#DCE9E7;
+  --hit:        #3D7A55;
+  --miss:       #A8382C;
+  --due:        #8A5F17;
+  --shadow:     0 1px 2px rgba(20,26,24,.06), 0 8px 24px -12px rgba(20,26,24,.18);
+
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans:  "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  --mono:  "Cascadia Mono", "Cascadia Code", Consolas, "SF Mono", ui-monospace, "Roboto Mono", monospace;
+
+  --step--1: clamp(.78rem, .76rem + .1vw, .84rem);
+  --step-0:  clamp(1rem, .97rem + .15vw, 1.075rem);
+  --step-1:  clamp(1.2rem, 1.13rem + .34vw, 1.42rem);
+  --step-2:  clamp(1.48rem, 1.34rem + .68vw, 1.95rem);
+  --step-3:  clamp(1.85rem, 1.6rem + 1.2vw, 2.75rem);
+
+  --rail: 15.5rem;
+  --gap: 1.15rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:      #0D1211;
+    --paper-2:    #141B19;
+    --paper-3:    #1B2422;
+    --edge:       #29332F;
+    --edge-soft:  #1F2825;
+    --ink:        #E3E8E4;
+    --ink-2:      #9DABA6;
+    --ink-3:      #74827D;
+    --accent:     #5CB9AF;
+    --accent-2:   #8ED4CB;
+    --accent-wash:#122A28;
+    --hit:        #6FB98A;
+    --miss:       #E0796C;
+    --due:        #D2A257;
+    --shadow:     0 1px 2px rgba(0,0,0,.4), 0 10px 28px -14px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"] {
+  --paper:      #0D1211;
+  --paper-2:    #141B19;
+  --paper-3:    #1B2422;
+  --edge:       #29332F;
+  --edge-soft:  #1F2825;
+  --ink:        #E3E8E4;
+  --ink-2:      #9DABA6;
+  --ink-3:      #74827D;
+  --accent:     #5CB9AF;
+  --accent-2:   #8ED4CB;
+  --accent-wash:#122A28;
+  --hit:        #6FB98A;
+  --miss:       #E0796C;
+  --due:        #D2A257;
+  --shadow:     0 1px 2px rgba(0,0,0,.4), 0 10px 28px -14px rgba(0,0,0,.7);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; text-wrap: balance; line-height: 1.18; margin: 0; }
+p { margin: 0; }
+a { color: var(--accent); text-underline-offset: .18em; text-decoration-thickness: .06em; }
+a:hover { color: var(--accent-2); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: var(--step--1);
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* ============================================================
+   SHELL
+   ============================================================ */
+.shell { display: grid; grid-template-columns: 1fr; }
+@media (min-width: 60rem) {
+  .shell { grid-template-columns: var(--rail) minmax(0, 1fr); }
+}
+
+/* ---- rail ---- */
+.rail {
+  border-bottom: 1px solid var(--edge);
+  background: var(--paper-2);
+  padding: 1rem 1.15rem;
+}
+@media (min-width: 60rem) {
+  .rail {
+    border-bottom: 0;
+    border-right: 1px solid var(--edge);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    padding: 1.6rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    overflow-y: auto;
+  }
+}
+.brand { display: flex; flex-direction: column; gap: .18rem; }
+.brand .mark { font-family: var(--serif); font-size: var(--step-1); letter-spacing: -.01em; }
+.brand .sub { font-family: var(--mono); font-size: var(--step--1); color: var(--ink-3); }
+
+.railnav { display: none; }
+@media (min-width: 60rem) { .railnav { display: flex; flex-direction: column; gap: .1rem; } }
+.railnav a {
+  font-size: var(--step--1);
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: .34rem .5rem;
+  border-radius: 3px;
+  border-left: 2px solid transparent;
+  display: flex;
+  justify-content: space-between;
+  gap: .5rem;
+}
+.railnav a:hover { background: var(--paper-3); color: var(--ink); }
+.railnav a.on { border-left-color: var(--accent); color: var(--ink); background: var(--paper-3); }
+.railnav a span { font-family: var(--mono); color: var(--ink-3); font-size: .72rem; }
+
+.railfoot { margin-top: auto; display: flex; flex-direction: column; gap: .6rem; }
+
+/* ---- main ---- */
+main { min-width: 0; padding: 0 1.15rem 5rem; }
+@media (min-width: 60rem) { main { padding: 0 2.6rem 6rem; } }
+
+section { padding-top: 3.4rem; scroll-margin-top: 1.5rem; }
+.prose { max-width: 66ch; font-family: var(--serif); font-size: 1.03rem; line-height: 1.65; }
+.prose p + p { margin-top: .85em; }
+.sechead { display: flex; flex-direction: column; gap: .3rem; margin-bottom: 1.3rem; }
+.sechead h2 { font-size: var(--step-2); }
+.rule { height: 1px; background: var(--edge); border: 0; margin: 0; }
+
+/* ---- masthead ---- */
+.masthead { padding-top: 2.6rem; }
+.masthead h1 { font-size: var(--step-3); letter-spacing: -.02em; max-width: 20ch; }
+.masthead .lede { max-width: 60ch; margin-top: .9rem; font-family: var(--serif); font-size: var(--step-1); color: var(--ink-2); line-height: 1.45; }
+
+.statusbar {
+  margin-top: 1.8rem;
+  display: grid;
+  gap: 1px;
+  background: var(--edge);
+  border: 1px solid var(--edge);
+  border-radius: 4px;
+  overflow: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+}
+.stat { background: var(--paper-2); padding: .8rem .9rem; display: flex; flex-direction: column; gap: .15rem; }
+.stat .k { font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+.stat .v { font-family: var(--mono); font-size: var(--step-1); font-variant-numeric: tabular-nums; }
+.stat .v small { font-size: .62em; color: var(--ink-3); }
+
+/* ============================================================
+   COMPONENTS
+   ============================================================ */
+.card {
+  background: var(--paper-2);
+  border: 1px solid var(--edge);
+  border-radius: 5px;
+  padding: 1.1rem 1.2rem;
+}
+.grid { display: grid; gap: var(--gap); }
+.g2 { grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); }
+.g3 { grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr)); }
+
+.btn {
+  font-family: var(--sans);
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--paper-3);
+  border: 1px solid var(--edge);
+  border-radius: 4px;
+  padding: .5rem .9rem;
+  cursor: pointer;
+  line-height: 1.2;
+}
+.btn:hover { border-color: var(--ink-3); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+.btn.primary:hover { background: var(--accent-2); border-color: var(--accent-2); }
+.btn.hit:hover { border-color: var(--hit); color: var(--hit); }
+.btn.miss:hover { border-color: var(--miss); color: var(--miss); }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+.btn.sm { font-size: .8rem; padding: .34rem .6rem; }
+
+.chip {
+  font-family: var(--mono);
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .17rem .45rem;
+  border-radius: 2px;
+  border: 1px solid var(--edge);
+  color: var(--ink-2);
+  background: var(--paper);
+  white-space: nowrap;
+}
+.chip.accent { color: var(--accent); border-color: var(--accent); background: var(--accent-wash); }
+.chip.due  { color: var(--due);  border-color: color-mix(in srgb, var(--due) 45%, transparent); }
+.chip.hit  { color: var(--hit);  border-color: color-mix(in srgb, var(--hit) 45%, transparent); }
+.chip.miss { color: var(--miss); border-color: color-mix(in srgb, var(--miss) 45%, transparent); }
+
+.tablewrap { overflow-x: auto; border: 1px solid var(--edge); border-radius: 5px; }
+table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+th, td { text-align: left; padding: .55rem .75rem; border-bottom: 1px solid var(--edge-soft); vertical-align: top; }
+thead th { background: var(--paper-3); font-family: var(--mono); font-size: .68rem; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-2); font-weight: 400; white-space: nowrap; }
+tbody tr:last-child td { border-bottom: 0; }
+td.num, th.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.note {
+  border-left: 2px solid var(--accent);
+  background: var(--accent-wash);
+  padding: .75rem .95rem;
+  border-radius: 0 4px 4px 0;
+  font-size: .92rem;
+}
+.note.warn { border-left-color: var(--due); background: color-mix(in srgb, var(--due) 9%, transparent); }
+
+/* ============================================================
+   DRILL FLOOR
+   ============================================================ */
+.drill { border: 1px solid var(--edge); border-radius: 6px; background: var(--paper-2); overflow: hidden; }
+.drill-top {
+  display: flex; flex-wrap: wrap; gap: .55rem; align-items: center;
+  padding: .7rem .9rem; border-bottom: 1px solid var(--edge); background: var(--paper-3);
+}
+.drill-top .spacer { flex: 1 1 auto; }
+select, input[type="number"] {
+  font-family: var(--mono); font-size: .8rem; color: var(--ink);
+  background: var(--paper); border: 1px solid var(--edge);
+  border-radius: 3px; padding: .3rem .45rem;
+}
+
+.stage { padding: 2rem 1.2rem 1.4rem; display: flex; flex-direction: column; gap: 1rem; align-items: center; text-align: center; min-height: 17rem; justify-content: center; }
+.stage .counter { font-family: var(--mono); font-size: .7rem; letter-spacing: .1em; color: var(--ink-3); }
+.prompt { font-family: var(--serif); font-size: var(--step-2); line-height: 1.28; max-width: 28ch; }
+.target {
+  font-family: var(--mono); font-size: var(--step-1); line-height: 1.45;
+  color: var(--accent); max-width: 34ch;
+}
+.target[hidden] { display: none; }
+.hint { font-size: .85rem; color: var(--ink-3); max-width: 40ch; }
+.stage .actions { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; }
+
+.meter { display: flex; gap: 2px; height: 4px; background: var(--edge-soft); }
+.meter i { display: block; height: 100%; background: var(--accent); transition: width .25s ease; }
+@media (prefers-reduced-motion: reduce) { .meter i { transition: none; } }
+
+.boxes { display: flex; gap: 3px; }
+.boxes b {
+  width: 1.55rem; height: 1.55rem; display: grid; place-items: center;
+  font-family: var(--mono); font-size: .68rem; font-weight: 400;
+  border: 1px solid var(--edge); border-radius: 2px; background: var(--paper);
+  color: var(--ink-3); font-variant-numeric: tabular-nums;
+}
+.boxes b[data-n]:not([data-n="0"]) { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+
+/* ============================================================
+   ILR LADDER
+   ============================================================ */
+.ladder { display: grid; gap: 0; border: 1px solid var(--edge); border-radius: 5px; overflow: hidden; }
+.rung { display: grid; grid-template-columns: 3.6rem 1fr; border-bottom: 1px solid var(--edge-soft); background: var(--paper-2); }
+.rung:last-child { border-bottom: 0; }
+.rung .lvl {
+  font-family: var(--mono); font-size: var(--step-1); font-variant-numeric: tabular-nums;
+  display: grid; place-items: center; background: var(--paper-3); color: var(--ink-2);
+  border-right: 1px solid var(--edge-soft);
+}
+.rung .body { padding: .7rem .9rem; display: flex; flex-direction: column; gap: .28rem; }
+.rung .body b { font-family: var(--serif); font-weight: 600; font-size: 1rem; }
+.rung .body p { font-size: .88rem; color: var(--ink-2); }
+.rung.mark { background: var(--accent-wash); }
+.rung.mark .lvl { background: var(--accent); color: var(--paper); }
+.rung .tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .15rem; }
+
+/* ============================================================
+   TECHNIQUE LIBRARY
+   ============================================================ */
+.tech { border: 1px solid var(--edge); border-radius: 5px; background: var(--paper-2); overflow: hidden; }
+.tech > summary {
+  cursor: pointer; padding: .8rem 1rem; display: flex; gap: .6rem; align-items: baseline;
+  list-style: none; flex-wrap: wrap;
+}
+.tech > summary::-webkit-details-marker { display: none; }
+.tech > summary:hover { background: var(--paper-3); }
+.tech > summary h3 { font-size: 1.02rem; flex: 1 1 12rem; }
+.tech > summary .n { font-family: var(--mono); font-size: .7rem; color: var(--ink-3); }
+.tech[open] > summary { border-bottom: 1px solid var(--edge-soft); background: var(--paper-3); }
+.tech .in { padding: .95rem 1rem 1.1rem; display: flex; flex-direction: column; gap: .7rem; }
+.tech .what { font-family: var(--serif); font-size: .98rem; color: var(--ink-2); }
+.tech ol { margin: 0; padding-left: 1.15rem; display: flex; flex-direction: column; gap: .32rem; font-size: .9rem; }
+.tech ol li::marker { font-family: var(--mono); font-size: .8rem; color: var(--ink-3); }
+.tech .builds { font-size: .85rem; color: var(--ink-2); border-top: 1px solid var(--edge-soft); padding-top: .6rem; }
+.tech .builds b { font-family: var(--mono); font-size: .68rem; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-3); font-weight: 400; display: block; margin-bottom: .15rem; }
+
+/* ============================================================
+   CHECKLIST
+   ============================================================ */
+.week { border: 1px solid var(--edge); border-radius: 5px; overflow: hidden; background: var(--paper-2); }
+.week > header { padding: .75rem 1rem; background: var(--paper-3); border-bottom: 1px solid var(--edge); display: flex; gap: .6rem; align-items: baseline; flex-wrap: wrap; }
+.week > header h3 { font-size: 1rem; flex: 1 1 auto; }
+.tasks { display: flex; flex-direction: column; }
+.task { display: flex; gap: .6rem; align-items: flex-start; padding: .5rem 1rem; border-bottom: 1px solid var(--edge-soft); font-size: .9rem; cursor: pointer; }
+.task:last-child { border-bottom: 0; }
+.task:hover { background: var(--paper-3); }
+.task input { margin-top: .28rem; accent-color: var(--accent); flex: none; }
+.task.done > span { text-decoration: line-through; color: var(--ink-3); }
+.task code { font-family: var(--mono); font-size: .82em; background: var(--paper); border: 1px solid var(--edge-soft); border-radius: 2px; padding: .05em .3em; }
+
+/* ============================================================
+   LINKS / ARMORY
+   ============================================================ */
+.res { display: flex; flex-direction: column; gap: .25rem; padding: .75rem .9rem; border: 1px solid var(--edge); border-radius: 4px; background: var(--paper-2); }
+.res a { font-family: var(--serif); font-size: 1rem; font-weight: 600; text-decoration: none; }
+.res a:hover { text-decoration: underline; }
+.res p { font-size: .85rem; color: var(--ink-2); }
+.res .host { font-family: var(--mono); font-size: .68rem; color: var(--ink-3); }
+
+footer { margin-top: 4rem; padding-top: 1.4rem; border-top: 1px solid var(--edge); font-size: .84rem; color: var(--ink-3); max-width: 66ch; }
+footer p + p { margin-top: .55rem; }
+
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+
+<div class="shell">
+
+  <!-- ================= RAIL ================= -->
+  <aside class="rail">
+    <div class="brand">
+      <span class="mark">Station</span>
+      <span class="sub">languages / training desk</span>
+    </div>
+
+    <nav class="railnav" aria-label="Sections">
+      <a href="#day"     class="on">The merged day <span>01</span></a>
+      <a href="#drill">Drill floor <span>02</span></a>
+      <a href="#library">Technique library <span>03</span></a>
+      <a href="#ladder">The ladder <span>04</span></a>
+      <a href="#armory">Armory <span>05</span></a>
+      <a href="#ship">Ship the page <span>06</span></a>
+    </nav>
+
+    <div class="railfoot">
+      <div class="boxes" id="railBoxes" title="Leitner boxes: how many sentences sit at each interval"></div>
+      <button class="btn sm" id="themeBtn" type="button">Toggle theme</button>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <header class="masthead">
+      <p class="eyebrow">Ten folders &middot; one push &middot; 30&ndash;60 minutes</p>
+      <h1>A training desk, not a curriculum</h1>
+      <p class="lede">
+        Your library already contains two methods that never agreed with each other. This page
+        settles the argument the way language schools that answer for their results settle it &mdash;
+        and then gives you something to actually do today.
+      </p>
+
+      <div class="statusbar" id="statusbar">
+        <div class="stat"><span class="k">Push language</span><span class="v">Spanish</span></div>
+        <div class="stat"><span class="k">Due now</span><span class="v" id="sDue">&mdash;</span></div>
+        <div class="stat"><span class="k">Session</span><span class="v" id="sHit">0<small>/0</small></span></div>
+        <div class="stat"><span class="k">Streak</span><span class="v" id="sStreak">0<small> d</small></span></div>
+      </div>
+    </header>
+
+    <!-- ============ 01 THE MERGED DAY ============ -->
+    <section id="day">
+      <div class="sechead">
+        <p class="eyebrow">01 &mdash; Reconciliation</p>
+        <h2>The two day-plans in your repo, merged</h2>
+      </div>
+
+      <div class="prose">
+        <p>
+          <strong>METHOD.md</strong> gives a day that is 50% recall on your own sentences,
+          30% grammar book, 20% input. <strong>How To Learn Languages.md</strong> gives a
+          different day: grammar spine, captioned video, a frequency deck, two tutor sessions
+          a week, minimal-pair drills. Each file calls itself &ldquo;the day.&rdquo; Neither
+          contains the other&rsquo;s largest component &mdash; there is no SRS line in the first
+          and no sentence-recall line in the second. Across the two files and the README there
+          are four different figures for how long a day takes: 15 minutes, 30 minutes, 45&ndash;60
+          minutes, and a routine table totalling up to three hours.
+        </p>
+        <p>
+          The military schools resolved this a long time ago, and not by choosing. A day at the
+          Defense Language Institute is roughly six classroom hours that move through several
+          different activities with different purposes &mdash; and the thing that makes it one day
+          rather than a pile of tactics is that each block ends in something you could not do
+          before. Your two files are not rival philosophies. One is a <em>production</em> engine
+          and one is a <em>comprehension</em> engine, and you need both, in that ratio, in that
+          order.
+        </p>
+      </div>
+
+      <div class="tablewrap" style="margin-top:1.4rem">
+        <table>
+          <thead>
+            <tr><th>Block</th><th class="num">Min</th><th>What</th><th>Which engine</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cold open</td><td class="num">10</td>
+              <td>Grammar spine, every exercise attempted closed-book <em>before</em> checking</td>
+              <td>Comprehension &mdash; the largest single effect in the literature</td>
+            </tr>
+            <tr>
+              <td>Drill floor</td><td class="num">15</td>
+              <td>Active recall on your own sentences, out loud, from English</td>
+              <td>Production &mdash; METHOD.md&rsquo;s engine, unchanged</td>
+            </tr>
+            <tr>
+              <td>Dead time</td><td class="num">&mdash;</td>
+              <td>Sentence audio, then graded listening. Costs no scheduled time</td>
+              <td>Comprehension &mdash; free hours</td>
+            </tr>
+            <tr>
+              <td>Evening</td><td class="num">10</td>
+              <td>Frequency deck, L2&rarr;L1 until the spine is done, then flipped</td>
+              <td>Comprehension &mdash; understanding other people</td>
+            </tr>
+            <tr>
+              <td>Twice weekly</td><td class="num">30</td>
+              <td>Tutor, with the standing correction instruction</td>
+              <td>Both &mdash; the only block that supplies feedback</td>
+            </tr>
+            <tr>
+              <td>First fortnight</td><td class="num">10</td>
+              <td>Minimal-pair perception, many different speakers</td>
+              <td>Perception &mdash; then it stops and never returns</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note" style="margin-top:1.1rem">
+        <strong>The one thing to fix in the tooling.</strong>
+        <code>How To Learn Languages.md</code> overturns <code>METHOD.md</code> on pronunciation and
+        prescribes generating sentence audio in <em>several different voices</em>, because the number
+        of distinct talkers is what makes perception training work. But
+        <code>build_audio.py</code> takes a single <code>--voice</code>, and its cache key is built
+        from that one voice string, so multi-voice output cannot currently be expressed. The
+        correction is written down and unimplemented.
+      </div>
+
+      <div class="note warn" style="margin-top:.7rem">
+        <strong>And one number that does not add up.</strong>
+        <code>recall_drill.py</code> caps its Leitner ladder at 14 days, so a fully-mature sentence
+        returns every fortnight forever. The SRS arithmetic in your own notes assumes mature cards
+        sit at 60&ndash;150 days. At a 14-day ceiling a thousand-sentence list costs about 71 reviews
+        a day indefinitely &mdash; roughly five times what you budgeted. The drill below uses the
+        longer ladder.
+      </div>
+    </section>
+
+    <!-- ============ 02 DRILL FLOOR ============ -->
+    <section id="drill">
+      <div class="sechead">
+        <p class="eyebrow">02 &mdash; Drill floor</p>
+        <h2>Say it out loud. Thinking it does not count.</h2>
+      </div>
+
+      <p class="prose" style="margin-bottom:1.2rem">
+        All 32 sentences from <code>Sentence Islands/Spanish/sentences.csv</code>, live. Progress
+        saves in this browser. Four modes, each borrowed from a different part of the schoolhouse
+        day &mdash; recall is your own method, the other three are the ones nobody self-studying
+        ever trains.
+      </p>
+
+      <div class="drill">
+        <div class="drill-top">
+          <label class="sr" for="mode">Mode</label>
+          <select id="mode">
+            <option value="recall">Recall &mdash; English &rarr; Spanish</option>
+            <option value="reverse">Reverse &mdash; Spanish &rarr; English</option>
+            <option value="shadow">Shadow &mdash; speak along</option>
+            <option value="gist">Gist &mdash; listen once, summarise</option>
+          </select>
+          <label class="sr" for="topic">Topic</label>
+          <select id="topic"><option value="">All topics</option></select>
+          <span class="spacer"></span>
+          <span class="chip" id="dueChip">&mdash;</span>
+          <button class="btn sm" id="resetBtn" type="button">Reset progress</button>
+        </div>
+
+        <div class="meter" aria-hidden="true"><i id="meterFill" style="width:0%"></i></div>
+
+        <div class="stage" id="stage">
+          <p class="counter" id="counter">Ready</p>
+          <p class="prompt" id="prompt">Press start.</p>
+          <p class="target" id="target" hidden lang="es"></p>
+          <p class="hint" id="hint">
+            Space reveals the answer. <kbd>1</kbd> missed it, <kbd>2</kbd> had it, <kbd>R</kbd> replays audio.
+          </p>
+          <div class="actions" id="actions">
+            <button class="btn primary" id="startBtn" type="button">Start session</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid g3" style="margin-top:1rem">
+        <div class="card">
+          <p class="eyebrow">Recall</p>
+          <p style="font-size:.88rem;margin-top:.3rem">
+            The engine. Getting it wrong and <em>then</em> seeing the answer is what builds the
+            memory &mdash; a re-read of the answer you never tried to produce does almost nothing.
+          </p>
+        </div>
+        <div class="card">
+          <p class="eyebrow">Shadow</p>
+          <p style="font-size:.88rem;margin-top:.3rem">
+            Speak <em>simultaneously</em> with the audio, not after it. Builds mouth timing at full
+            speed. The thinnest evidence base of anything here &mdash; no meta-analysis exists.
+          </p>
+        </div>
+        <div class="card">
+          <p class="eyebrow">Gist</p>
+          <p style="font-size:.88rem;margin-top:.3rem">
+            One pass, no replay, then say what it was about in English. This is the actual
+            intelligence-linguist skill, and it is the one self-studiers never practise.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 TECHNIQUE LIBRARY ============ -->
+    <section id="library">
+      <div class="sechead">
+        <p class="eyebrow">03 &mdash; Technique library</p>
+        <h2>What transfers to thirty minutes alone</h2>
+      </div>
+      <div class="prose" style="margin-bottom:1.4rem" id="libIntro">
+        <p>
+          Two facts frame everything below. The first is that the Foreign Service Institute measured
+          this in 1967 and found a student working alone with recorded material participates with the
+          language at <strong>400&ndash;600 times an hour</strong>, against 100&ndash;150 in a class
+          shared with three other people. For the drilling layer, working alone is <em>denser</em>,
+          not degraded.
+        </p>
+        <p>
+          The second is that the Army's own sustainment requirement for a qualified linguist is
+          <strong>8&ndash;16 hours a month</strong> plus one annual block of 160 consecutive hours,
+          against a written individual plan, with a real test at the end. That is the military's own
+          answer to &ldquo;what keeps a professional at level,&rdquo; and unlike sixty weeks of
+          full-time school, it is a dose you can actually hit.
+        </p>
+        <p>
+          One caution before you start collecting. The drills people associate with the
+          &ldquo;military method&rdquo; are a 1940s inheritance the institution has explicitly moved
+          past &mdash; its current catalogue describes task-based, content-based, learner-centered
+          instruction, and pattern drills appear nowhere in it. Its instructor certification course
+          does not teach them. What is worth taking is the <em>architecture</em> &mdash; short cycles
+          that end in real use, authentic material from day one, diagnose-then-target &mdash; at
+          least as much as the drills.
+        </p>
+      </div>
+      <div class="grid" id="techList" style="gap:.6rem"></div>
+
+      <h3 style="margin-top:2.2rem;font-size:var(--step-1)">A week of it</h3>
+      <p style="font-size:.88rem;color:var(--ink-2);margin:.4rem 0 .9rem;max-width:66ch">
+        Scaled to 30 minutes a day, which lands inside that 8&ndash;16 hours a month.
+      </p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Day</th><th>The block</th></tr></thead>
+          <tbody>
+            <tr><td class="num">Mon</td><td>Microwave cycle on new material</td></tr>
+            <tr><td class="num">Tue</td><td>Shadowing, then minimal pairs</td></tr>
+            <tr><td class="num">Wed</td><td>Dictation or transcription, then the named-entity log</td></tr>
+            <tr><td class="num">Thu</td><td>Scan-and-search, or one complete GLOSS lesson</td></tr>
+            <tr><td class="num">Fri</td><td>Transformation drill, then self-run question and answer</td></tr>
+            <tr><td class="num">Sat</td><td>Two-pass listening, then sight translation</td></tr>
+            <tr><td class="num">Sun</td><td>Interview self-simulation monthly; otherwise domain reading</td></tr>
+            <tr><td class="num">Daily</td><td><em>Additive, not a substitute:</em> 10 minutes of spaced retrieval</td></tr>
+            <tr><td class="num">Quarterly</td><td>Re-diagnose, and take one full iso-immersion day</td></tr>
+            <tr><td class="num">Yearly</td><td>Your own 160-hour block: one full week of concentrated study before a self-test</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ 04 THE LADDER ============ -->
+    <section id="ladder">
+      <div class="sechead">
+        <p class="eyebrow">04 &mdash; The ladder</p>
+        <h2>Where the honest benchmark actually sits</h2>
+      </div>
+
+      <div class="prose" style="margin-bottom:1.4rem">
+        <p>
+          The Interagency Language Roundtable scale is the one the US government actually pays
+          against, and it is worth internalising because it is far less flattering than the scales
+          used in language marketing. Level 2 is called <em>limited working proficiency</em>. It is
+          where most graduates of a full-time, sixty-week, selectively-admitted military course
+          land.
+        </p>
+      </div>
+
+      <div class="ladder">
+        <div class="rung">
+          <div class="lvl">0+</div>
+          <div class="body"><b>Memorised</b><p>Fixed phrases. Cannot recombine. Most app streaks live here.</p></div>
+        </div>
+        <div class="rung">
+          <div class="lvl">1</div>
+          <div class="body">
+            <b>Elementary</b>
+            <p>Survives predictable everyday exchanges. Frequent errors, constant repetition needed.</p>
+            <div class="tags"><span class="chip">CEFR A2&ndash;B1</span><span class="chip">ACTFL Intermediate</span></div>
+          </div>
+        </div>
+        <div class="rung mark">
+          <div class="lvl">2</div>
+          <div class="body">
+            <b>Limited working proficiency</b>
+            <p>
+              Handles routine work demands and concrete topics. Still breaks down on abstraction,
+              argument and unfamiliar register. <strong>This is the military graduation target</strong> &mdash;
+              and roughly 3 in 10 people who start the course do not reach it.
+            </p>
+            <div class="tags"><span class="chip">CEFR B2</span><span class="chip">ACTFL Advanced</span><span class="chip accent">The real bar</span></div>
+          </div>
+        </div>
+        <div class="rung">
+          <div class="lvl">2+</div>
+          <div class="body">
+            <b>Above limited</b>
+            <p>Only about a quarter to a third of graduating classes reach this in listening and reading together.</p>
+          </div>
+        </div>
+        <div class="rung">
+          <div class="lvl">3</div>
+          <div class="body">
+            <b>General professional</b>
+            <p>
+              Abstract topics, argument, unfamiliar subject matter, structural accuracy that never
+              impedes. Government auditors put linguist productivity at up to four times higher here
+              than at level 2. This is what people mean when they say &ldquo;fluent.&rdquo;
+            </p>
+            <div class="tags"><span class="chip">CEFR C1</span><span class="chip">ACTFL Superior</span></div>
+          </div>
+        </div>
+        <div class="rung">
+          <div class="lvl">4&ndash;5</div>
+          <div class="body"><b>Advanced professional &rarr; native</b><p>Level 5 is an articulate educated native speaker. It is not a study goal.</p></div>
+        </div>
+      </div>
+
+      <div class="note warn" style="margin-top:1.2rem">
+        <strong>Read pass rates with suspicion &mdash; including the ones above.</strong>
+        When the proficiency test was redesigned in 2006&ndash;08, Modern Standard Arabic pass rates
+        collapsed to about 14%, and Persian-Farsi fell from roughly 92% to 50% &mdash; on the same
+        instruction. In February 2009 a memo lowered the mastery cut score, and the very next class
+        went from 34.5% meeting the standard to 92%. A 2.5&times; swing in &ldquo;pass rate&rdquo;
+        was produced by an administrative signature. Any programme&rsquo;s advertised numbers,
+        including a language app&rsquo;s, are partly a policy variable.
+      </div>
+
+      <div class="grid g2" style="margin-top:1.4rem">
+        <div class="card">
+          <p class="eyebrow">The dosage, honestly</p>
+          <p style="font-size:.9rem;margin-top:.45rem">
+            A Category IV course &mdash; Arabic, Chinese, Japanese, Korean &mdash; is 64 weeks at
+            six classroom hours a day: roughly <strong>1,920 contact hours</strong>, plus homework,
+            with students pre-selected by aptitude test and studying as their full-time job.
+          </p>
+          <p style="font-size:.9rem;margin-top:.55rem">
+            At 30 minutes a day, 365 days a year, you accumulate 182 hours a year. The same hour
+            count would take about <strong>ten and a half years</strong> &mdash; and that assumes
+            perfect linearity, which nobody believes.
+          </p>
+        </div>
+        <div class="card">
+          <p class="eyebrow">What that buys, and what it doesn't</p>
+          <p style="font-size:.9rem;margin-top:.45rem">
+            Those six hours a day are not mostly buying vocabulary. They buy <strong>processing
+            automaticity under time pressure</strong> and thousands of hours of interactive output
+            with someone correcting it. That is the part 30 minutes a day cannot replicate.
+          </p>
+          <p style="font-size:.9rem;margin-top:.55rem">
+            What <em>does</em> transfer &mdash; and where the distributed learner genuinely has the
+            advantage &mdash; is spacing. In a nine-year study, 13 sessions at 56-day intervals
+            matched the retention of 26 sessions at 14-day intervals. Half the work, same result,
+            for the memorisation layer specifically.
+          </p>
+        </div>
+      </div>
+
+      <div class="tablewrap" style="margin-top:1.4rem">
+        <table>
+          <thead><tr><th>Cat</th><th>Your folders</th><th class="num">Class hrs</th><th class="num">Still quoted</th><th>Note</th></tr></thead>
+          <tbody>
+            <tr><td>I</td><td>Spanish, French, Portuguese</td><td class="num">552&ndash;690</td><td class="num">600&ndash;750</td><td>Closest to English. Spanish then Portuguese then French compounds the discount.</td></tr>
+            <tr><td>II</td><td>&mdash;</td><td class="num">828</td><td class="num">900</td><td>German, Indonesian, Swahili. None of your ten.</td></tr>
+            <tr><td>III</td><td>Russian, Hebrew, Farsi, Tagalog</td><td class="num">1,012</td><td class="num">1,100</td><td>Hard grammar or a new script, but no character set. About forty languages sit here.</td></tr>
+            <tr><td>IV</td><td>Arabic, Chinese, Japanese</td><td class="num">2,024</td><td class="num">2,200</td><td>Script <em>and</em> distance. Arabic is really two projects &mdash; a formal register plus a spoken dialect.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note warn" style="margin-top:.8rem">
+        <strong>Three corrections your ten READMEs need.</strong>
+        First, <strong>there is no Category V.</strong> Your Arabic, Chinese and Japanese READMEs all
+        cite &ldquo;FSI Category V&rdquo; as a planning fact; the scale stops at IV, and all three
+        languages are in it. Second, the hour figures moved: the old numbers were weeks &times; 25,
+        the current ones are weeks &times; 23, and nearly every chart online still reproduces the
+        obsolete set. Third, even the official Category IV figure is stale &mdash; 88 weeks &times; 23
+        is 2,024, but the page still says 2,200.
+      </div>
+      <p style="font-size:.82rem;color:var(--ink-3);margin-top:.7rem;max-width:66ch">
+        Use all of these as an <em>ordinal ranking</em> and nothing more &mdash; which is the
+        conclusion <code>How To Learn Languages.md</code> already reached independently. They are
+        class hours only; the same courses expect a further 17 hours a week of self-study, and they
+        target level 3, a full step above what the military course aims at.
+      </p>
+    </section>
+
+    <!-- ============ 05 ARMORY ============ -->
+    <section id="armory">
+      <div class="sechead">
+        <p class="eyebrow">05 &mdash; Armory</p>
+        <h2>Free, official, and better than most paid material</h2>
+      </div>
+      <p class="prose" style="margin-bottom:1.3rem">
+        All of it is US government work, all of it is free, and most of it is built for exactly the
+        skills in the library above. The reading and listening lessons are graded by the same ILR
+        levels on the ladder, which means you can aim at a rung rather than at a vibe.
+      </p>
+      <div class="grid g3" id="armoryList"></div>
+    </section>
+
+    <!-- ============ 06 SHIP ============ -->
+    <section id="ship">
+      <div class="sechead">
+        <p class="eyebrow">06 &mdash; Ship the page</p>
+        <h2>Four weeks to this page on a public URL</h2>
+      </div>
+      <p class="prose" style="margin-bottom:1.3rem">
+        The full walkthrough is in <code>How To Learn GitHub And The Web.md</code> next to this
+        file. This is the checklist. It ticks and saves. One rule: commit every day you work, even
+        if it is one line &mdash; you cannot learn version control by reading about version control.
+      </p>
+      <div class="grid" id="weeks" style="gap:.9rem"></div>
+    </section>
+
+    <footer>
+      <p>
+        Built from this folder: <code>METHOD.md</code>, <code>How To Learn Languages.md</code>,
+        <code>Sentence Islands/</code> and the ten language READMEs &mdash; reconciled against the
+        publicly documented practice of the Defense Language Institute and the Foreign Service
+        Institute.
+      </p>
+      <p>
+        Progress is stored in this browser only, under keys prefixed
+        <code>station:</code>. Nothing is uploaded. Clearing site data clears your streak.
+      </p>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+/* ============================================================
+   DATA
+   ============================================================ */
+const SENTENCES = [
+ [1,"morning","I just woke up and I'm not fully awake yet.","Me acabo de despertar y todavía no estoy despierto del todo."],
+ [2,"morning","I'm going to make myself a coffee before anything else.","Voy a hacerme un café antes de cualquier otra cosa."],
+ [3,"morning","I have class at ten today and then I'm going to the library.","Hoy tengo clase a las diez y después voy a la biblioteca."],
+ [4,"work","This meeting could have been an email.","Esta reunión pudo haber sido un correo."],
+ [5,"work","I'm working on a machine learning project.","Estoy trabajando en un proyecto de aprendizaje automático."],
+ [6,"work","Basically, I teach a program to find patterns in a lot of data.","Básicamente, le enseño a un programa a encontrar patrones en muchos datos."],
+ [7,"work","My code broke again and I don't know why.","Se me rompió el código otra vez y no sé por qué."],
+ [8,"work","I've tried everything already and it still doesn't work.","Ya probé de todo y sigue sin funcionar."],
+ [9,"glue","Can you explain that again, but slower?","¿Me puedes explicar eso otra vez, pero más despacio?"],
+ [10,"glue","Sorry, I didn't understand even half of what you said.","Perdón, no entendí ni la mitad de lo que dijiste."],
+ [11,"glue","How do you say this in Spanish?","¿Cómo se dice esto en español?"],
+ [12,"glue","I've been learning Spanish for a few months, so be patient with me.","Llevo unos meses aprendiendo español, así que ten paciencia conmigo."],
+ [13,"self","I'm from California and I study in Santa Cruz.","Soy de California y estudio en Santa Cruz."],
+ [14,"self","I study computer science, but I'm more interested in artificial intelligence.","Estudio informática, pero me interesa más la inteligencia artificial."],
+ [15,"self","I started because I wanted to understand how these things work underneath.","Empecé porque quería entender cómo funcionan estas cosas por dentro."],
+ [16,"self","On weekends I usually go for a walk or stay in and read.","Los fines de semana normalmente salgo a caminar o me quedo leyendo."],
+ [17,"self","Honestly, I haven't had much free time lately.","La verdad es que no he tenido mucho tiempo libre últimamente."],
+ [18,"transaction","Could you bring me the check, please?","¿Me traes la cuenta, por favor?"],
+ [19,"transaction","How much does this cost?","¿Cuánto cuesta esto?"],
+ [20,"transaction","I'd like a latte and something to eat.","Quisiera un café con leche y algo de comer."],
+ [21,"transaction","Excuse me, where's the bathroom?","Disculpa, ¿dónde está el baño?"],
+ [22,"transaction","Can you give me the wifi password?","¿Me pasas la contraseña del wifi?"],
+ [23,"opinion","I think that's overrated, but I understand why people like it.","Creo que eso está sobrevalorado, pero entiendo por qué le gusta a la gente."],
+ [24,"opinion","I partly agree, but not completely.","Estoy de acuerdo en parte, pero no del todo."],
+ [25,"opinion","It depends on what you mean.","Depende de a qué te refieras."],
+ [26,"glue","Hold on a second, I'm thinking.","Espérame un segundo, estoy pensando."],
+ [27,"social","I have to go now, it got late.","Ya me tengo que ir, se me hizo tarde."],
+ [28,"social","I'll let you know when I get there.","Te aviso cuando llegue."],
+ [29,"social","I'm tired because I went to bed really late last night.","Estoy cansado porque anoche me dormí muy tarde."],
+ [30,"question","And what do you do for a living?","¿Y tú a qué te dedicas?"],
+ [31,"question","How long have you lived here?","¿Desde cuándo vives aquí?"],
+ [32,"question","What do you recommend?","¿Qué me recomiendas?"]
+].map(([id,topic,english,target]) => ({id,topic,english,target}));
+
+/* Intervals in days by Leitner box. Deliberately longer than the 14-day
+   ceiling in recall_drill.py -- see the note in section 01. */
+const INTERVALS = {1:1, 2:3, 3:8, 4:21, 5:60, 6:150};
+const MAX_BOX = 6;
+
+const ARMORY = [
+  ["GLOSS", "https://gloss.dliflc.edu", "Thousands of task-based listening and reading lessons across ~40 languages, each tagged with the ILR level it targets. The single best free resource on this page."],
+  ["Headstart2", "https://hs2.dliflc.edu", "An 80–100 hour beginner self-study course. A real structured start for the languages where you have nothing."],
+  ["ODA", "https://oda.dliflc.edu", "Adaptive diagnostic across 20 languages. Produces a profile of what specifically is weak, rather than a score."],
+  ["Phone Conversations", "https://phone.dliflc.edu", "300+ unscripted real phone calls in non-standard dialects. Degraded, fast, overlapping — the hardest listening material that exists for free."],
+  ["Accents Library", "https://accents.dliflc.edu", "The same passage read across up to ten regional accents. This is the multi-talker perception training your own notes call for."],
+  ["Field Support", "https://fieldsupport.dliflc.edu", "Language Survival Kits and Cultural Orientation for 100+ countries. Useful for a language you are only visiting."],
+  ["DLPT5 guides", "https://www.dliflc.edu/resources/dlpt-guides/", "Test format guides with the ILR skill-level descriptions appended. Read the level 2 and 3 descriptions once a month."],
+  ["FSI courses (Live Lingua)", "https://www.livelingua.com/fsi/", "The public-domain FSI Basic Courses — 40+ languages, thousands of audio files. Dated (1950s–70s) but structurally excellent."],
+  ["Open Language Library", "https://fsi-languages.yojik.eu/", "The same FSI material at stable paths, plus DLI and Peace Corps courses. Best mirror for actually downloading things."],
+  ["ILR scale", "https://www.govtilr.org/", "The skill level descriptions themselves. Section 04 above is a summary; this is the source."],
+  ["Learn Git Branching", "https://learngitbranching.js.org/", "Visual sandbox for Git. The fastest way to make merge versus rebase click, because you watch the graph move."],
+  ["JavaScript.info", "https://javascript.info/", "The best free JavaScript explanation available. Part 2 covers everything this page is built from."]
+];
+
+const WEEKS = [
+  ["Week 1", "Git, and these notes on GitHub", [
+    "Move the folder out of OneDrive to <code>C:\\Dev\\languages</code>",
+    "<code>git init</code>, check the <code>.gitignore</code>, first commit",
+    "<code>gh repo create languages --public --source=. --push</code>",
+    "Do the Introduction to GitHub course (under an hour)",
+    "Edit, <code>git add -p</code>, commit, push — three separate times",
+    "Make a branch, merge it, then cause a merge conflict on purpose and fix it",
+    "Open your first pull request and read your own diff before merging"
+  ]],
+  ["Week 2", "HTML, CSS, and a live URL by day two", [
+    "Copy this file to <code>docs/index.html</code>, add an empty <code>docs/.nojekyll</code>",
+    "Serve it locally: <code>python -m http.server 8000 --directory docs</code>",
+    "Settings → Pages → Deploy from a branch → <code>main</code> / <code>/docs</code>",
+    "Load <code>jdardash.github.io/languages/</code> on your phone",
+    "Read web.dev Learn CSS: box model, selectors, the cascade",
+    "Find one case-sensitivity bug — works locally, 404s live. That is the lesson landing"
+  ]],
+  ["Week 3", "JavaScript, and the app does something", [
+    "JavaScript.info Part 1 — variables, functions, arrays, objects",
+    "Part 2 — the DOM and events",
+    "Extend <code>build_audio.py</code> to also emit <code>docs/data/spanish.json</code>",
+    "Load it with <code>fetch</code> instead of the inline array in this file",
+    "Copy the real mp3s to <code>docs/audio/</code> and use them instead of speech synthesis",
+    "Handle the autoplay rejection with <code>try/catch</code> — it will happen on mobile"
+  ]],
+  ["Week 4", "Polish, and prove the architecture", [
+    "Keyboard control and <code>aria-live</code> on the drill card, then run Lighthouse",
+    "Add a second language. If it needs only a data file, the design is right",
+    "If it needs JavaScript changes, refactor until it does not",
+    "Write the repository README: what this is, the live URL, how to regenerate the data",
+    "Do the week's work on a branch and squash-merge it with a real description",
+    "Read <code>git log --oneline --graph</code> across all four weeks"
+  ]]
+];
+
+const TECHNIQUES = [
+{
+  name: "The microwave cycle", mins: "20–30 min", tag: "Production",
+  what: "Stevick's 1966 FSI unit design: introduce a small amount of language, then use it for real communication before moving on. His own words — communication should be real, not just simulated. The name is about short <em>waves</em>, not fast cooking.",
+  how: [
+    "Take 4–6 new sentences with audio.",
+    "<strong>M-phase, 10–20 min.</strong> Mimic the audio until your pronunciation matches. Spend <em>no more than three minutes</em> establishing meanings. Then manipulate: swap the nouns, change the tense, negate it, turn it into a question.",
+    "<strong>C-phase, 10 min.</strong> Say or write 5–8 new sentences with that material about real people, places and things in your own life this week.",
+    "Re-run the same cycle once or twice on later days. Total lifetime cost is about an hour."
+  ],
+  builds: "The know-it to use-it transition inside a single session. This is the direct fix for the classic self-study failure of accumulating language you have never once used."
+},
+{
+  name: "Backward build-up", mins: "10 min", tag: "Production",
+  what: "Break a sentence you keep fumbling and rebuild it from the end. The technique is lifted verbatim from the State Department's own audiolingual teacher-training packet.",
+  how: [
+    "Pick 3–5 sentences you stumble on.",
+    "Say the <em>last</em> two or three words. Repeat until fluent.",
+    "Add the next chunk to the <em>front</em>. Repeat. Continue until you reach the start.",
+    "Say the whole sentence three times with no hesitation, then move on.",
+    "Worked example: <em>post office</em> → <em>to the post office</em> → <em>going to the post office</em> → …"
+  ],
+  builds: "Fluency on long or awkward strings. It works because the end of an utterance — otherwise the least rehearsed and most fatigued part — becomes the most practised."
+},
+{
+  name: "Mim-mem to overlearning", mins: "20–30 min", tag: "Production",
+  what: "Memorise a short dialogue until you can perform it perfectly, both roles. The oldest technique here — it is what the WWII Army Specialized Training Program ran on ten hours a day.",
+  how: [
+    "Take a 6–10 line authentic dialogue with audio.",
+    "Listen through with <em>no text</em>.",
+    "Repeat line by line after the model. Back-chain any line that resists.",
+    "Play the recording and speak Role A against it. Then swap and speak Role B.",
+    "<em>Only now</em> open the transcript and check what you got wrong.",
+    "The standard is memorised so you can say it perfectly — continue to the point of overlearning."
+  ],
+  builds: "A stock of fully automatised, prosodically correct chunks that come out under pressure with zero construction time."
+},
+{
+  name: "Substitution drill", mins: "10–15 min", tag: "Production",
+  what: "Hold a sentence frame constant and swap one element, then two. The single most characteristic drill of the whole military tradition.",
+  how: [
+    "Pick <em>one</em> target structure.",
+    "Write the frame plus 10–15 substitution items in two columns.",
+    "Cover the full sentence. From the cue alone, say the <em>entire</em> sentence aloud.",
+    "Target 2–3 seconds per item — roughly 100 productions in ten minutes.",
+    "Then upgrade: change two elements at once.",
+    "Keep the bursts short and spaced. Massed blocks produce in-session fluency that does not survive the night."
+  ],
+  builds: "Speed and accuracy on one structure at a time."
+},
+{
+  name: "Transformation drill", mins: "15 min", tag: "Production",
+  what: "Systematically convert: statement to question, affirmative to negative, present to past, singular to plural, active to passive, direct to reported speech.",
+  how: [
+    "Take 15–20 sentences you already know well.",
+    "Write the answer key <em>first</em>.",
+    "Run <em>one</em> transformation aloud across the whole set, then check against the key.",
+    "Run a <em>second</em> transformation over the same sentences."
+  ],
+  builds: "Morphological automaticity. The second pass is where the work happens — the content is already familiar, so all the effort goes into form."
+},
+{
+  name: "Self-run response drill", mins: "10–15 min", tag: "Production",
+  what: "FSI's question-and-answer drill, turned around so you generate the questions yourself.",
+  how: [
+    "From a text or dialogue, write <em>ten comprehension questions in the target language</em>.",
+    "Wait several hours, or until the next day.",
+    "Answer them aloud, in full sentences, from memory.",
+    "Then reverse: given only your answers, reconstruct the questions."
+  ],
+  builds: "Question formation — chronically underpractised by self-studiers, because alone you never have to ask anyone anything. Your own repo notes make the same point: you spend more of a real conversation asking than answering."
+},
+{
+  name: "Shadowing", mins: "10–15 min", tag: "Perception",
+  what: "Listen and simultaneously repeat, a beat behind, without a script. Note honestly: this is the thinnest evidence base on the page. No meta-analysis exists, and the one well-known study found listening gains chiefly at <em>lower</em> proficiency.",
+  how: [
+    "Take 2–3 minutes of natural-speed audio.",
+    "Pass 1: listen only.",
+    "Pass 2: shadow <em>with</em> the script visible.",
+    "Passes 3–5: shadow <em>without</em> the script, attending to prosody, rhythm and linking rather than meaning.",
+    "Pause and replay wherever it collapses, then resume."
+  ],
+  builds: "Bottom-up processing — sound perception and word recognition in connected speech. The sub-skill self-studiers most reliably lack."
+},
+{
+  name: "Dictation and self-dictogloss", mins: "15–25 min", tag: "Perception",
+  what: "Write down exactly what you hear; or listen twice, take notes, and reconstruct from meaning. It survived the collapse of audiolingualism because the modern rationale — focus on form under processing pressure — is completely different from the original one.",
+  how: [
+    "<strong>Dictation.</strong> Take 60–90 seconds of audio. Play it in short segments and transcribe <em>verbatim</em>. Diff against the transcript.",
+    "Sort every error into one of three bins: <em>didn't hear it</em> / <em>heard it but didn't know the word</em> / <em>knew it but mis-parsed the word boundary</em>.",
+    "<strong>Dictogloss.</strong> Listen twice at full speed, take content-word notes only, rewrite the passage in your own target-language words, then compare."
+  ],
+  builds: "Attention to form under pressure, which pure comprehension never forces. The error taxonomy is the real payload — it tells you whether your bottleneck is perception, vocabulary or parsing, and therefore which drill to run next."
+},
+{
+  name: "Transcription of authentic audio", mins: "25–30 min", tag: "Intel",
+  what: "The intelligence linguist's core task: full verbatim rendering of unscripted speech.",
+  how: [
+    "Take 45–60 seconds of <em>unscripted</em> audio — a call-in show, an interview, or DLI's Phone Conversations archive.",
+    "Transcribe it completely, including hesitations, false starts and repairs.",
+    "Mark every gap <code>[??]</code>.",
+    "<em>Only then</em> check against a transcript or a native speaker.",
+    "Your <code>[??]</code> marks are the study list."
+  ],
+  builds: "Tolerance for the messiness of real speech — the fillers, elisions, self-corrections and overlaps that scripted course audio systematically removes."
+},
+{
+  name: "Two-pass listening: gist, then full", mins: "15 min", tag: "Intel",
+  what: "The operational distinction between gisting — is this worth working? — and full exploitation. Machine gisting exists precisely to triage volume so human linguists only work what warrants depth.",
+  how: [
+    "Play a 2–3 minute clip <em>exactly once</em>.",
+    "Immediately write three sentences in English: what is this, who is speaking, what is the main claim. Stop and save that.",
+    "Now play it 3–4 more times and write a detailed summary.",
+    "<strong>Compare the two.</strong> The delta is exactly how much of your comprehension was inference."
+  ],
+  builds: "Two separately trainable skills. Self-studiers overwhelmingly train only the second, which is why single-pass real-time input defeats them."
+},
+{
+  name: "Scan-and-search", mins: "15 min", tag: "Intel",
+  what: "The proficiency test's reading task in operational form: locate specific information in an authentic document, under time, with no dictionary.",
+  how: [
+    "Take an authentic article of about 400 words you have not seen.",
+    "Write yourself an <em>Orientation</em> first — one English sentence naming the source and context, exactly as the real test does.",
+    "Write four questions, or list four facts to find.",
+    "Set a <strong>four-minute timer</strong>. No dictionary, no notes, no re-reading from the top.",
+    "When it ends, stop and score. <em>Only then</em> read it properly and look things up."
+  ],
+  builds: "Reading at a normal range of speed — the level 3 criterion — instead of decoding word by word. It trains extraction <em>without</em> full comprehension, which is the actual professional skill."
+},
+{
+  name: "Sight translation", mins: "15 min", tag: "Intel",
+  what: "Read a written source text aloud in the other language, in real time. A recognised hybrid of translation and interpreting, and a standard preparatory exercise for simultaneous interpreting.",
+  how: [
+    "Take a paragraph you have never seen.",
+    "<strong>Record yourself</strong> sight-translating it aloud, continuously, without stopping to look anything up.",
+    "Play it back. Mark every hesitation, and every rendering that came out word-for-word and unnatural.",
+    "Do the same paragraph again and compare."
+  ],
+  builds: "Rapid source-text analysis and flexibility of expression. It is uncomfortable and highly diagnostic — your hesitation points map exactly onto the structures you have not automatised."
+},
+{
+  name: "Personal iso-immersion", mins: "1 hr → 1 day", tag: "Immersion",
+  what: "The institute's term is training conducted in <em>total isolation from the English language</em>. Its own evaluation found 92% of immersion students passing the graduation standard against 78% of controls — while itself warning that only the best and most motivated students were selected, and that the gain was listening-specific.",
+  how: [
+    "Follow the real escalation. First tier: <strong>one continuous English-free hour</strong> — all input, all output, all self-talk, phone language switched. Then two hours. Then a half day. Then a full day.",
+    "Give yourself a <em>transactional task</em>, not a conversation: plan a trip using only target-language sites, write and resolve a customer-service complaint, research a controversy and write a position.",
+    "The simulations that work require a decision to be made and a consensus to be reached."
+  ],
+  builds: "Sustained processing with no English fallback. The task requirement is what forces the deeper processing — free-floating exposure does not."
+},
+{
+  name: "Run a complete GLOSS lesson", mins: "20–30 min", tag: "Diagnostic",
+  what: "Use the institute's actual current lesson design rather than inventing one. Every lesson is a pre-task, then 3–4 enabling tasks, then a wrap-up, built on one authentic text — which is Stevick's M-phase and C-phase wearing task-based clothing.",
+  how: [
+    "Pick one lesson at or just above your level.",
+    "Do it <em>in order</em>, and do not skip the pre-task.",
+    "Log which enabling-task type you failed: summarise, match, predict, answer, and so on.",
+    "That task type is your weakness. Apply it to your own authentic texts for the next week."
+  ],
+  builds: "Exposure to a professionally sequenced lesson in your language, free, with feedback on every response. The six exercise types are themselves a reusable menu for any text you find."
+},
+{
+  name: "Build your own training plan", mins: "30 min, then 10/wk", tag: "Diagnostic",
+  what: "Army regulation requires an Individual Language Training Plan for every military linguist, holding assignments, training, proficiency requirements and test results. The free ODA diagnostic produces a profile across four dimensions: comprehension, lexicon, syntax, discourse.",
+  how: [
+    "Run an ODA session for your push language.",
+    "Take the <em>weakest</em> of the four dimensions and make it the single theme for the next four weeks.",
+    "Keep a one-page plan: current estimated level, target level, the four-week theme, and which drills on this page you are using against it.",
+    "Re-diagnose quarterly."
+  ],
+  builds: "An <em>external</em> read on where the weakness is — the thing self-studiers most lack, because left alone we all practise what already feels good."
+},
+{
+  name: "Domain sprint", mins: "20–30 min for 2 weeks", tag: "Diagnostic",
+  what: "Content-based instruction. The ten GLOSS domains, the Applied Operational Language courses and Area Studies all do the same thing: build language <em>through</em> content, one topic at a time.",
+  how: [
+    "Pick <em>one</em> domain — energy policy, epidemiology, military organisation, central banking.",
+    "For two weeks, read and listen only inside it.",
+    "Keep a running terminology list.",
+    "By day ten you should notice you read domain texts measurably faster than general ones."
+  ],
+  builds: "The specific mechanism behind level 3 — technical discussions within a special field. Depth in a narrow domain arrives far faster than breadth, and it is what actually gets used."
+},
+{
+  name: "Dialect and accent contrast", mins: "15 min", tag: "Perception",
+  what: "Isolate the accent variable by hearing the <em>same</em> content in different varieties — which is exactly what the free Accents Library is built to do.",
+  how: [
+    "Use the Accents Library if your language is covered (Arabic and Spanish).",
+    "Otherwise build your own: find the <em>same news story</em> reported by broadcasters from three regions.",
+    "Listen to the standard version until comfortable, then the variants.",
+    "Write down the <em>specific</em> substitutions — which vowels, which consonants, which lexical swaps.",
+    "Keep that list. It is a phonological conversion table, not vocabulary."
+  ],
+  builds: "A direct attack on the level 3 ceiling clause: still does not understand native speakers who speak very quickly or use slang or dialect."
+},
+{
+  name: "Degraded-audio training", mins: "15 min", tag: "Intel",
+  what: "Deliberate practice against the four named impediment classes: input quality, speech characteristics, content complexity, and the passive-listener constraint — you cannot ask for a repeat.",
+  how: [
+    "Use the Phone Conversations archive if your language is covered — 300+ unscripted, band-limited, non-standard-dialect calls.",
+    "Otherwise degrade deliberately: play audio at 1.25× speed; play it quietly with background noise running; use phone-recorded rather than studio audio; use multi-speaker panels with interruptions.",
+    "Then transcribe 30–45 seconds under those conditions."
+  ],
+  builds: "Robustness. Clean studio audio trains a skill that does not survive contact with reality — the scale is explicit that at level 2 you catch only occasional words and phrases in unfavourable conditions."
+},
+{
+  name: "Interview self-simulation", mins: "20–30 min monthly", tag: "Diagnostic",
+  what: "Run the official four-phase oral proficiency interview on yourself, using its published task list: warm-up, level checks, probes, wind-down.",
+  how: [
+    "Record yourself throughout.",
+    "<strong>Warm-up, 2 min.</strong> Easy self-introduction.",
+    "<strong>Level check, 8 min.</strong> Run the level 2 tasks: past narration, present narration, future narration, description, giving instructions, reporting facts.",
+    "<strong>Probe, 8 min.</strong> Run the level 3 tasks: support an opinion, discuss an abstract topic, state and defend a hypothesis, role-play an <em>unfamiliar</em> situation.",
+    "<strong>Wind-down, 2 min.</strong> Back to something easy.",
+    "Play it back and score against the four criteria — task, content and context, accuracy, text type. Find where accuracy visibly collapses. That is your real speaking level."
+  ],
+  builds: "Honest criterion-referenced self-assessment, plus practice on the exact discourse functions that separate 2 from 3. Most self-studiers never practise hypothesis or supported opinion at all, which is precisely why they plateau."
+},
+{
+  name: "Spacing-scheduled chunks", mins: "10 min daily", tag: "Schedule",
+  what: "Distributed retrieval with intervals tuned to how long you actually need to remember. This is the one place the evidence strongly favours the distributed self-studier over the intensive course.",
+  how: [
+    "Use an SRS, and <strong>set the intervals long</strong>.",
+    "In a nine-year study, 13 sessions at 56-day intervals matched the retention of 26 sessions at 14-day intervals — half the work, same result.",
+    "The optimal gap is roughly 20% of your target retention interval at a few weeks, falling to about 5% at one year. For one-year retention, that means reviewing roughly every three weeks.",
+    "Store <em>chunks and collocations</em>, not bare word pairs."
+  ],
+  builds: "Durable declarative knowledge at minimum session cost. Note this is also the direct argument for raising the 14-day ceiling in your own drill script."
+},
+{
+  name: "Minimal-pair perception", mins: "10 min", tag: "Perception",
+  what: "Train the phoneme contrasts your first language does not encode. Your own notes already prescribe this for the first fortnight and call fossilisation permanent.",
+  how: [
+    "Build a list of 10–15 word pairs differing in <em>exactly one</em> phoneme that English merges.",
+    "Have native recordings play them in random order.",
+    "<strong>Identify which one you heard before you attempt to produce either.</strong>",
+    "Perception first, production second. Reverse the order and you drill into the wrong category.",
+    "Use many different speakers — the number of distinct talkers is the moderator that makes this work."
+  ],
+  builds: "The phonemic categories everything downstream depends on. Shadowing, dictation and transcription all fail silently without them."
+},
+{
+  name: "Named-entity and jargon log", mins: "5 min", tag: "Intel",
+  what: "A list kept separately from your vocabulary deck, for items that cannot be inferred from context. A name maps to a canonical form rather than a meaning, so no amount of general proficiency recovers it.",
+  how: [
+    "At the end of any listening session, log proper names, place names, organisations, acronyms and in-group jargon.",
+    "Record both the target-language and English canonical forms.",
+    "Review this list <em>before</em>, not after, working a new text in that domain."
+  ],
+  builds: "Coverage of the highest-cost failures in a single-pass listen. Place references and coded language are named as distinct impediment classes for exactly this reason."
+}
+];
+
+/* ============================================================
+   STORE
+   ============================================================ */
+const K = "station:v1";
+const store = {
+  read() {
+    try { return JSON.parse(localStorage.getItem(K)) ?? {}; }
+    catch { return {}; }
+  },
+  write(s) {
+    try { localStorage.setItem(K, JSON.stringify(s)); }
+    catch (e) { console.warn("storage unavailable", e); }
+  }
+};
+let state = Object.assign({ cards: {}, tasks: {}, streak: 0, last: null, theme: null }, store.read());
+function save() { store.write(state); }
+
+function card(id) {
+  if (!state.cards[id]) state.cards[id] = { box: 0, due: null, misses: 0 };
+  return state.cards[id];
+}
+const today = () => new Date().toISOString().slice(0, 10);
+function addDays(n) {
+  const d = new Date();
+  d.setDate(d.getDate() + n);
+  return d.toISOString().slice(0, 10);
+}
+function isDue(id) {
+  const c = card(id);
+  return !c.due || c.due <= today();
+}
+
+/* ============================================================
+   AUDIO — speech synthesis, with graceful absence
+   ============================================================ */
+let voices = [];
+function loadVoices() { voices = window.speechSynthesis ? speechSynthesis.getVoices() : []; }
+if (window.speechSynthesis) {
+  loadVoices();
+  speechSynthesis.addEventListener("voiceschanged", loadVoices);
+}
+function pickVoice(prefix) {
+  return voices.find(v => v.lang.toLowerCase().startsWith(prefix)) || null;
+}
+function speak(text, lang = "es", rate = 0.95) {
+  if (!window.speechSynthesis) return false;
+  const u = new SpeechSynthesisUtterance(text);
+  const v = pickVoice(lang);
+  if (v) u.voice = v;
+  u.lang = v ? v.lang : (lang === "es" ? "es-ES" : "en-US");
+  u.rate = rate;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+  return true;
+}
+
+/* ============================================================
+   DRILL
+   ============================================================ */
+const el = id => document.getElementById(id);
+let queue = [], idx = -1, revealed = false, hits = 0, seen = 0, running = false;
+
+function pool() {
+  const t = el("topic").value;
+  return SENTENCES.filter(s => !t || s.topic === t);
+}
+function buildQueue() {
+  const mode = el("mode").value;
+  let rows = pool();
+  if (mode === "recall" || mode === "reverse") {
+    const due = rows.filter(s => isDue(s.id));
+    rows = due.length ? due : rows;
+  }
+  rows = rows.slice().sort(() => Math.random() - 0.5);
+  rows.sort((a, b) => card(a.id).box - card(b.id).box || card(b.id).misses - card(a.id).misses);
+  return rows.slice(0, 20);
+}
+
+function start() {
+  queue = buildQueue();
+  idx = -1; hits = 0; seen = 0; running = true;
+  next();
+}
+
+function next() {
+  idx++;
+  revealed = false;
+  if (idx >= queue.length) return finish();
+  const s = queue[idx], mode = el("mode").value;
+  el("counter").textContent = `${idx + 1} / ${queue.length}  ·  ${s.topic}  ·  box ${card(s.id).box}`;
+  el("target").hidden = true;
+  el("meterFill").style.width = `${(idx / queue.length) * 100}%`;
+
+  if (mode === "reverse") {
+    el("prompt").textContent = s.target;
+    el("prompt").setAttribute("lang", "es");
+    el("target").textContent = s.english;
+    el("target").setAttribute("lang", "en");
+    el("hint").textContent = "Say it in English. Space reveals.";
+    speak(s.target, "es");
+  } else if (mode === "shadow") {
+    el("prompt").textContent = s.target;
+    el("prompt").setAttribute("lang", "es");
+    el("target").textContent = s.english;
+    el("target").setAttribute("lang", "en");
+    el("hint").textContent = "Speak at the same time as the voice, not after it. Replay until you are with it.";
+    speak(s.target, "es", 0.85);
+  } else if (mode === "gist") {
+    el("prompt").textContent = "Listening.";
+    el("prompt").removeAttribute("lang");
+    el("target").textContent = `${s.target}  —  ${s.english}`;
+    el("target").setAttribute("lang", "es");
+    el("hint").textContent = "One pass only. Say in English what that was about, then reveal.";
+    speak(s.target, "es", 1.05);
+  } else {
+    el("prompt").textContent = s.english;
+    el("prompt").setAttribute("lang", "en");
+    el("target").textContent = s.target;
+    el("target").setAttribute("lang", "es");
+    el("hint").textContent = "Say the Spanish out loud, then reveal. Out loud — thinking it does not count.";
+  }
+  renderActions("reveal");
+}
+
+function reveal() {
+  if (revealed || idx < 0 || idx >= queue.length) return;
+  revealed = true;
+  el("target").hidden = false;
+  const s = queue[idx];
+  if (el("mode").value === "recall") speak(s.target, "es");
+  renderActions("grade");
+}
+
+function grade(ok) {
+  if (idx < 0 || idx >= queue.length) return;
+  const s = queue[idx], c = card(s.id);
+  seen++;
+  if (ok) {
+    hits++;
+    c.box = Math.min(c.box + 1, MAX_BOX);
+    c.due = addDays(INTERVALS[c.box] || 1);
+  } else {
+    c.box = 0;
+    c.due = today();
+    c.misses++;
+  }
+  bumpStreak();
+  save();
+  paintStats();
+  next();
+}
+
+function finish() {
+  running = false;
+  el("meterFill").style.width = "100%";
+  el("counter").textContent = "Session complete";
+  el("prompt").textContent = seen ? `${hits} of ${seen} recalled` : "Nothing due.";
+  el("prompt").removeAttribute("lang");
+  el("target").hidden = true;
+  el("hint").textContent = seen
+    ? "Misses come back tomorrow. Everything else is spaced out."
+    : "Everything is scheduled ahead. Switch topic, or use the time on input instead.";
+  renderActions("done");
+  paintStats();
+}
+
+function renderActions(phase) {
+  const a = el("actions");
+  a.innerHTML = "";
+  const mk = (label, cls, fn) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = `btn ${cls}`; b.textContent = label;
+    b.addEventListener("click", fn); a.appendChild(b); return b;
+  };
+  if (phase === "reveal") {
+    mk("Reveal", "primary", reveal);
+    if (window.speechSynthesis) mk("Replay", "", () => replay());
+  } else if (phase === "grade") {
+    mk("Missed it", "miss", () => grade(false));
+    mk("Had it", "hit", () => grade(true));
+    if (window.speechSynthesis) mk("Replay", "", () => replay());
+  } else {
+    mk("Start session", "primary", start);
+  }
+}
+function replay() {
+  const s = queue[idx];
+  if (!s) return;
+  const mode = el("mode").value;
+  speak(s.target, "es", mode === "shadow" ? 0.85 : 1);
+}
+
+function bumpStreak() {
+  const t = today();
+  if (state.last === t) return;
+  const y = addDays(-1);
+  state.streak = state.last === y ? (state.streak || 0) + 1 : 1;
+  state.last = t;
+}
+
+/* ============================================================
+   PAINT
+   ============================================================ */
+function paintStats() {
+  const due = SENTENCES.filter(s => isDue(s.id)).length;
+  el("sDue").textContent = due;
+  el("sHit").innerHTML = `${hits}<small>/${seen}</small>`;
+  el("sStreak").innerHTML = `${state.streak || 0}<small> d</small>`;
+  el("dueChip").textContent = `${due} due`;
+  el("dueChip").className = "chip " + (due ? "due" : "hit");
+
+  const counts = Array(MAX_BOX + 1).fill(0);
+  SENTENCES.forEach(s => counts[card(s.id).box]++);
+  el("railBoxes").innerHTML = counts
+    .map((n, i) => `<b data-n="${n}" title="Box ${i}: ${n} sentence${n === 1 ? "" : "s"}">${n}</b>`)
+    .join("");
+}
+
+function paintTopics() {
+  const seenT = [...new Set(SENTENCES.map(s => s.topic))];
+  el("topic").innerHTML = `<option value="">All topics</option>` +
+    seenT.map(t => `<option value="${t}">${t}</option>`).join("");
+}
+
+function paintTechniques() {
+  const wrap = el("techList");
+  if (!TECHNIQUES.length) {
+    el("libIntro").textContent = "Technique library pending.";
+    return;
+  }
+  wrap.innerHTML = TECHNIQUES.map((t, i) => `
+    <details class="tech">
+      <summary>
+        <span class="n">${String(i + 1).padStart(2, "0")}</span>
+        <h3>${t.name}</h3>
+        <span class="chip">${t.mins}</span>
+        <span class="chip accent">${t.tag}</span>
+      </summary>
+      <div class="in">
+        <p class="what">${t.what}</p>
+        <ol>${t.how.map(h => `<li>${h}</li>`).join("")}</ol>
+        <p class="builds"><b>Builds</b>${t.builds}</p>
+      </div>
+    </details>`).join("");
+}
+
+function paintArmory() {
+  el("armoryList").innerHTML = ARMORY.map(([name, url, blurb]) => `
+    <div class="res">
+      <a href="${url}" target="_blank" rel="noopener">${name}</a>
+      <span class="host">${new URL(url).host}</span>
+      <p>${blurb}</p>
+    </div>`).join("");
+}
+
+function paintWeeks() {
+  el("weeks").innerHTML = WEEKS.map(([wk, title, tasks], wi) => `
+    <div class="week">
+      <header><h3>${title}</h3><span class="chip accent">${wk}</span></header>
+      <div class="tasks">
+        ${tasks.map((t, ti) => {
+          const id = `w${wi}t${ti}`;
+          const done = state.tasks[id] ? " done" : "";
+          return `<label class="task${done}" data-id="${id}">
+            <input type="checkbox" ${state.tasks[id] ? "checked" : ""}>
+            <span>${t}</span>
+          </label>`;
+        }).join("")}
+      </div>
+    </div>`).join("");
+
+  el("weeks").addEventListener("change", e => {
+    const label = e.target.closest(".task");
+    if (!label) return;
+    state.tasks[label.dataset.id] = e.target.checked;
+    label.classList.toggle("done", e.target.checked);
+    save();
+  });
+}
+
+/* ============================================================
+   WIRING
+   ============================================================ */
+el("startBtn").addEventListener("click", start);
+el("mode").addEventListener("change", () => { if (running) start(); });
+el("topic").addEventListener("change", () => { if (running) start(); });
+el("resetBtn").addEventListener("click", () => {
+  state.cards = {};
+  save();
+  paintStats();
+  el("counter").textContent = "Reset";
+  el("prompt").textContent = "Progress cleared.";
+  el("target").hidden = true;
+  renderActions("done");
+});
+
+document.addEventListener("keydown", e => {
+  if (e.target.matches("input, select, textarea")) return;
+  if (e.code === "Space") { e.preventDefault(); revealed ? null : reveal(); }
+  else if (e.key === "1" && revealed) grade(false);
+  else if (e.key === "2" && revealed) grade(true);
+  else if (e.key.toLowerCase() === "r") replay();
+});
+
+el("themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const isDark = cur ? cur === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  const nextT = isDark ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", nextT);
+  state.theme = nextT;
+  save();
+});
+if (state.theme) document.documentElement.setAttribute("data-theme", state.theme);
+
+/* section highlight in the rail */
+const links = [...document.querySelectorAll(".railnav a")];
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (!en.isIntersecting) return;
+    links.forEach(l => l.classList.toggle("on", l.getAttribute("href") === `#${en.target.id}`));
+  });
+}, { rootMargin: "-20% 0px -70% 0px" });
+document.querySelectorAll("section[id]").forEach(s => obs.observe(s));
+
+paintTopics();
+paintArmory();
+paintWeeks();
+paintTechniques();
+paintStats();
+</script>

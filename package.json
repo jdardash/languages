@@ -1,0 +1,6 @@
+{
+  "name": "languages-site",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test tests/" }
+}
